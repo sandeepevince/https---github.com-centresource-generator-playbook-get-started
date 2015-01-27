@@ -1,0 +1,82 @@
+.panel-group {
+  .panel {
+    overflow: hidden;
+
+    &:first-child {
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+
+    .panel-heading {
+      background: $base-accent-color;
+      border-bottom: 1px solid $white;
+      padding: .5em 1em;
+    }
+
+    .panel-heading {
+      .panel-title {
+        margin-bottom: 0;
+
+        a {
+          color: $white;
+          display: block;
+          padding-left: 1.25em;
+          position: relative;
+
+          &:before {
+            content: "\f068";
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            padding-right: 0.5em;
+            position: absolute;
+            top: 2px;
+            left: 0;
+          }
+
+          &.collapsed {
+            &:before {
+              content: "\f067";
+            }
+          }
+        }
+      }
+    }
+
+    .panel-body {
+      @include clearfix;
+      background: shade($white, 5%);
+      padding: 1em 1em 2em;
+
+      p {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// SHOW / HIDE STYLES
+.panel-group {
+  .collapse {
+    display: none;
+
+    &.in {
+      display: block;
+    }
+  }
+
+  .collapsing {
+    @include transition (all .35s ease-in-out);
+    position: relative;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+

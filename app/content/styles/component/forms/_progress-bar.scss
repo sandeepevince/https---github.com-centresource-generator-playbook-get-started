@@ -1,0 +1,29 @@
+.progress-bar {
+  height: 10px;
+  width: 100%;
+  background: $green-light;
+
+  &.progress-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-indicator {
+    background: #fff;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .progress-label {
+    background: none;
+    height: 100%;
+    left: 0;
+    height: 100%;
+    padding: 0.2em;
+    position: absolute;
+    top: 0;
+  }
+}

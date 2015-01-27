@@ -1,0 +1,38 @@
+.cta-block {
+  @include span-columns(12 of 12);
+  @include clearfix;
+  background-color: $blue;
+  color: $white;
+  padding: 3em 2em;
+
+  .cta-block-copy {
+    @include span-columns(12 of 12);
+
+    @include media($medium) {
+      @include span-columns(9 of 12);
+      border-right: 1px solid $blue-light;
+      padding-left: 1em;
+    }
+  }
+
+  .cta-block-action {
+    @include span-columns(12 of 12);
+    padding: 1em;
+
+    @include media($medium) {
+      @include span-columns(3 of 12);
+      padding: 2.5em 1.5em;
+    }
+  }
+
+  .cta-description {
+    font-family: $serif;
+  }
+
+  .cta-action-link {
+    @include link-variant($white);
+    font-size: em(16);
+    line-height: 1em;
+  }
+}
+

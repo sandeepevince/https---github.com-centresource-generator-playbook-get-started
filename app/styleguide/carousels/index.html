@@ -1,0 +1,702 @@
+---
+layout: styleguide
+title: Tony Robbins - Styleguide - Carousels
+items:
+- url: http://placecorgi.com/1080/500
+  text: Foo
+  headline: Headline One
+- url: http://placekitten.com/1080/500
+  text: Bar
+quotes:
+- text: And those who were seen dancing were thought to be insane by those who could not hear the music.
+  attribution: Friedrich Nietzsche
+- text: If you can't do great things, do small things in a great way.
+  attribution: Napoleon Hill
+media-items:
+- headline: Get Some
+  text: Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid
+  button-text: CTA Button
+  image-url: /content/images/carousel-media-iphone.png
+- headline: Get Some MOAR
+  text: Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid
+  button-text: CTA Button
+  image-url: /content/images/carousel-media-iphone.png
+small-media-items:
+- url: http://placecorgi.com/140/80
+  text: Foo
+- url: http://placekitten.com/140/80
+  text: Bar
+- url: http://placecorgi.com/140/80
+  text: Foo
+- url: http://placekitten.com/140/80
+  text: Bar
+- url: http://placecorgi.com/140/80
+  text: Foo
+- url: http://placekitten.com/140/80
+  text: Bar
+- url: http://placecorgi.com/140/80
+  text: Foo
+- url: http://placekitten.com/140/80
+  text: Bar
+images:
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+- url: http://placecorgi.com/1100/500
+thumbs:
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+- url: http://placecorgi.com/100/100
+product-items:
+- url: http://placecorgi.com/230/230
+  title: Fancy Dog
+  price: 128.99
+  button-text: Get Fancy
+- url: http://placekitten.com/230/230
+  title: Grumpy Cat
+  price: 569.99
+  button-text: Get Grumpy
+- url: http://beerhold.it/230/230
+  title: Just the Beer
+  price: 5.01
+  button-text: I'm Thirsty
+- url: http://fillmurray.com/230/230
+  title: Deja Vu
+  price: 0.99
+  button-text: Murray Me
+- url: http://baconmockup.com/230/230
+  title: Bacon
+  price: 8.99
+  button-text: I said BACON
+- url: http://nicenicejpg.com/230/230
+  title: Talent
+  price: 99.99
+  button-text: Ice Ice Baby
+secondary-items:
+- title: Food to Eat for Alkalising
+  text: Gastropub irony lomo, Pinterest 3 wolf moon forage semiotics viral drinking vinegar. Tonx readymade vegan YOLO. Authentic VHS 3 wolf moon, biodiesel flannel Kickstarter Etsy mumblecore Pinterest cliche.
+  button-text: Read Article
+- title: Food to Eat for Alkalising
+  text: Gastropub irony lomo, Pinterest 3 wolf moon forage semiotics viral drinking vinegar. Tonx readymade vegan YOLO. Authentic VHS 3 wolf moon, biodiesel flannel Kickstarter Etsy mumblecore Pinterest cliche.
+  button-text: Read Article
+- title: Food to Eat for Alkalising
+  text: Gastropub irony lomo, Pinterest 3 wolf moon forage semiotics viral drinking vinegar. Tonx readymade vegan YOLO. Authentic VHS 3 wolf moon, biodiesel flannel Kickstarter Etsy mumblecore Pinterest cliche.
+  button-text: Read Article
+- title: Food to Eat for Alkalising
+  text: Gastropub irony lomo, Pinterest 3 wolf moon forage semiotics viral drinking vinegar. Tonx readymade vegan YOLO. Authentic VHS 3 wolf moon, biodiesel flannel Kickstarter Etsy mumblecore Pinterest cliche.
+  button-text: Read Article
+---
+
+<h1>Carousels</h1>
+{% include shared/nav-styleguide-secondary.html %}
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Hero">Hero</h3>
+  <p class="styleguide-notes">Creates single visible image carousel the width of the page.</p>
+  {% include component/carousels/hero.html value="Go Here" %}
+
+  {% highlight html %}
+  <div class="owl-carousel hero-carousel">
+    <div class="item">
+      <img src="http://placecorgi.com/1080/500" alt="Foo">
+      <div class="hero-copy">
+        <h2 class="headline-primary">Headline One</h2>
+        <input class="btn large" type="submit" value="Go Here" />
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://placekitten.com/1080/500" alt="Bar">
+    </div>
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Gallery">Gallery</h3>
+  <p class="styleguide-notes">Creates a synced carousel gallery with thumbnails</p>
+  {% include component/carousels/gallery.html %}
+
+  {% highlight html %}
+  <div class="gallery">
+    <div class="owl-carousel gallery-carousel sync-primary">
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/1100/500">
+      </div>
+    </div>
+    <div class="owl-carousel gallery-carousel sync-secondary">
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+      <div class="item">
+        <img src="http://placecorgi.com/100/100">
+      </div>
+    </div>
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Quote">Quote</h3>
+  <p class="styleguide-notes">Creates single visible quote carousel the width of the container.</p>
+  {% include component/carousels/quote.html %}
+
+  {% highlight html %}
+  <div class="owl-carousel quote quote-carousel">
+    <div class="item">
+      <blockquote>
+        <h4 class="primary-headline light">“And those who were seen dancing were thought to be insane by those who could not hear the music.”</h4>
+        <span class="author">Friedrich Nietzsche</span>
+      </blockquote>
+    </div>
+    <div class="item">
+      <blockquote>
+        <h4 class="primary-headline light">“If you can't do great things, do small things in a great way.”</h4>
+        <span class="author">Napoleon Hill</span>
+      </blockquote>
+    </div>
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Media">Media</h3>
+  <p class="styleguide-notes">Creates single visible media carousel with pagination controls sized to the width of the section.</p>
+  {% include component/carousels/media-pagination.html %}
+
+  {% highlight html %}
+  <div class="owl-carousel media-pagination media-pagination-carousel">
+    <div class="item">
+      <div class="image-content copy-right">
+        <img class="media-object" src="http://placekitten.com/360/260">
+        <div class="copy">
+          <h3 class="headline">Get Some</h3>
+          <p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid</p>
+          <input class="btn large" type="submit" value="CTA Button" />
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image-content copy-right">
+        <img class="media-object" src="http://placecorgi.com/360/260">
+        <div class="copy">
+          <h3 class="headline">Get Some MOAR</h3>
+          <p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid</p>
+          <input class="btn large" type="submit" value="CTA Button" />
+        </div>
+      </div>
+    </div>
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Small Media">Small Media</h3>
+  <p class="styleguide-notes">Creates small media carousel with variable number of shown items based on available width.</p>
+  {% include component/carousels/small-media.html %}
+
+  {% highlight html %}
+  <div class="owl-carousel small-media small-media-carousel">
+    <div class="item"><img src="http://placecorgi.com/140/80" alt="Foo"></div>
+    <div class="item"><img src="http://placekitten.com/140/80" alt="Bar"></div>
+    <div class="item"><img src="http://placecorgi.com/140/80" alt="Foo"></div>
+    <div class="item"><img src="http://placekitten.com/140/80" alt="Bar"></div>
+    <div class="item"><img src="http://placecorgi.com/140/80" alt="Foo"></div>
+    <div class="item"><img src="http://placekitten.com/140/80" alt="Bar"></div>
+    <div class="item"><img src="http://placecorgi.com/140/80" alt="Foo"></div>
+    <div class="item"><img src="http://placekitten.com/140/80" alt="Bar"></div>
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Product">Product</h3>
+  <p class="styleguide-notes">Creates product carousel with variable number of shown items based on available width.</p>
+  {% include component/carousels/product.html %}
+
+  {% highlight html %}
+  <div class="owl-carousel product-carousel">
+    <div class="item">
+      <div class="product-block">
+        <img class="product" src="http://placecorgi.com/230/230">
+        <div class="product-info">
+          <h4>Fancy Dog</h4>
+          <p class="price">$128.99</p>
+          <input class="btn small" type="submit" value="Get Fancy" />
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="product-block">
+        <img class="product" src="http://placekitten.com/230/230">
+        <div class="product-info">
+          <h4>Grunpy Cat</h4>
+          <p class="price">$569.99</p>
+          <input class="btn small" type="submit" value="Get Grumpy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ... well, you get the idea -->
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Secondary">Secondary</h3>
+  <p class="styleguide-notes">Creates mixed content carousel with variable number of shown items based on available width.</p>
+  {% include component/carousels/secondary.html %}
+
+  {% highlight html %}
+  <div class="owl-carousel secondary-carousel">
+    <div class="item">
+      <div class="centered-content">
+        <h4 class="headline-tertiary">Food to Eat for Alkalising</h4>
+        <p>Gastropub irony lomo, Pinterest 3 wolf moon forage semiotics viral drinking vinegar. Tonx readymade vegan YOLO. Authentic VHS 3 wolf moon, biodiesel flannel Kickstarter Etsy mumblecore Pinterest cliche.</p>
+        <input class="btn small secondary" type="submit" value="Read Article">
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="centered-content">
+        <h4 class="headline-tertiary">Food to Eat for Alkalising</h4>
+        <p>Gastropub irony lomo, Pinterest 3 wolf moon forage semiotics viral drinking vinegar. Tonx readymade vegan YOLO. Authentic VHS 3 wolf moon, biodiesel flannel Kickstarter Etsy mumblecore Pinterest cliche.</p>
+        <input class="btn small secondary" type="submit" value="Read Article">
+      </div>
+    </div>
+
+    <!-- ... well, you get the idea -->
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Commitment Level">Commitment Level</h3>
+  <p class="styleguide-notes">Commitment Level Tabbed Interface</p>
+  {% include component/carousels/commitment-level.html %}
+
+  {% highlight html %}
+  <section class="commitment-level">
+    <div class="tabs-section">
+      <h2 class="headline-secondary">What's Your Commitment?</h2>
+      <!-- Nav tabs -->
+      <ul id="commitment-tabs" class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#diamond-premier" role="tab" data-toggle="tab">Diamond Premier</a></li>
+        <li role="presentation"><a href="#diamond" role="tab" data-toggle="tab">Diamond</a></li>
+        <li role="presentation"><a href="#vip" role="tab" data-toggle="tab">VIP</a></li>
+        <li role="presentation"><a href="#executive" role="tab" data-toggle="tab">Executive</a></li>
+        <li role="presentation"><a href="#general-admission" role="tab" data-toggle="tab">General Admissions</a></li>
+      </ul>
+    </div>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="diamond-premier">
+        <div class="level-info-wrap">
+          <div class="level-info">
+            <h3 class="headline-tertiary">Diamond Premier Pass</h3>
+            <span class="price">$2195</span>
+            <img src="http://placecorgi.com/600/200">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur. Excepteur sint occaecat cupidatat non  in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem occaecat cupidatat non proident, sunt accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae  ab illo inventore veritatis et quasi.</p>
+            <input class="btn large" type="submit" value="Add to Cart">
+          </div>
+          <div class="level-testimony">
+            <!-- BLOCKQUOTE -->
+            <blockquote class="full-photo">
+              <div class="quote-container">
+                <span class="quotation-mark">“</span>
+                <p class="quote">Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be"</p>
+              </div>
+              <span class="author">Oprah Winfrey</span>
+              <div class="group">DWD 2012</div>
+              <div class="avatar-container">
+                <img class="avatar" src="http://placecorgi.com/311/214">
+              </div>
+            </blockquote>
+            <!-- /BLOCKQUOTE -->
+          </div>
+        </div>
+        <div class="level-group">
+          <h4 class="header-paragraph">Group Rates</h4>
+          <div class="form-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur.</p>
+          </div>
+          <form class="level-group-form">
+            <input class="first-name" type="text" value="" placeholder="First Name">
+            <input class="last-name" type="text" value="" placeholder="Last Name">
+            <input type="text" value="" placeholder="Phone Number">
+            <input type="text" value="" placeholder="Enter Your Email Address">
+            <div class="select-submit">
+              <label for="ticketnumber">Number of Tickets</label>
+              <select name="ticketnumber" style="display: none;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected="selected">5</option>
+              </select><div class="chosen-container chosen-container-single" style="width: 38px;" title=""><a class="chosen-single" tabindex="-1"><span>5</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+              <input class="btn large" type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade in" id="diamond">
+        <div class="level-info-wrap">
+          <div class="level-info">
+            <h3 class="headline-tertiary">Diamond Pass</h3>
+            <span class="price">$2195</span>
+            <img src="http://placecorgi.com/600/200">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur. Excepteur sint occaecat cupidatat non  in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem occaecat cupidatat non proident, sunt accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae  ab illo inventore veritatis et quasi.</p>
+            <input class="btn large" type="submit" value="Add to Cart">
+          </div>
+          <div class="level-testimony">
+            <!-- BLOCKQUOTE -->
+            <blockquote class="full-photo">
+              <div class="quote-container">
+                <span class="quotation-mark">“</span>
+                <p class="quote">Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be"</p>
+              </div>
+              <span class="author">Oprah Winfrey</span>
+              <div class="group"></div>
+              <div class="avatar-container">
+                <img class="avatar" src="http://placecorgi.com/311/214">
+              </div>
+            </blockquote>
+            <!-- /BLOCKQUOTE -->
+          </div>
+        </div>
+        <div class="level-group">
+          <h4 class="header-paragraph">Group Rates</h4>
+          <div class="form-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur.</p>
+          </div>
+          <form class="level-group-form">
+            <input class="first-name" type="text" value="" placeholder="First Name">
+            <input class="last-name" type="text" value="" placeholder="Last Name">
+            <input type="text" value="" placeholder="Phone Number">
+            <input type="text" value="" placeholder="Enter Your Email Address">
+            <div class="select-submit">
+              <label for="ticketnumber">Number of Tickets</label>
+              <select name="ticketnumber" style="display: none;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected="selected">5</option>
+              </select><div class="chosen-container chosen-container-single" style="width: 0px;" title=""><a class="chosen-single" tabindex="-1"><span>5</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+              <input class="btn large" type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade in" id="vip">
+        <div class="level-info-wrap">
+          <div class="level-info">
+            <h3 class="headline-tertiary">VIP Pass</h3>
+            <span class="price">$2195</span>
+            <img src="http://placecorgi.com/600/200">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur. Excepteur sint occaecat cupidatat non  in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem occaecat cupidatat non proident, sunt accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae  ab illo inventore veritatis et quasi.</p>
+            <input class="btn large" type="submit" value="Add to Cart">
+          </div>
+          <div class="level-testimony">
+            <!-- BLOCKQUOTE -->
+            <blockquote class="full-photo">
+              <div class="quote-container">
+                <span class="quotation-mark">“</span>
+                <p class="quote">Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be"</p>
+              </div>
+              <span class="author">Oprah Winfrey</span>
+              <div class="group"></div>
+              <div class="avatar-container">
+                <img class="avatar" src="http://placecorgi.com/311/214">
+              </div>
+            </blockquote>
+            <!-- /BLOCKQUOTE -->
+          </div>
+        </div>
+        <div class="level-group">
+          <h4 class="header-paragraph">Group Rates</h4>
+          <div class="form-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur.</p>
+          </div>
+          <form class="level-group-form">
+            <input class="first-name" type="text" value="" placeholder="First Name">
+            <input class="last-name" type="text" value="" placeholder="Last Name">
+            <input type="text" value="" placeholder="Phone Number">
+            <input type="text" value="" placeholder="Enter Your Email Address">
+            <div class="select-submit">
+              <label for="ticketnumber">Number of Tickets</label>
+              <select name="ticketnumber" style="display: none;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected="selected">5</option>
+              </select><div class="chosen-container chosen-container-single" style="width: 0px;" title=""><a class="chosen-single" tabindex="-1"><span>5</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+              <input class="btn large" type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade in" id="executive">
+        <div class="level-info-wrap">
+          <div class="level-info">
+            <h3 class="headline-tertiary">Executive Pass</h3>
+            <span class="price">$2195</span>
+            <img src="http://placecorgi.com/600/200">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur. Excepteur sint occaecat cupidatat non  in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem occaecat cupidatat non proident, sunt accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae  ab illo inventore veritatis et quasi.</p>
+            <input class="btn large" type="submit" value="Add to Cart">
+          </div>
+          <div class="level-testimony">
+            <!-- BLOCKQUOTE -->
+            <blockquote class="full-photo">
+              <div class="quote-container">
+                <span class="quotation-mark">“</span>
+                <p class="quote">Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be"</p>
+              </div>
+
+              <span class="author">Oprah Winfrey</span>
+              <div class="group"></div>
+              <div class="avatar-container">
+                <img class="avatar" src="http://placecorgi.com/311/214">
+              </div>
+            </blockquote>
+            <!-- /BLOCKQUOTE -->
+          </div>
+        </div>
+        <div class="level-group">
+          <h4 class="header-paragraph">Group Rates</h4>
+          <div class="form-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur.</p>
+          </div>
+          <form class="level-group-form">
+            <input class="first-name" type="text" value="" placeholder="First Name">
+            <input class="last-name" type="text" value="" placeholder="Last Name">
+            <input type="text" value="" placeholder="Phone Number">
+            <input type="text" value="" placeholder="Enter Your Email Address">
+            <div class="select-submit">
+              <label for="ticketnumber">Number of Tickets</label>
+              <select name="ticketnumber" style="display: none;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected="selected">5</option>
+              </select><div class="chosen-container chosen-container-single" style="width: 0px;" title=""><a class="chosen-single" tabindex="-1"><span>5</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+              <input class="btn large" type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade in" id="general-admission">
+        <div class="level-info-wrap">
+          <div class="level-info">
+            <h3 class="headline-tertiary">General Admission Pass</h3>
+            <span class="price">$2195</span>
+            <img src="http://placecorgi.com/600/200">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur. Excepteur sint occaecat cupidatat non  in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem occaecat cupidatat non proident, sunt accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae  ab illo inventore veritatis et quasi.</p>
+            <input class="btn large" type="submit" value="Add to Cart">
+          </div>
+          <div class="level-testimony">
+            <!-- BLOCKQUOTE -->
+            <blockquote class="full-photo">
+              <div class="quote-container">
+                <span class="quotation-mark">“</span>
+                <p class="quote">Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be"</p>
+              </div>
+              <span class="author">Oprah Winfrey</span>
+              <div class="group"></div>
+              <div class="avatar-container">
+                <img class="avatar" src="http://placecorgi.com/311/214">
+              </div>
+            </blockquote>
+            <!-- /BLOCKQUOTE -->
+          </div>
+        </div>
+        <div class="level-group">
+          <h4 class="header-paragraph">Group Rates</h4>
+          <div class="form-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt nulla pariatur.</p>
+          </div>
+          <form class="level-group-form">
+            <input class="first-name" type="text" value="" placeholder="First Name">
+            <input class="last-name" type="text" value="" placeholder="Last Name">
+            <input type="text" value="" placeholder="Phone Number">
+            <input type="text" value="" placeholder="Enter Your Email Address">
+            <div class="select-submit">
+              <label for="ticketnumber">Number of Tickets</label>
+              <select name="ticketnumber" style="display: none;">
+                <option value="5" selected="selected">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select><div class="chosen-container chosen-container-single" style="width: 0px;" title=""><a class="chosen-single" tabindex="-1"><span>5</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+              <input class="btn large" type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Bootstrap Tabs">Bootstrap Tabs</h3>
+  <p class="styleguide-notes">Basic tabs implementation</p>
+  {% include component/carousels/bootstrap-tabs.html headline="Turn Fear into Power" body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet." %}
+
+</section>
+
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Endorsement Carousel">Endorsement Carousel</h3>
+  <p class="styleguide-notes">Endorsement Carousel for homepage and event pages</p>
+  <section class="endorsements homepage">
+    <div class="container">
+      <h3 class="headline-secondary">What People Are Saying</h3>
+      {% include component/carousels/endorsements.html %}
+    </div>
+  </section>
+
+  {% highlight html %}
+  <section class="endorsements homepage">
+      <div class="container">
+        <h3 class="headline-secondary">What People Are Saying</h3>
+        <div class="endorsements-carousel">
+          <div class="item">
+            <div class="portrait">
+              <img class="author-portrait" src="http://img.estaticos-atleticodemadrid.com/system/foto_listados/2316/thumb_300x400/02_moya.png?1409589659">
+            </div>
+            <div class="quote">
+              <p>Suspendisse sit amet libero quis mi elementum porttitor. Ut enim lacus, ultricies sed venenatis at, tristique ac dolor. Nulla venenatis quam in ligula molestie aliquet.</p>
+              <p class="author">john doe</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="portrait">
+              <img class="author-portrait" src="http://img.estaticos-atleticodemadrid.com/system/foto_listados/2315/thumb_300x400/02_oblak.png?1409589686">
+            </div>
+            <div class="quote">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus ante erat, nec sagittis arcu fringilla sed. Aenean auctor porttitor ex, ac consequat tortor elementum at. Praesent vitae commodo eros. Etiam blandit nulla sed quam scelerisque imperdiet.</p>
+              <p class="author">jane doe</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="portrait">
+              <img class="author-portrait" src="http://img.estaticos-atleticodemadrid.com/system/foto_listados/2316/thumb_300x400/02_moya.png?1409589659">
+            </div>
+            <div class="quote">
+              <p>Nam ac augue eu leo consequat luctus in ac justo. Vestibulum eu volutpat nisi. Integer fermentum bibendum est vel semper. Fusce fringilla libero sit amet lectus fringilla volutpat. Vivamus eget velit maximus, facilisis leo quis, lacinia ligula. Nunc a eros sit amet turpis faucibus posuere sit amet sed diam.</p>
+              <p class="author">jimmy doe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>{% endhighlight %}
+  </section>
+

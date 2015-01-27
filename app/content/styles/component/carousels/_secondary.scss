@@ -1,0 +1,28 @@
+$arrow-icon-height: 42px;
+
+.secondary-carousel {
+
+  .item {
+    margin: 0 0.8em;
+  }
+
+  &.owl-carousel {
+    padding: 0 calc(#{$arrow-icon-height} * 1.2);
+  }
+
+  &.owl-theme .owl-controls .owl-buttons div {
+    background: none;
+    color: $gray;
+    position: absolute;
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-prev {
+    left: -5px;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-next {
+    right: -5px;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+}

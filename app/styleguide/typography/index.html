@@ -1,0 +1,87 @@
+---
+layout: styleguide
+title: Tony Robbins - Styleguide - Typography
+---
+<h1>Typography Elements</h1>
+{% include shared/nav-styleguide-secondary.html %}
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Base Typography">Typography</h4>
+  <p class="styleguide-notes">These are the baseline typography styles. The classes drive the  sizing to allow the elements to be switched out semantically.</p>
+
+  {% include component/typography/typography.html %}
+
+  {% highlight html %}
+  <h1 class="headline-primary">Primary</h1>
+  <h2 class="headline-secondary">Secondary Headline</h2>
+  <h3 class="headline-tertiary">Tertiary Headline</h3>
+  <h4 class="headline-paragraph">Paragraph Headline</h4>
+
+  <p>Aye, aye," said Stubb, the second mate, "Starbuck, there, is as careful a man as you'll find anywhere in this fishery." But we shall ere long see what that word "careful" precisely means when used by a man like Stubb, or almost any other whale hunter.</p>{% endhighlight %}
+
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Blockquote">Blockquote</h4>
+  <p class="styleguide-notes">This element includes a photo (if necessary) of the attributed author, the quote itself, and the persons name.</p>
+
+  {% include component/typography/blockquote.html class="testimonial" src="http://placecorgi.com/294/294"  quote="Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be" author="Oprah Winfrey" %}
+
+  {% highlight html %}
+  <blockquote>
+    <img class="avatar" src="http://placecorgi.com/94/94">
+    <div class="quote-container">
+      <span class="quotation-mark">"</span>
+      <p class="quote">Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be"</p>
+      <p class="author">- Oprah Winfrey</p>
+    </div>
+  </blockquote>{% endhighlight %}
+
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Blockquote">Blockquote in sidebar</h4>
+  <p class="styleguide-notes">This element includes a photo (if necessary) of the attributed author, the quote itself, and the persons name.</p>
+
+  {% include component/typography/blockquote.html class="side" src="http://placecorgi.com/94/94"  quote="Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be" author="Oprah Winfrey" %}
+
+  {% highlight html %}
+  <blockquote class="side">
+    <div class="quote-container">
+      <span class="quotation-mark">"</span>
+      <p class="quote">Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be"</p>
+    </div>
+    <div class="avatar-container">
+      <hr>
+      <img class="avatar" src="http://placecorgi.com/94/94">
+    </div>
+    <span class="author">Oprah Winfrey</span>
+  </blockquote>{% endhighlight %}
+
+</section>
+
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Centered content">Centered content</h4>
+  <p class="styleguide-notes">This element includes a headline and body copy that is centered.</p>
+
+  {% include component/typography/centered-content.html headline="That day the scattered multitudes began" body="Night came on; the train passed on at full speed, in the midst of the roaring of the tigers, bears, and wolves which fled before the locomotive; and the marvels of Bengal, Golconda ruined Gour, Murshedabad, the ancient capital, Burdwan, Hugly, and the French town of Chandernagor, where Passepartout would have been proud to see his country's flag flying, were hidden from their view in the darkness." %}
+
+  {% highlight html %}
+  <div class="centered-content">
+    <h4 class="headline-tertiary">That day the scattered multitudes began</h4>
+    <p>Night came on; the train passed on at full speed, in the midst of the roaring of the tigers, bears, and wolves which fled before the locomotive; and the marvels of Bengal, Golconda ruined Gour, Murshedabad, the ancient capital, Burdwan, Hugly, and the French town of Chandernagor, where Passepartout would have been proud to see his country's flag flying, were hidden from their view in the darkness.</p>
+  </div>{% endhighlight %}
+
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Action Link">Action Link</h4>
+  <p class="styleguide-notes">A minimally styled link with trailing arrow</p>
+
+  {% include component/typography/action-link.html body="Edit Account Settings" %}
+
+  {% highlight html %}
+  <a class="action-link" href="#" title="#">Edit Account Settings <i class="fa fa-chevron-right"></i></a>{% endhighlight %}
+
+</section>

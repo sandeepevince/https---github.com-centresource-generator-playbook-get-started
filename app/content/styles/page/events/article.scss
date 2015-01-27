@@ -1,0 +1,12 @@
+.blog-article {
+	.article-content {
+		@include clearfix();
+		position: relative;
+	}
+	.half-page {
+		@include span-columns(6 of 12);
+	}
+	.quarter-page {
+		@include span-columns(3 of 12);
+	}
+}

@@ -1,0 +1,9 @@
+<!-- QUOTE CAROUSEL -->
+<div class="owl-carousel quote quote-carousel">
+  {% for quote in page.quotes %}
+  <div class="item">
+    {% include component/typography/blockquote.html quote=quote.text author=quote.attribution %}
+  </div>
+  {% endfor %}
+</div>
+<!-- /QUOTE CAROUSEL -->

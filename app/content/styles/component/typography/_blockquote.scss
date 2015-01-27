@@ -1,0 +1,77 @@
+blockquote {
+  @include clearfix;
+  border: 0;
+  font-family: $serif;
+  padding: 0;
+
+  .quote-container {
+    margin: 0 auto;
+    padding: 1.5em 1em;
+    position: relative;
+
+    .quotation-mark {
+      @include position(absolute, 0 null null 0);
+      font-size: 12em;
+      line-height: 0.75;
+      opacity: .15;
+      z-index: 1;
+    }
+  }
+
+
+  .quote,
+  .author {
+    font-size: 1.25em;
+    font-style: italic;
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+blockquote.testimonial {
+  @include media($medium) {
+    .author-photo {
+      @include span-columns(4);
+    }
+
+    .quote-container {
+      @include span-columns(8);
+    }
+  }
+}
+
+//SIDEBAR QUOTE
+blockquote.side {
+  text-align: center;
+
+  @include media($medium) {
+    padding: 2em 0;
+  }
+
+  .avatar-container {
+    position: relative;
+
+    hr {
+      @include position(absolute, 50% null null 15%);
+      margin: 0 auto;
+      position: absolute;
+      width: 70%;
+
+    }
+
+    .avatar {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .quote-container {
+    max-width: 38rem;
+
+    .quote {
+      font-size: 1.75em;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+---
+layout: default
+title: Member Portal
+header_color: blue
+body_class: white-bg no-hero upcoming-event-checklist
+---
+
+<a class="action-link" href="../upcoming-events" title="#"><i class="fa fa-chevron-left"></i> Back to upcoming events</a>
+
+<section class="blurb-block">
+  <h2 class="headline-secondary">UPW Dallas Fall 2014</h2>
+  <h3 class="headline-tertiary">Checking in is as easy as 1, 2, 3</h3>
+  <p class="blurb-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+</section>
+
+<section class="upcoming-event-checklist">
+  <div class="container">
+    {% include component/layout/members-portal/upcoming-event-checklist-item.html icon="qol-graph" stepNumber="1" src="http://placecorgi.com/350/350" headline="Quality of Life Assesment" body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." value="Take Test" state="disabled" completion="completed"%}
+
+    {% include component/layout/members-portal/upcoming-event-checklist-item.html icon="printer" stepNumber="2" src="http://placecorgi.com/350/350" headline="Print out your badge" body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." value="Get my badge" %}
+
+    {% include component/layout/members-portal/upcoming-event-checklist-item.html icon="check-circle" stepNumber="3" src="http://placecorgi.com/350/350" headline="Review the survival guide" body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." value="Get the guide" %}
+  </div>
+</section>
+
+{% include component/media/full-width-promo.html name="Follow along at the event" body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." icon="fa-tablet" form="Enter your phone #" %}

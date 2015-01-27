@@ -1,0 +1,7 @@
+<!-- SMALL MEDIA CAROUSEL -->
+<div class="owl-carousel small-media small-media-carousel">
+  {% for item in page.small-media-items %}
+  <div class="item"><img src="{{ item.url }}" alt="{{ item.text }}"></div>
+  {% endfor %}
+</div>
+<!-- /SMALL MEDIA CAROUSEL -->

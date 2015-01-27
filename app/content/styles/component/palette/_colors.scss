@@ -1,0 +1,175 @@
+.color-passion {
+  background-color: $color-passion;
+}
+
+.color-positivity {
+  background-color: $color-positivity;
+}
+
+.color-life {
+  background-color: $color-life;
+}
+
+.color-leadership {
+  background-color: $color-leadership;
+}
+
+.color-power {
+  background-color: $color-power;
+}
+
+.color-success {
+  background-color: $color-success;
+}
+
+.color-humility {
+  background-color: $color-humility;
+}
+
+
+// BRAND SPECIFIC STYLES//
+
+// UPW
+.upw {
+  .color-gratitude {
+    background-color: $color-gratitude;
+  }
+
+  .color-transcendence {
+    background-color: $color-transcendence;
+  }
+
+  .color-energy {
+    background-color: $color-energy;
+  }
+
+  .gradient-passion {
+    @include linear-gradient($color-passion, $color-energy, $fallback: $color-passion);
+  }
+
+  .gradient-gratitude {
+    @include linear-gradient($color-gratitude, $color-transcendence, $fallback: $color-gratitude);
+  }
+
+  .gradient-transcendence {
+    @include linear-gradient($color-transcendence, $color-passion, $fallback: $color-transcendence);
+  }
+
+  .gradient-energy {
+    @include linear-gradient($color-transcendence, $color-energy, $fallback: $color-energy);
+  }
+
+  .nav-tabs .container ul .nav-tab-item {
+    &.active,
+    &:hover {
+      border-color: $action-upw;
+      a {
+        color: $gray-dark;
+      }
+    }
+  }
+}
+
+
+// DWD
+.dwd {
+  .color-vitality {
+    background-color: $color-vitality;
+  }
+
+  .color-wealth {
+    background-color: $color-wealth;
+  }
+
+  .gradient-positivity {
+    @include linear-gradient($color-vitality, $color-positivity, $fallback: $color-positivity);
+  }
+
+  .gradient-vitality {
+    @include linear-gradient($color-vitality, $color-wealth, $fallback: $color-vitality);
+  }
+
+  .gradient-wealth {
+    @include linear-gradient($color-life, $color-wealth, $fallback: $color-wealth);
+  }
+
+  .gradient-life {
+    @include linear-gradient($color-life, $color-positivity, $fallback: $color-life);
+  }
+
+  .nav-tabs .container ul .nav-tab-item {
+    &.active,
+    &:hover {
+      border-color: $action-dwd;
+      a {
+        color: $gray-dark;
+      }
+    }
+  }
+}
+
+
+// DWD LEADERSHIP
+.dwd-leadership {
+  .color-confidence {
+    background-color: $color-confidence;
+  }
+
+  .gradient-confidence {
+    @include linear-gradient($color-leadership, $color-confidence, $fallback: $color-confidence);
+  }
+
+  .gradient-leadership {
+    @include linear-gradient($color-leadership, $color-power, $fallback: $color-leadership);
+  }
+
+  .gradient-power {
+    @include linear-gradient($color-life, $color-power, $fallback: $color-power);
+  }
+
+  .gradient-life {
+    @include linear-gradient($color-life, $color-confidence, $fallback: $color-life);
+  }
+}
+
+
+// BM (Business Mastery)
+.bm {
+  .gradient-success {
+    @include linear-gradient($color-power, $color-success, $fallback: $color-power);
+  }
+
+  .nav-tabs .container ul .nav-tab-item {
+    &.active,
+    &:hover {
+      border-color: $action-bm;
+      a {
+        color: $gray-dark;
+      }
+    }
+  }
+}
+
+
+// BRCOACHING
+.brc-coaching {
+  .gradient-leadership {
+    @include linear-gradient($color-leadership, $color-success, $fallback: $color-leadership);
+  }
+
+  .gradient-positivity {
+    @include linear-gradient($color-positivity, $color-leadership, $fallback: $color-positivity);
+  }
+}
+
+
+// COACHING
+.coaching {
+  .gradient-leadership {
+    @include linear-gradient($color-leadership, $color-success, $fallback: $color-leadership);
+  }
+
+  .gradient-passion {
+    @include linear-gradient($color-passion, $color-leadership, $fallback: $color-passion);
+  }
+}

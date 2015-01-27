@@ -1,0 +1,23 @@
+<!-- GRID LIST ITEM - UTEST -->
+{% if include.title != null %}
+<li class="item test{% if include.class != null %} {{ include.class }}{% endif %}">
+  <div class="test-information">
+    <h4 class="headline-paragraph">{{ include.title }}</h4>
+    {% if include.description != null %}
+    <span class="description">{{ include.description }}</span>
+    {% endif %}
+  </div>
+
+  {% if include.class != "taken" %}
+  <div class="actionable-items">
+    {% include component/buttons/button.html value="Take Test" class="secondary" %}
+  </div>
+  {% else %}
+  <div class="actionable-items">
+    {% include component/buttons/button-icon.html value="See Results" destination=include.destination %}
+    <span class="completed"><i class="fa fa-check"></i>Completed</span>
+  </div>
+  {% endif %}
+</li>
+{% endif %}
+<!-- /GRID LIST ITEM - UTEST -->

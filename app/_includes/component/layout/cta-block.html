@@ -1,0 +1,15 @@
+<!-- CTA BLOCK-->
+<div class="cta-block{% if include.class != null %} {{ include.class }}{% endif %}">
+  <div class="cta-block-copy">
+    {% if include.headline-primary != null %}
+      <h2 class="cta-headline-primary">{{ include.headline-primary }}</h2>
+    {% endif %}
+    {% if include.description != null %}
+      <em class="cta-description">{{ include.description }}</em>
+    {% endif %}
+  </div>
+  <div class="cta-block-action">
+    <a class="large action-link cta-action-link" href="{{ include.link-url }}">{{ include.link-text }} <i class="fa fa-chevron-right"></i></a>
+  </div>
+</div>
+<!-- /CTA BLOCK -->

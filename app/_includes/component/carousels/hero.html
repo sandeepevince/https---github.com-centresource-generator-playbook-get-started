@@ -1,0 +1,17 @@
+<!-- HERO CAROUSEL -->
+<div class="owl-carousel hero-carousel">
+  {% for item in page.items %}
+    <div class="item">
+      <img src="{{ item.url }}" alt="{{ item.text }}">
+
+      {% if item.headline != null %}
+      <div class="hero-copy">
+        <h2 class="headline-primary">{{ item.headline }}</h2>
+        {% if item.secondary != null %}<p class="secondary-copy">{{ item.secondary }}</p>{% endif %}
+        {% include component/buttons/button.html class="secondary" value=include.value %}
+      </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+<!-- /HERO CAROUSEL -->

@@ -1,0 +1,30 @@
+<!-- HERO -->
+<div class="hero{% if include.class != null %} {{ include.class }}{% endif %} {% if include.src != null %}with-image{% endif %}"{% if include.src != null %} style="background-image: url('{{ include.src }}')"{% endif %}>
+  <div class="hero-headline">
+
+      {% if include.class == "secondary" %}
+        <h1 class="headline-secondary">{{ include.primary }}</h1>
+        {% if include.secondary != null %}<p>{{ include.secondary }}</p>{% endif %}
+        {% include component/buttons/button.html class="large" value=include.value %}
+
+      {% elsif include.class == "medium" %}
+        <h1 class="headline-primary">{{ include.primary }}</h1>
+        {% if include.secondary != null %}<h2 class="headline-secondary">{{ include.secondary }}</h2>{% endif %}
+        {% include component/buttons/button.html class="large" value=include.value %}
+
+      {% elsif include.class == "small" %}
+        <h1 class="headline-secondary">
+          {% if include.icon != null %}
+            <i class="fa {{ include.icon }}"></i>
+          {% endif %}
+          {{ include.primary }}
+        </h1>
+
+      {% else %}
+        <h1 class="headline-primary">{{ include.primary }}</h1>
+        {% if include.secondary != null %}<h2 class="headline-tertiary">{{ include.secondary }}</h2>{% endif %}
+        {% include component/buttons/button.html class="large" value=include.value %}
+      {% endif %}
+  </div>
+</div>
+<!-- /HERO -->

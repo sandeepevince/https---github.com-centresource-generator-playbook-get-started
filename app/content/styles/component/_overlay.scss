@@ -1,0 +1,49 @@
+body {
+  .overlay {
+    @include background-opacity($black, .95);
+    @include position(fixed, 0 0 0 0);
+    @include transition (opacity .35s ease-in-out);
+    opacity: 0;
+
+    &.active,
+    &.opt-in {
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .newsletter-options {
+      display: none;
+    }
+
+    &.opt-in {
+      .newsletter-options {
+        @include clearfix;
+        @include position(fixed, 0 0 0 0);
+        color: $white;
+        display: block;
+        opacity: 0;
+        padding-top: 6em;
+        text-align: center;
+        z-index: 1;
+
+        &.active {
+          @include position(fixed, 0 0 0 0);
+          opacity: 1;
+          z-index: 200;
+
+          header {
+            p {
+              margin: 0 auto 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.nav-active,
+  &.opt-in {
+    position: relative;
+    overflow: hidden;
+  }
+}

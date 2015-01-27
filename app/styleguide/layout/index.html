@@ -1,0 +1,221 @@
+---
+layout: styleguide
+title: Tony Robbins - Styleguide - Layout
+tabs:
+- url: \#foo
+  text: Foo
+- url: \#bar
+  text: Bar
+step_tabs:
+- url: \#foo
+  text: Step 1
+- url: \#bar
+  text: Step 2
+- url: \#bar
+  text: Step 3
+links:
+- url: http://facebook.com
+  text: Facebook
+- url: http://linkedin.com
+  text: LinkedIn
+sticky-scroll:
+- content: content/styleguide/layout/sticky-scroll-content.html
+---
+
+<h1>Layout</h1>
+{% include shared/nav-styleguide-secondary.html %}
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Tabs">Tabs</h3>
+  <p class="styleguide-notes">Creates inline tabs for navigation.</p>
+  {% include component/layout/tabs.html class="uppercase" %}
+
+  {% highlight html %}
+  <nav class="nav-tabs uppercase">
+    <ul>
+      <li class="nav-tab-item">
+        <a href="\#foo">Foo</a>
+      </li>
+      <li class="nav-tab-item">
+        <a href="\#bar">Bar</a>
+      </li>
+    </ul>
+  </nav>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Bold Tabs">Bold Tabs</h3>
+  <p class="styleguide-notes">Inline tabs with bolder style for navigation.</p>
+  {% include component/layout/bold-tabs.html class="uppercase" %}
+
+  {% highlight html %}
+  <nav class="bold-tabs uppercase">
+    <ul>
+      <li class="bold-tab-item">
+        <a href="\#foo">Foo</a>
+      </li>
+      <li class="nav-tab-item">
+        <a href="\#bar">Bar</a>
+      </li>
+    </ul>
+  </nav>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Step Tabs">Step Tabs</h3>
+  <p class="styleguide-notes">Step tabs typically used for checkout stages</p>
+  {% include component/layout/step-tabs.html %}
+
+  {% highlight html %}
+  <nav class="step-tabs ">
+    <ul>
+      <li class="step-tab-item active">
+        <a href="\#foo">Step 1</a>
+      </li>
+      <li class="step-tab-item">
+        <a href="\#bar">Step 2</a>
+      </li>
+      <li class="step-tab-item">
+        <a href="\#bar">Step 3</a>
+      </li>
+    </ul>
+  </nav>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Blurb Block">Blurb Block</h3>
+  <p class="styleguide-notes">Blurb Block with optional gray background (add 'with-bg' class), image and link</p>
+  {% include component/layout/blurb-block.html headline-secondary="Headline Secondary" headline-tertiary="Headline Tertiary" body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." link="Take the Test" src="http://placecorgi.com/450/450" %}
+
+  {% highlight html %}
+  <section class="blurb-block ">
+    <div class="blurb-info">
+      <h2 class="headline-secondary">Headline Secondary</h2>
+      <h3 class="headline-tertiary">Headline Tertiary</h3>
+      <p class="blurb-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+      <input class="btn btn secondary" type="submit" value="Take the Test">
+    </div><!--blurb-info-->
+    <img class="blurb-img" src="http://placecorgi.com/450/450">
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Event List Item">Event List Item</h3>
+  <p class="styleguide-notes">Standard Event List Item variation</p>
+  <ul class="event-list">
+    {% include component/layout/event-list.html group="lm" title="Leadership Mastery" date="Sept. 26" location="Dallas, TX" body="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." buttonValue="Check In" %}
+  </ul>
+
+  {% highlight html %}
+  <li class="item lm">
+    <span class="group lm">lm</span>
+    <h3 class="header-tertiary item-name">Leadership Mastery</h3>
+    <div class="date-container">Sept. 26</div>
+    <h4 class="headline-paragraph"><i class="fa fa-map-marker"></i>Dallas, TX</h4>
+    <p class="body-copy">Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+    <a class="action-link " href="#" title="#">Details <i class="fa fa-chevron-right"></i></a>
+  </li>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Grid List Item">Grid List Item</h3>
+  <p class="styleguide-notes">Standard Grid List Item variation</p>
+  <ul class="grid-list">
+    {% include component/layout/grid-list/grid-list-item.html class="full-width" group="upw" title="Unleash The Power Within" commitment="Diamond Premier in Dallas, TX" buttonValue="Check In" %}
+  </ul>
+
+  {% highlight html %}
+  <li class="item full-width group">
+    <span class="cube upw">upw</span>
+    <div class="item-information">
+      <h4 class="item-name">Unleash The Power Within</h4>
+      <p class="body-copy">Diamond Premier in Dallas, TX</p>
+    </div>
+    <div class="actionable-items">
+      <input class="btn secondary" type="submit" value="Check In">
+    </div>
+  </li>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Grid List Item - UTest">Grid List Item - UTest</h3>
+  <p class="styleguide-notes">Grid List Item used for testing</p>
+  <ul class="grid-list">
+    {% include component/layout/grid-list/grid-list-item-utest.html class="taken" title="Grid List Item Title" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr." %}
+  </ul>
+
+  {% highlight html %}
+  <li class="item test taken">
+    <div class="test-information">
+      <h4 class="headline-paragraph">Grid List Item Title</h4>
+      <span class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</span>
+    </div>
+    <div class="actionable-items">
+      <input class="btn secondary" type="submit" value="See Results">
+      <span class="completed"><i class="fa fa-check"></i>Completed</span>
+    </div>
+  </li>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Share Block">Share Block</h3>
+  <p class="styleguide-notes">Footer Block with optional title, links</p>
+    {% include component/layout/share-block.html headline-secondary="Share the Test &amp; Receive a Free Gift" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr." %}
+
+  {% highlight html %}
+  <section class="share-block ">
+    <h2 class="headline-secondary">Share the Test &amp; Receive a Free Gift</h2>
+    <em class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</em>
+    <div class="links">
+      <a class="btn large" href="http://facebook.com">Facebook</a>
+      <a class="btn large" href="http://linkedin.com">LinkedIn</a>
+    </div>
+  </section>{% endhighlight %}
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Sticky Scroll">Sticky Scroll</h3>
+  <p class="styleguide-notes">Create an element that scrolls with the page inside a container.</p>
+  {% include component/layout/sticky-scroll-container.html content="component/layout/sticky-scroll-content.html" sticky-scroll-content="component/layout/sticky-scroll-scrolling-content.html" %}
+
+  {% highlight html %}
+  <div class="sticky-scroll-container">
+    <div class="sticky-scroll-content">
+      Lorem ipsum dolor sit amet, prompta nusquam nam ad, cum ad stet invidunt, nec invidunt dissentiunt te. Solet dolo...
+    </div>
+    <div class="sticky-scroller-container">
+      <div class="sticky-scroll styleguide-sticky-scroll-example">
+        Scroll
+      </div>
+    </div>
+  </div>{% endhighlight %}
+
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Sticky Scroll 2">Sticky Scroll section 2</h3>
+  <p class="styleguide-notes">Create an element that scrolls with the page inside a container.</p>
+  {% include component/layout/sticky-scroll-container.html content="component/layout/sticky-scroll-content.html" sticky-scroll-content="component/layout/sticky-scroll-scrolling-content.html" %}
+</section>
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Test Questions">Test Questions</h3>
+  <p class="styleguide-notes">Basic format for questions in the ID tests. Includes ID, Question, Rating slider and controls to move forward, backward, or to replay the video.</p>
+
+  {% include component/layout/identity-tests/question.html questionID="one" question="How happy are you with the overall state of your relationships?" %}
+
+  {% highlight html %}
+  <form id="one" class="question-container">
+    <dl>
+      <dt class="question">How happy are you with the overall state of your relationships?</dt>
+      <dd class="range-container"><div id="category-rating" class="category-rating"></div></dd>
+    </dl>
+    <fieldset class="form-actions">
+      <input class="btn large secondary" type="submit" value="Next Question" />
+    </fieldset>
+
+    <div class="secondary-controls">
+      <a class="back" href="#"><i class="fa fa-angle-left"></i> Back To {Last Section}</a>
+      <a class="replay" href="#"><i class="fa fa-rotate-right"></i> Replay</a>
+    </div>
+  </form>{% endhighlight %}
+</section>

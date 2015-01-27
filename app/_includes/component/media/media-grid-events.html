@@ -1,0 +1,43 @@
+<section class="stories">
+  <header>
+    <h3 class="headline-secondary">Stories</h3>
+    {% include component/typography/action-link.html body="See All" %}
+  </header>
+  <div class="media-grid events">
+    <div class="column-half">
+      <div class="column-large">
+        {% include component/media/media-block.html id="large-one" src="http://placecorgi.com/500/500" class="large" headline="This is a sample headline and such" body="Some details about this headline" %}
+      </div>
+
+      <div class="column-small">
+        {% include component/media/media-block.html id="small-five" src="http://placecorgi.com/250/250" class="small" %}
+
+        {% include component/media/media-block.html id="small-six" src="http://placecorgi.com/250/250" class="small" %}
+
+        {% include component/media/media-block.html id="small-seven" src="http://placecorgi.com/250/250" class="small" %}
+      </div>
+    </div>
+
+    <div class="column-half">
+      <div class="column-half">
+        {% include component/media/media-block.html id="medium-one" src="http://placecorgi.com/425/425" class="medium" headline="This is a sample headline and such" body="Some details about this headline" %}
+
+        <div class="row">
+          {% include component/media/media-block.html id="small-eight" src="http://placecorgi.com/250/250" class="small" %}
+
+          {% include component/media/media-block.html id="small-nine" src="http://placecorgi.com/250/250" class="small" %}
+        </div>
+      </div>
+
+      <div class="column-half">
+          <div class="row">
+            {% include component/media/media-block.html id="small-eight" src="http://placecorgi.com/250/250" class="small" %}
+
+            {% include component/media/media-block.html id="small-nine" src="http://placecorgi.com/250/250" class="small" %}
+          </div>
+
+        {% include component/media/media-block.html id="medium-one" src="http://placecorgi.com/425/425" class="medium" headline="This is a sample headline and such" body="Some details about this headline" %}
+      </div>
+    </div>
+  </div>
+</section>

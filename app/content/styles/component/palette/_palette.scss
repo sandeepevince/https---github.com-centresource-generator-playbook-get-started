@@ -1,0 +1,17 @@
+.list-media-grid {
+  text-align: center;
+
+  .media {
+    .color-block {
+      @include square($base-value * 3);
+      border-radius: 50%;
+      margin: 0 auto 0.5em;
+    }
+
+    .gradient {
+      height: 4em;
+      margin-bottom: .5em;
+    }
+  }
+}
+

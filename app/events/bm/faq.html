@@ -1,0 +1,31 @@
+---
+layout: default
+title: Events
+body_class: hero-image events bm
+
+tabs:
+- url:
+  text: Overview
+- url: ../stories
+  text: Stories
+- url: ../steps
+  text: 4 Steps To Transformation
+- url: ../impact
+  text: Impact
+- url: ../accommodations
+  text: Accommodations
+- url: ../faq
+  text: FAQ
+---
+
+{% include component/media/hero-event.html src="/content/images/hero-sample.jpg" primary="Get Ready" fullName="Unleash The Power Within" initials="UPW" location="Zanzibar" dateLocation="10/24 - 10/28 | Boca Raton Resort" countdownClass="countdown-upw" value="Buy Tickets" destination="ticketing" %}
+
+{% include component/layout/tabs.html class="uppercase scroll" takeActionURL="../take-action" %}
+
+<section class="questions">
+  <div class='container'>
+    {% include component/media/accordion.html panelOneId="panelOne" headlineOne="This is my first item" bodyOne="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid" panelTwoId="panelTwo" headlineTwo="This is my second item" bodyTwo="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid" panelThreeId="panelThree" headlineThree="This is my third item" bodyThree="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid"%}
+  </div>
+</section>
+
+{% include component/media/full-width-promo.html src="/content/images/audiobook.jpg" name="Get Your Free Audiobook" body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." icon="fa-tablet" class="audiobook" %}

@@ -1,0 +1,8 @@
+{% if include.class != null %}
+<fieldset class="{{ include.class }}">{% else %}<fieldset>{% endif %}
+  {% if include.label != null %}<label for="{{ include.name }}">{{ include.label }}</label>{% endif %}
+  <select id="{{ include.name }}">
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select>
+</fieldset>

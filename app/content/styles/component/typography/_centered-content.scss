@@ -1,0 +1,42 @@
+.centered-content {
+  text-align: center;
+
+  @include media($small-only) {
+    padding: 0 1em;
+  }
+
+  p {
+    margin: 0 auto 1.5em;
+  }
+
+  &.event {
+    .headline-secondary {
+      color: $white;
+      font-size: .9em;
+      font-weight: normal;
+      line-height: 2em;
+      margin-bottom: 2em;
+      position: relative;
+
+      &:after {
+        background-color: $base-accent-color;
+        content: " ";
+        display: block;
+        height: 3px;
+        left: 50%;
+        margin-left: -12px;
+        position: absolute;
+        width: 24px;
+      }
+    }
+
+    p {
+      color: $gray-lighter;
+      font-family: $serif;
+    }
+
+    .headline-tertiary {
+      color: $white;
+    }
+  }
+}

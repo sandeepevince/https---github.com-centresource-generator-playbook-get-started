@@ -1,0 +1,9 @@
+<!-- PRODUCT CAROUSEL -->
+<div class="owl-carousel product-carousel">
+  {% for item in page.product-items %}
+  <div class="item">
+    {% include component/media/product-block.html src=item.url name=item.title price=item.price button=item.button-text %}
+  </div>
+  {% endfor %}
+</div>
+<!-- /PRODUCT CAROUSEL -->

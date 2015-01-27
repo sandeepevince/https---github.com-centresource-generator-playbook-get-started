@@ -1,0 +1,9 @@
+<!-- SECONDARY CAROUSEL -->
+<div class="owl-carousel secondary-carousel">
+  {% for item in page.secondary-items %}
+  <div class="item">
+    {% include component/typography/centered-content.html headline=item.title body=item.text button=item.button-text %}
+  </div>
+  {% endfor %}
+</div>
+<!-- /SECONDARY CAROUSEL -->

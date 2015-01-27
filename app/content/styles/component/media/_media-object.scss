@@ -1,0 +1,14 @@
+.media {
+  .media-object {
+    float: left;
+
+    img {
+      display: block;
+    }
+  }
+
+  .media-body {
+    padding-left: 1em;
+    overflow: hidden;
+  }
+}

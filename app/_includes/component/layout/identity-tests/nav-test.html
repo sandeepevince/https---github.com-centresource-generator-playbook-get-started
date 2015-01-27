@@ -1,0 +1,42 @@
+<nav class="nav-tabs uppercase nav-test">
+  <ul>
+    {% if include.categoryOneLink != null %}
+    <li class="nav-tab-item active">
+      <a href="\#{{ include.categoryOneLink }}">{{ include.categoryOne }}</a>
+    </li>
+    {% endif %}
+    {% if include.categoryTwoLink != null %}
+    <li class="nav-tab-item">
+      <a href="\#{{ include.categoryTwoLink }}">{{ include.categoryTwo }}</a>
+    </li>
+    {% endif %}
+    {% if include.categoryThreeLink != null %}
+    <li class="nav-tab-item">
+      <a href="\#{{ include.categoryThreeLink }}">{{ include.categoryThree }}</a>
+    </li>
+    {% endif %}
+    {% if include.categoryFourLink != null %}
+    <li class="nav-tab-item">
+      <a href="\#{{ include.categoryFourLink }}">{{ include.categoryFour }}</a>
+    </li>
+    {% endif %}
+    {% if include.categoryFiveLink != null %}
+    <li class="nav-tab-item">
+      <a href="\#{{ include.categoryFiveLink }}">{{ include.categoryFive }}</a>
+    </li>
+    {% endif %}
+    {% if include.categorySixLink != null %}
+    <li class="nav-tab-item">
+      <a href="\#{{ include.categorySixLink }}">{{ include.categorySix }}</a>
+    </li>
+    {% endif %}
+    {% if include.categorySevenLink != null %}
+    <li class="nav-tab-item">
+      <a href="\#{{ include.categorySevenLink }}">{{ include.categorySeven }}</a>
+    </li>
+    {% endif %}
+    <li class="nav-tab-item">
+      <a href="\#results">Results</a>
+    </li>
+  </ul>
+</nav>

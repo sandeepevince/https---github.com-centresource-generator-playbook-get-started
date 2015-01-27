@@ -1,0 +1,24 @@
+.gallery-carousel {
+  max-width: 555px;
+}
+
+.sync-primary {
+  img {
+    max-width: 550px;
+    width: 100%;
+  }
+}
+
+.sync-secondary {
+  .owl-item {
+    opacity: .6;
+  }
+
+  .synced {
+    opacity: 1;
+  }
+
+  img {
+    cursor: pointer;
+  }
+}

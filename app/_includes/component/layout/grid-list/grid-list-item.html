@@ -1,0 +1,47 @@
+<!-- GRID LIST ITEM -->
+{% if include.title != null %}
+<li class="item{% if include.class != null %} {{ include.class }}{%endif%}{% if include.group != null %} group{% endif %}">
+  {% if include.month and include.day %}
+  <div class="date-container">
+    <div class="date">
+      <span class="month">{{ include.month }}</span>
+      <span class="day">{{ include.day }}</span>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if include.group != null %}
+  <span class="cube {{ include.group }}">{{ include.group }}</span>
+  {% endif %}
+
+  <div class="item-information{% if include.month and include.day %} event{% endif %}">
+    <h4 class="item-name">{{ include.title }}</h4>
+    <p class="body-copy">{{ include.commitment }}</p>
+  </div>
+
+  {% if include.group != null %}
+  <div class="actionable-items">
+    {% include component/buttons/button-icon.html class="secondary" value="Learn More" destination=include.destination %}
+  </div>
+
+
+  {% elsif include.title == "Unleash The Power Within" %}
+  <div class="actionable-items">
+    {% include component/buttons/button-icon.html class="secondary" value="Check In" destination="../upcoming-event-checklist" %}
+  </div>
+
+  {% else %}
+  <div class="actionable-items phone">
+  <p class="call-now">Call <a href="tel://1-{{ include.phone }}">+1 {{ include.phone }}</a> <span>to enroll now</span></p>
+  </div>
+  {% endif %}
+
+  {% if include.class == "editable" %}
+  <div class="controls">
+    <a href="#" class="control"><i class="fa fa-pencil"></i></a>
+    <a href="#" class="control"><i class="fa fa-times"></i></a>
+  </div>
+  {% endif %}
+</li>
+{% endif %}
+<!-- /GRID LIST ITEM -->

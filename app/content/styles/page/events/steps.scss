@@ -1,0 +1,21 @@
+.steps {
+
+  .nav-tabs {
+    margin-bottom: 0;
+  }
+
+  .image-content.copy-right {
+
+    .media-object {
+      @include media($medium) {
+        @include span-columns(6);
+      }
+    }
+
+    .copy {
+      @include media($medium) {
+        @include span-columns(6);
+      }
+    }
+  }
+}

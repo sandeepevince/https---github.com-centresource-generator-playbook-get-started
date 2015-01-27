@@ -1,0 +1,87 @@
+.full-width-video {
+  background: $black;
+  min-height: 440px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  .video-block {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.video-active {
+    .indentity-test-questions {
+      display: none !important;
+      z-index: 0;
+    }
+  }
+
+  &.video-inactive {
+    .indentity-test-questions {
+      @include span-columns(12 of 12);
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 90px;
+      z-index: 3;
+      width: 100%;
+
+      @include media($medium) {
+        bottom: 0;
+        height: 33%;
+        margin: auto;
+        top: 0;
+      }
+    }
+
+    .cover-blur {
+      @include background-opacity($black, .9);
+      @include position(absolute, 0 0 0 0);
+      @include transition (all .35s ease-in-out);
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .video-block {
+      filter:blur(.25em);
+      -o-filter:blur(.25em);
+      -ms-filter:blur(.25em);
+      -moz-filter:blur(.25em);
+      -webkit-filter:blur(.25em);
+    }
+
+    .cover-blur {
+      opacity: 1;
+    }
+
+    .question-container {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+}
+
+
+.test-progress {
+  .progress-bar.id-test {
+    &.progress-bar {
+      @include linear-gradient(left, $base-accent-color, $pink 50%, $fallback: $base-accent-color);
+      height: .5em;
+
+      .progress-indicator {
+        @include transition (all .45s ease-in-out);
+        background: lighten($gray-dark, 7%);
+      }
+
+      .progress-label {
+        display: none;
+      }
+    }
+  }
+
+  .nav-tabs {
+    border-bottom: 0;
+  }
+}

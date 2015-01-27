@@ -1,0 +1,66 @@
+.cards-footer {
+  margin: 1em 0;
+  text-align: right;
+}
+
+//CREDIT CARD GRID ITEM LAYOUT
+.grid-list {
+  .item.credit-card {
+    position: relative;
+    padding: 1em .5em;
+
+    @include media($medium) {
+      padding: 1em;
+    }
+
+    .card-avatar {
+      text-align: center;
+
+      @include media($small-only) {
+        @include position(absolute, 0 null null 0);
+      }
+
+      @include media($medium) {
+        @include span-columns(2);
+        position: relative;
+      }
+
+      .primary-card {
+        color: $base-accent-color;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .fa {
+        display: none;
+        font-size: 3.5em;
+        margin: 0;
+
+        @include media($medium) {
+          display: block;
+        }
+      }
+    }
+
+    .card-information, .billing-address {
+      @include span-columns(6 of 12);
+      padding: 1.5em 0 0;
+
+      @include media($medium) {
+        @include span-columns(5);
+        padding: 0 1em;
+      }
+
+      p {
+        font-size: .75em;
+        margin-bottom: 0;
+      }
+    }
+
+    .billing-address {
+      @include omega;
+    }
+  }
+}
+
+

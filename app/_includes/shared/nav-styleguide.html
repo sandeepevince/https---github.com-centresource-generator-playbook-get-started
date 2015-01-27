@@ -1,0 +1,17 @@
+<div class="styleguide-sidebar">
+  <a href="/styleguide" class="styleguide-logo">Tony Robbins</a>
+  <nav id="nav-styleguide" class="nav-styleguide">
+    <ul>
+      {% for link in site.styleguide_navigation %}
+        {% assign current = nil %}
+        {% if page.url == link.url or page.layout == link.layout %}
+          {% assign current = 'current' %}
+        {% endif %}
+
+        <li class="{{ current }}">
+          <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

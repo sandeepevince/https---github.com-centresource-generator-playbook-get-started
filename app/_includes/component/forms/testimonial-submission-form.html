@@ -1,0 +1,11 @@
+<!-- TESTIMONIAL SUBMISSION FORM -->
+<form class="testimonial-submission{% if include.class != null %} {{include.class}}{% endif %}">
+  {% include component/forms/fieldset-textarea.html name="testimonial" placeholder="Leave Testimonial Here" %}
+
+  {% include component/forms/fieldset-form-action.html value="Submit Testimonial" classTwo="secondary" valueTwo="View Recap" %}
+
+  {% if include.class == "inline" %}
+    {% include component/buttons/action-link.html body="Cancel Submission" %}
+  {% endif %}
+</form>
+<!-- /TESTIMONIAL SUBMISSION FORM -->

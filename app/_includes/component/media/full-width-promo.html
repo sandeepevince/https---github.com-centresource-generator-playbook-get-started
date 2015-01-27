@@ -1,0 +1,34 @@
+<!-- RECOMMENDED -->
+<section class="full-width-promo{% if include.icon != null %} with-icon{% endif %}{% if include.src != null %} with-bg{% endif %}{% if include.form != null %} with-form{% endif %}{% if include.class == 'audiobook' %} audiobook{% endif %}" {% if include.src != null %}style="background:url({{ include.src }}) no-repeat scroll 0 0;background-size:cover;"{% endif %}>
+  <div class="container">
+    {% if include.icon != null %}
+      <i class="fa {{ include.icon }}"></i>
+    {% endif %}
+    <div class="ad-info">
+      <h2 class="headline-secondary product-name">{{ include.name }}</h2>
+      {% if include.body != null %}
+        <em>{{ include.body }}</em>
+      {% endif %}
+    </div>
+      {% if include.class == 'audiobook' %}
+        <form class="action-items">
+          <div class="textfields">
+            <input type="text" value="" placeholder="Enter Your Email Address">
+            <input type="text" value="" placeholder="Full Name">
+            <input type="text" value="" placeholder="Phone Number">
+          </div>
+          {% include component/buttons/button.html class="primary" value="Submit" %}
+        </form>
+      {% elsif include.form %}
+        <form class="action-items">
+          <input type="text" value="" placeholder="{{ include.form }}">
+          {% include component/buttons/button.html class="primary" value="Download the App" %}
+        </form>
+      {% else %}
+        <div class="action-items">
+          {% include component/buttons/button-icon.html class="primary" value="Call Now" destination="tel://1-888-888-8888" %}
+        </div>
+      {% endif %}
+  </div>
+</section>
+<!-- /RECOMMENDED -->

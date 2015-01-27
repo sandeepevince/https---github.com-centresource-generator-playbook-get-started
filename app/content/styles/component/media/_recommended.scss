@@ -1,0 +1,23 @@
+.recommended {
+  background-color:$gray-lighter;
+  border-bottom: 5px solid $gray-light;
+  overflow: hidden;
+  padding: 4% 2% 0;
+
+  .headline-secondary, .product, .btn {
+    float: left;
+  }
+  .headline-secondary {
+    font-size: 1.7em;
+    font-weight: normal;
+    line-height: 1.3em;
+    margin-top: 2em;
+    width: 54%;
+  }
+  .product {
+    margin-right: 4%;
+    width: 38%;
+  }
+}
+
+

@@ -1,0 +1,76 @@
+---
+layout: default
+title: Library
+body_class: hero-image library
+items:
+- url: http://placecorgi.com/1080/540
+  text: Foo
+  headline: Product Name
+  secondary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- url: http://placecorgi.com/1080/540
+  text: Bar
+  headline: Product Name
+  secondary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+tabs:
+- url: /library
+  text: All
+- url: /library
+  text: Personal Achievement
+- url: /library
+  text: Relationships
+- url: /library
+  text: Health &amp; Fitness
+- url: /library
+  text: Time &amp; Life Management
+- url: /library
+  text: Career &amp; Money
+
+cart:
+- name: Product Name
+  price: 34.50
+- name: Product Name
+  price: 109.50
+- name: Product Name
+  price: Free
+---
+
+{% include component/carousels/hero.html headline="Product Name" value="Buy Now" %}
+
+{% include component/layout/tabs.html class="uppercase scroll"  %}
+
+<div class="container sticky-scroll-container">
+  <section class="content-main sticky-scroll-content">
+    <article class="product-type">
+      <header class="header-product container">
+        <h3 class="headline-tertiary">Best Sellers</h3>
+        {% include component/typography/action-link.html body="View All" %}
+      </header>
+      <div class="container">
+        {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" price="$737" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+
+        {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" price="$238" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+
+        {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" price="$125" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+      </div>
+    </article>
+
+    <article class="product-type">
+      <header class="header-product container">
+        <h3 class="headline-tertiary">Top Free Resources</h3>
+        {% include component/typography/action-link.html body="View All" %}
+      </header>
+      <div class="container">
+        {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." price="Free" %}
+
+        {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" price="125" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." price="Free" %}
+
+        {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." price="Free" %}
+      </div>
+    </article>
+  </section>
+
+  <aside class="content-aside sticky-scroller-container">
+    {% include component/typography/blockquote.html class="full-photo sticky-scroll" src="http://img.estaticos-atleticodemadrid.com/system/foto_listados/2316/thumb_300x400/02_moya.png?1409589659" quote="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed labore et dolore magna aliqua enim ad minim veniam." author="Oprah Winfrey" group="DWD 2012" %}
+  </aside>
+</div>

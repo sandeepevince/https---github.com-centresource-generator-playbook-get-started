@@ -1,0 +1,15 @@
+@mixin small-border($color: $blue-lighter) {
+  font-size: .9em;
+  font-weight: normal;
+  line-height: 2em;
+  margin-bottom: 1em;
+  position: relative;
+
+  &:after {
+    background-color: $color;
+    content: " ";
+    display: block;
+    height: 3px;
+    width: 24px;
+  }
+}

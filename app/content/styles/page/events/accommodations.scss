@@ -1,0 +1,30 @@
+.accommodations {
+  .content-primary {
+    section {
+
+      &.full-width-promo {
+        margin: 0;
+      }
+    }
+  }
+
+  .nav-tabs {
+    margin-bottom: 0;
+  }
+
+  .centered-content {
+    .headline-tertiary {
+      font-family: "function_pro_bookbold";
+    }
+  }
+}
+
+.about-the-city {
+  background-color: $gray-lightest;
+}
+
+.hotels, .food-dining {
+  .wrapper {
+    @include outer-container;
+  }
+}

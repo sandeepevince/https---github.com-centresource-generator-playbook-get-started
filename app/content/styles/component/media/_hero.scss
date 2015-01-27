@@ -1,0 +1,202 @@
+.hero {
+  @include clearfix;
+  background-size: cover;
+  background-position: center;
+  padding: 7em 0;
+
+  @include media($medium) {
+    padding: 8em 0;
+  }
+
+  @include media($large) {
+    padding: 11em 0;
+  }
+
+  .hero-headline {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+    max-width: em(860);
+    text-align: center;
+  }
+
+  .hero-headline-primary {
+    font-size: em(72);
+    margin-bottom: .25em;
+  }
+
+  .headline-tertiary {
+    font-size: em(22);
+    font-family: 'function_prodemi';
+    letter-spacing: 3px;
+  }
+
+  &.with-image {
+    color: white;
+  }
+
+  // SECONDARY HERO STYLES
+  &.secondary {
+    padding: 7em 0 3.5em;
+
+    @include media($medium) {
+      padding: 8em 0 4em;
+    }
+
+    .hero-headline-primary {
+      font-size: em(56);
+      margin-bottom: .25em;
+    }
+
+    .hero-headline-secondary {
+      font-size: em(16);
+    }
+
+    p {
+      margin: 0 auto;
+    }
+  }
+
+  // MEDIUM HERO STYLES
+  &.medium {
+    margin-bottom: 2em;
+
+    .headline-primary {
+      font-size: em(70);
+      font-weight: normal;
+      margin-bottom: .25em;
+    }
+
+    .headline-secondary {
+      font: em(30) $header-font-family-light;
+      font-weight: normal;
+    }
+  }
+
+  // SMALL HERO STYLES
+  &.small {
+    padding: 7em 0 3.5em;
+
+    @include media($medium) {
+      padding: 8em 0 7em;
+    }
+
+    .headline-secondary {
+      font-size: em(60);
+      margin-bottom: .25em;
+    }
+
+    .fa {
+      display: block;
+    }
+  }
+
+  // SEARCH HERO STYLES
+  &.blog {
+    padding: 4.5em 1em;
+
+    .hero-headline {
+      margin: 0 auto;
+      max-width: em(660);
+
+      .search {
+        @include media($medium) {
+          margin: 0 auto;
+          width: 85%;
+        }
+      }
+    }
+  }
+
+  // BLOG HERO STYLES
+  &.blog-article {
+    position: relative;
+
+    &:after {
+      @include linear-gradient(transparent, #fff);
+      bottom: 0em;
+      content: " ";
+      display: block;
+      height: 35%;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  // RESULTS HERO STYLES
+  &.results {
+    background-position: center top;
+
+    .headline-primary {
+      font-size: em(50);
+      font-weight: normal;
+      margin-bottom: .25em;
+    }
+
+    .headline-tertiary {
+      font: em(22) $header-font-family-light;
+      font-family: $serif;
+      font-style: italic;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+  }
+
+  &.hero-home {
+    background: $black url("/content/images/hero-home.jpg") no-repeat;
+    background-size: cover;
+    height: calc(100% - 75px);
+    padding: 15em 0 0;
+    position: relative;
+
+    .hero-headline {
+      max-width: none;
+    }
+
+    .headline-primary {
+      font-size: em(100);
+      opacity: .5;
+
+      @include media($large) {
+        font-size: em(160);
+      }
+
+      @include media($x-large) {
+        font-size: em(200);
+      }
+    }
+    
+    .headline-tertiary {
+      font-size: em(24);
+      font-weight: normal;
+      letter-spacing: .25em;
+
+      @include media($medium) {
+        letter-spacing: .5em;
+      }
+    }
+
+    .action-link {
+      @include link-variant(#fafffa, $white);
+      bottom: 1em;
+      position: absolute;
+      margin-left: calc(50% - 50px);
+
+      .fa {
+        font-size: 2em;
+        margin: 0;
+      }
+    }
+  }
+  
+  .play-link {
+    @include link-variant($white);
+    font-size: 3em;
+    display: block;
+  }
+}
+
+.hero-home-container {
+  background-color: $white;
+  height: 100%;
+}

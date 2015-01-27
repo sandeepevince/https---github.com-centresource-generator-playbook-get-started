@@ -1,0 +1,236 @@
+.nav-primary {
+  @include clearfix;
+  @include position(fixed, 0 0 0 0);
+  @include transition (opacity .35s ease-in-out);
+  opacity: 0;
+  padding-top: 6em;
+  z-index: 1;
+
+  &.active {
+    @include position(fixed, 0 0 0 0);
+    opacity: 1;
+    z-index: 100;
+  }
+
+  .primary-container {
+    @include span-columns(5);
+    margin-top: 1.5em;
+    padding: 0 1em;
+
+    @include media($small-only) {
+      max-width: 175px;
+    }
+
+    @include media($medium) {
+      @include span-columns(3);
+      max-width: auto;
+    }
+
+    @include media($large) {
+      @include span-columns(2);
+      padding-right: 0;
+    }
+  }
+
+  .primary-container {
+    .primary-options {
+      .nav-item {
+        color: $white;
+        display: block;
+        margin: 0 0 2em;
+
+        @include media($large) {
+          padding-left: .75em;
+        }
+
+        &:hover {
+          color: $base-accent-color;
+        }
+
+        &.nav-secondary-toggle {
+          border-bottom: 1px dotted $gray;
+          font-family: $sans-serif;
+          font-size: .75em;
+          font-weight: 700;
+          margin-bottom: 3em;
+          padding-bottom: 2em;
+          text-transform: uppercase;
+
+          .fa.large {
+            color: $base-accent-color;
+            font-size: 2.5em;
+            margin-right: .25em;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    .personal-options {
+      .nav-item {
+        &.pill {
+          border: 2px solid $gray;
+          border-radius: 2em;
+          color: $gray;
+          display: block;
+          font-size: .75em;
+          max-width: 135px;
+          margin: 0 auto 1.5em;
+          text-align: center;
+          text-transform: uppercase;
+          padding: .5em 0;
+
+          &:hover {
+            background: $base-accent-color;
+            border-color: $base-accent-color;
+            color: $white;
+          }
+
+          .fa {
+            @include media($medium) {
+              margin-right: .5em;
+            }
+
+            @include media($large) {
+              margin-right: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    .social {
+      @include clearfix;
+      font-size: .75em;
+      margin: 0 auto;
+      max-width: 85px;
+
+      @include media($medium) {
+        font-size: 1em;
+        max-width: 120px;
+      }
+
+      .nav-item {
+        margin: 0 .25em;
+        @include span-columns(4);
+        border: 2px solid $gray;
+        border-radius: 50%;
+        color: $gray;
+        padding: .25em;
+        text-align: center;
+        height: 24px;
+        width: 24px;
+
+        &:hover {
+          background: $base-accent-color;
+          border-color: $base-accent-color;
+          color: $white;
+        }
+
+        @include media($medium) {
+          height: 32px;
+          margin: 0 .25em;
+          width: 32px;
+        }
+      }
+    }
+  }
+
+
+  .secondary-options {
+    @include span-columns(7);
+    @include transition (opacity .35s ease-in-out);
+    border-left: 1px solid $base-border-color;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 1.5em 0 0;
+    opacity: 0;
+    padding: 0 1em 2.5em;
+
+    @include media($medium) {
+      @include span-columns(9);
+    }
+
+    @include media($large) {
+      @include span-columns(10);
+      padding-left: 2.5em;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+
+  .secondary-options {
+    .headline {
+      color: $white;
+      font-size: 1em;
+      max-width: 13rem;
+
+      .bar {
+        border-bottom: 3px solid $base-accent-color;
+        margin: .35em 0;
+        width: 13%;
+      }
+    }
+
+    .nav-category {
+      @include clearfix;
+      padding: 1em 0;
+
+      @include media($medium) {
+        max-width: em(720);
+      }
+
+      .nav-item {
+        color: $white;
+        display: inline-block;
+        font-size: .8em;
+        line-height: 1;
+        margin-bottom: 2.5em;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: top;
+
+        &:hover {
+          color: $gray;
+
+          .fa {
+            border-color: $gray;
+          }
+        }
+
+        @include media($small-only) {
+          @include span-columns(6);
+          @include omega(2n);
+        }
+
+        @include media($medium) {
+          @include span-columns(3);
+          @include omega(4n);
+        }
+
+        @include media($large) {
+          @include omega-reset(4n);
+          @include span-columns(2);
+          @include omega(6n);
+        }
+
+        .fa {
+          border: 1px solid $white;
+          display: block;
+          font-size: 2.5em;
+          margin: 0 auto.25em;
+          max-width: 55px;
+          padding: .25em;
+
+          @include media($medium) {
+            max-width: 60px;
+          }
+        }
+      }
+    }
+  }
+}

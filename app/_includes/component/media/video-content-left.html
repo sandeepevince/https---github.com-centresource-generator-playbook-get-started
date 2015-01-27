@@ -1,0 +1,15 @@
+<!-- VIDEO CONTENT - LEFT -->
+<div class="video-content">
+  <div class="copy">
+    <h3 class="headline">{{ include.headline }}</h3>
+    <p>{{ include.body }}</p>
+    {% if include.link != null %}
+      {% include component/typography/action-link.html body=include.link %}
+    {% endif %}
+  </div>
+
+  <div class="video-wrap">
+    {% include component/media/responsive-video.html source="/content/images/sample-video" %}
+  </div>
+</div>
+<!-- /VIDEO CONTENT - LEFT -->

@@ -1,0 +1,54 @@
+.post-event {
+  .full-width-ad {
+    margin-bottom: 3.2em;
+    margin-top: 0;
+
+    .container {
+
+      @include media($medium) {
+        padding: 0;
+      }
+    }
+  }
+
+  .secondary-carousel {
+    background: $gray-lightest;
+    padding: 40px 0 25px;
+  }
+
+  .nav-tabs {
+    @include media($medium) {
+      margin-bottom: 0;
+    }
+
+    @include media($small-only) {
+      border-bottom: none;
+    }
+  }
+
+  .image-content,
+  .video-content {
+    @include outer-container();
+    padding-bottom: 3.2em;
+
+    .copy {
+      @include media($small-only) {
+        margin-top: 1em;
+        padding: 1em;
+        text-align: center;
+      }
+    }
+  }
+
+  .image-content {
+    @include media($medium) {
+      margin-top: 3.2em;
+    }
+  }
+
+  .video-content {
+    @include media($medium) {
+      border-bottom: 1px solid $gray-lighter;
+    }
+  }
+}

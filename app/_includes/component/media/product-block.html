@@ -1,0 +1,13 @@
+<!-- PRODUCT BLOCK -->
+<div class="product-block">
+  <a href="#" title="{{ include.name }}"><img class="product" src="{{ include.src }}"></a>
+  <div class="media-body">
+    <h4 class="headline-paragraph product-name">{{ include.name }}</h4>
+    <p class="body-copy">{{ include.description }}</p>
+    <footer class="footer-product">
+      <p class="price">{{ include.price }}</p>
+      {% include component/typography/action-link.html body="Add to Cart" %}
+    </footer>
+  </div>
+</div>
+<!-- /PRODUCT BLOCK -->

@@ -1,0 +1,39 @@
+.blog {
+  .hero.medium {
+    padding: 9em 0 6em 0;
+    margin-bottom: 0;
+
+    .headline-primary {
+      margin-bottom: 0.1em;
+    }
+  }
+
+  .btn-icon {
+    background-color: $blue-light;
+
+    &:hover {
+      background-color: darken($blue-light, 5);
+
+      .icon-audiobook {
+        background-color: darken($blue-light, 12);
+      }
+    }
+  }
+
+  .icon-audiobook {
+    background-color: darken($blue-light, 7);
+    background-position: center;
+    background-size: auto 22px;
+    height: 100%;
+    left: -50px;
+    position: absolute;
+    top: 0;
+    width: 50px;
+  }
+
+  .share-block .btn.large{
+    @extend .btn.secondary;
+  }
+}
+
+

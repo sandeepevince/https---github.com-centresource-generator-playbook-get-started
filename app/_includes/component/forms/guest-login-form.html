@@ -1,0 +1,20 @@
+<!-- GUEST LOGIN FORM -->
+<div class="guest-login-form">
+  <div class="row">
+    {% include component/forms/fieldset-select.html class="greeting" name="greeting" label="Greeting" %}
+
+    <div class="fieldset-wrap">
+      {% include component/forms/fieldset-text.html class="half" name="first-name" label="First Name" type="text" placeholder="First Name" help="<p class='help'>Please enter your first name.</p>" %}
+
+      {% include component/forms/fieldset-text.html class="half" name="last-name" label="Last Name" type="text" placeholder="Last Name" help="<p class='help'>Please enter your last name.</p>" %}
+    </div>
+  </div>
+  <div class="fieldset-wrap">
+    {% include component/forms/fieldset-text.html class="half" name="email" label="Email" type="email" placeholder="Email" help="<p class='help'>Please enter your email address.</p>" %}
+
+    {% include component/forms/fieldset-text.html class="half" name="phone-number" label="Phone Number" type="text" placeholder="Phone Number" help="<p class='help'>Please enter your phone number.</p>" %}
+  </div>
+
+  {% include component/forms/fieldset-form-action.html value="Login" %}
+</div>
+<!-- /GUEST LOGIN FORM -->

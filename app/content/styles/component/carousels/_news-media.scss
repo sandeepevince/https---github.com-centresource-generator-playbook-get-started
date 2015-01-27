@@ -1,0 +1,59 @@
+//NEWS MEDIA CAROUSEL
+.news-media-carousel {
+  background: $gray-lighter;
+
+  .owl-wrapper-outer {
+    border: 0;
+
+    .owl-item {
+      .item {
+        .source-logo {
+          float: left;
+          margin: 0 1em 0 0;
+          max-width: 75px;
+
+          @include media($small-only) {
+            left: 50%;
+            margin-left: -50px;
+            max-width: 100px;
+            opacity: .15;
+            position: absolute;
+            z-index: 1;
+          }
+        }
+
+        .update {
+          color: $gray;
+          margin: 0;
+          max-width: 100%;
+
+          @include media($small-only) {
+            padding: 1em 0;
+            position: relative;
+            z-index: 2;
+          }
+
+          @include media($medium) {
+            font-size: .9em;
+            padding: 2em 0 0;
+          }
+
+          strong {
+            color: $base-accent-color;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+.news-media-carousel.owl-theme {
+  .owl-controls {
+    .owl-buttons {
+      div {
+        color: $base-accent-color;
+      }
+    }
+  }
+}

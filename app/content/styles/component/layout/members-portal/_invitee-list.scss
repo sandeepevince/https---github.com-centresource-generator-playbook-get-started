@@ -1,0 +1,89 @@
+.invitee-list {
+  @include clearfix;
+
+  .invitee {
+    border-bottom: 3px solid shade($base-border-color, 10%);
+    margin-bottom: 2em;
+
+    @include media($medium) {
+      @include span-columns(4);
+      @include omega(3n);
+      font-size: .9em;
+    }
+
+    .fa {
+      @include position(absolute, 7px 8px null null);
+      color: $gray;
+    }
+
+    .information {
+      @include row(table);
+      border: 1px solid $base-border-color;
+      position: relative;
+      text-align: center;
+
+      @include media($small-only) {
+        text-align: left;
+      }
+
+      @include media($large) {
+        text-align: left;
+      }
+
+      .media-object {
+        margin-bottom: .5em;
+        width: 100%;
+
+        @include media($small-only) {
+          @include span-columns(2.5 of 12);
+          float: left;
+          margin: 0 1em 0 0;
+        }
+
+        @include media($large) {
+          @include span-columns(3);
+          float: left;
+          margin: 0 .5em 0 0;
+        }
+      }
+
+      .headline-paragraph {
+        @include media($small-only) {
+          margin: .5em 1em 0 0;
+        }
+
+        @include media($large) {
+          margin: .65em 0 0;
+        }
+      }
+
+      .body-copy {
+        font-style: italic;
+        margin-bottom: .5em;
+
+        @include media($small-only) {
+          margin-bottom: 0;
+        }
+
+        @include media($large) {
+          margin-bottom: 0;
+        }
+      }
+    }
+    @include reset-display;
+
+    .credit-detail {
+      background: $base-border-color;
+      color: $gray;
+      padding: .25em .75em;
+      position: relative;
+
+      .details {
+        font-size: .75em;
+        font-weight: 700;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

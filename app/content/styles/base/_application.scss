@@ -1,0 +1,261 @@
+/* Application Template
+ * -----------------------------------------------------------------------------
+ * Styling for the structure of the site. If your element doesn't show up on
+ * every page, it probably shouldn't be in this file.
+ * -----------------------------------------------------------------------------*/
+
+/* Things to place in separate files...
+ * ---------------------------------------------------------------------------
+ * /extends/            => Sass extends declarations
+ * /mixins/             => Sass mixins declarations
+ * _buttons.scss
+ * _fonts.scss          => Font imports
+ * _forms.scss
+ * _lists.scss
+ * _library.scss        => Custom classes used throughout the app.
+ * _tables.scss
+ * _typography.scss
+ * _utilities.scss
+ * _variables.scss
+ * _component_name.scss => Styles for a component of functionality (e.g. – modal).
+ * _page_name.scss      => Styles for page specific elements.
+ * ---------------------------------------------------------------------------
+ */
+
+body, html {
+  height: 100%;
+}
+
+.container {
+  @include outer-container;
+  padding: 0 1em;
+}
+
+// BASE HEADER STYLES
+.header-primary {
+  @include position(fixed, 0 0 null 0);
+  @include clearfix;
+  background: none;
+  padding: .75em 0;
+  z-index: 200;
+  text-align: center;
+
+  .fa {
+    font-size: 1.75em;
+  }
+
+  .controls {
+    @include background-opacity($white, .15);
+    @include clearfix;
+    border: none;
+    float: left;
+
+    .nav-toggle {
+      @include background-opacity($white, .35);
+      color: $white;
+      display: table;
+      float: left;
+      padding: 0.87em 0;
+      width: 55px;
+
+      @include media($medium) {
+        width: 65px;
+      }
+
+      @include media($large) {
+        width: 70px;
+      }
+    }
+  }
+}
+
+.header-primary {
+  .controls {
+    display: table;
+
+    .logo {
+      color: transparent;
+      display: inline-block;
+      float: left;
+      padding: .7em 0 0;
+
+      h1 {
+        background: url("/content/images/logo.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        border-right: 1px solid $white;
+        font-size: 10px;
+        padding: 1em 1.25em;
+        margin: 0;
+      }
+    }
+
+    .breadcrumb {
+      color: $white;
+      display: none;
+      font-size: .8em;
+      font-weight: 700;
+      line-height: 1;
+      padding: .5em 1.25em;
+      text-transform: uppercase;
+      vertical-align: middle;
+
+      @include media($medium) {
+        display: table-cell;
+      }
+    }
+  }
+
+  &.blue-header {
+    .controls {
+      @include background-opacity($base-accent-color, .9);
+      border-bottom: 3px solid $blue-light;
+    }
+
+    .member {
+      border: 2px solid $base-accent-color;
+
+      .member-toggle {
+        color: $base-accent-color;
+      }
+    }
+  }
+}
+
+
+.header-primary {
+  .member {
+    border: 2px solid $white;
+    border-radius: 50%;
+    float: right;
+    height: 48px;
+    margin: .5em 1em;
+    opacity: .75;
+    overflow: hidden;
+    position: relative;
+    width: 48px;
+
+    @include media($medium) {
+      height: 54px;
+      margin: 0 1em;
+      width: 54px;
+    }
+
+    @include media($large) {
+      height: 58px;
+      width: 58px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    .member-toggle {
+      color: $white;
+      display: block;
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      font-size: 25px;
+      margin-left: -17px;
+
+
+      @include media($medium) {
+        font-size: 28px;
+        margin-left: -19px;
+      }
+
+      @include media($large) {
+        font-size: 32px;
+        margin-left: -22px;
+      }
+    }
+  }
+}
+
+//MAIN CONTENT WELL
+.content-primary {
+  @include clearfix;
+  background: $white;
+  position: relative;
+  z-index: 2;
+
+  section {
+    padding: 2em 0;
+
+    @include media($medium) {
+      padding: 3em 0;
+    }
+
+    &.full-width-promo {
+      padding: 2em 1em;
+
+      @include media($medium) {
+        padding: 1.5em 0;
+      }
+    }
+
+    &.member-information {
+      @include media($medium) {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.content-primary.no-hero {
+  padding-top: 7.5em;
+}
+
+
+//4 - 8 GRID LAYOUT
+.content-primary {
+  .content-aside {
+    margin-bottom: 1em;
+
+    @include media($large) {
+      @include span-columns(4);
+    }
+  }
+
+  .content-main {
+    @include media($large) {
+      @include span-columns(8);
+    }
+  }
+}
+
+
+.footer-primary {
+  @include clearfix;
+  background: $black;
+  color: $white;
+  padding: 1em;
+
+  .logo {
+    @include hide-text;
+    background: url("/content/images/logo.svg") no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 32px;
+    margin: 0 auto .25em;
+    overflow: hidden;
+    width: 92px;
+
+    @include media($medium) {
+      float: left;
+      margin-bottom: 0;
+
+    }
+  }
+
+  .copyright {
+    font-size: .75em;
+    margin: .25em auto 0;
+    text-align: center;
+
+    @include media($medium) {
+      float: right;
+    }
+  }
+}

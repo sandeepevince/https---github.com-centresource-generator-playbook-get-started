@@ -1,0 +1,60 @@
+.events {
+  .upcoming-events {
+    .headline-secondary {
+      @include small-border();
+    }
+  }
+
+  .about-the-event {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3em 0;
+    text-align: center;
+
+    .headline-tertiary {
+      margin-bottom: 1em;
+    }
+  }
+
+  // Ticketing Page Only
+  &.ticketing {
+
+     .nav-tabs {
+      text-align: left;
+     }
+
+    .commitment-level {
+      padding-top:0;
+    }
+  }
+
+  // Take Action
+  section.take-action {
+    @include span-columns(9);
+    @include shift(1.5);
+
+    .headline-primary {
+      font-size: 1.6em;
+      margin: .5em 0 1em;
+      text-align: center;
+    }
+
+    p {
+      max-width: none;
+    }
+  }
+
+  &.upw {
+    @include event($action-upw, url("/content/images/background-event-upw.jpg"), $header-font-family-light);
+  }
+
+  &.bm {
+    @include event($action-bm, url("/content/images/background-event-upw.jpg"), $header-font-family-light);
+  }
+
+  &.dwd {
+    @include event($action-dwd, url("/content/images/background-event-upw.jpg"), $header-font-family-light);
+  }
+}
+

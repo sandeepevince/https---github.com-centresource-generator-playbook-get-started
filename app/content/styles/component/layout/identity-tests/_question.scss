@@ -1,0 +1,42 @@
+.question-container {
+  padding: 0 1em;
+  text-align: center;
+
+  .slider-container {
+    @include background-opacity($white, .1);
+    color: $white;
+    margin: 0 0 3em;
+    padding: 3em 3em 4em;
+
+    .question {
+      font-family: $serif;
+      font-size: 1.25em;
+      font-style: italic;
+      margin: 0 0 1.5em;
+
+      @include media($large) {
+        font-size: 1.25em;
+      }
+    }
+  }
+
+  .secondary-controls {
+    font-size: .8em;
+
+    a {
+      color: $white;
+
+      .fa {
+        color: $base-accent-color;
+      }
+
+      &.back {
+        margin-right: .5em;
+      }
+
+      &.replay {
+        margin-left: .5em;
+      }
+    }
+  }
+}

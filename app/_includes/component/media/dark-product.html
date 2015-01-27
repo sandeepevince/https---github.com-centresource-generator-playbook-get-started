@@ -1,0 +1,11 @@
+<!-- DARK PRODUCT -->
+<div class="dark-product">
+  <img class="product" src="{{ include.src }}">
+  <div class="product-info">
+    <h3 class="headline-tertiary product-name">{{ include.name }}</h3>
+    <p class="product-description">{{ include.description }}</p>
+    <p class="price">${{ include.price }}</p>
+    {% include component/typography/action-link.html body="Add to Cart" %}
+  </div>
+</div>
+<!-- /DARK PRODUCT -->

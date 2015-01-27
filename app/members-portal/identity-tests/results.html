@@ -1,0 +1,40 @@
+---
+layout: default
+title: Identity Tests
+header_color: blue
+body_class: white-bg test-results
+links:
+- url: http://facebook.com
+  text: Facebook
+- url: http://linkedin.com
+  text: LinkedIn
+chart:
+- label: Current Analysis
+  data: 65, 59, 90, 81, 56, 55, 40
+  color: 244, 232, 244, 0.7
+- label: Growth Goal
+  data: 28, 48, 40, 19, 96, 27, 100
+  color: 153, 205, 245, 0.7
+- label: Points of Potentional
+  data: 78, 100, 20, 50, 16, 47, 80
+  color: 121, 300, 155, 0.7
+---
+{% include component/media/hero.html class="results with-image" primary="Quality of Life" secondary="Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo." src="/content/images/hero-sample.jpg" %}
+
+<!-- navigation here -->
+
+<section class="test-results">
+  <div class="container">
+    {% include component/media/radar-chart.html labels='"Physical Body", "Emotions &amp; Meaning", "Relationships", "Time", "Work/Career/Mission", "Finances", "Celebrate &amp; Continue"' %}
+
+    <aside class="content-aside analysis-results">
+      {% include component/layout/blurb-block.html class="with-bg" headline-secondary="Strongest Area in Life" headline-tertiary="Personal Finances" body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." %}
+      {% include component/layout/blurb-block.html class="with-bg" headline-secondary="Key Improvement Area" headline-tertiary="Relationships" body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." %}
+      {% include component/media/recommended.html src="/content/images/recommended-sample.png" name="Recommended Product Goes Here" %}
+    </aside>
+  </div>
+</section>
+
+{% include component/layout/share-block.html headline-secondary="Share the Test &amp; Receive a Free Gift" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr." %}
+
+{% include component/layout/cta-block.html headline-primary="My Career Assessment" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. " link-url="#" link-text="Take the Next Test" %}

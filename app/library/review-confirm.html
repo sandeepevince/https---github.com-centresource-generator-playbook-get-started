@@ -1,0 +1,95 @@
+---
+layout: default
+title: Review &amp; Confirm
+header_color: blue
+body_class: white-bg no-hero checkout-form-page review-confirm
+step_tabs:
+- url: /library/checkout-form
+  text: Step 1
+- url: /library/review-confirm
+  text: Step 2
+  class: active
+- url: /library/thank-you
+  text: Step 3
+cart:
+- name: Product Title
+  price: 298.50
+---
+
+<div class="container">
+  <h1>Review &amp; Confirm</h1>
+  {% include component/layout/step-tabs.html %}
+
+  <section class="review-confirm-main">
+    <div class="cart">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <th>Items</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <tr class="contents">
+            <td>{% include component/media/media-object.html src="http://placecorgi.com/64/64" body="Chillwave single-origin coffee Schlitz, butcher fanny pack scenester banh mi American" %}</td>
+            <td>{% include component/forms/fieldset-text.html class="quantity" name="quantity" type="textfield" value="1" %}</td>
+            <td>Tier 2</td>
+          </tr>
+          <tr>
+            <td>{% include component/media/media-object.html src="http://placecorgi.com/64/64" body="Chillwave single-origin coffee Schlitz, butcher fanny pack scenester banh mi American" %}</td>
+            <td>{% include component/forms/fieldset-text.html class="quantity" name="quantity" type="textfield" value="1" %}</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>{% include component/media/media-object.html src="http://placecorgi.com/64/64" body="Chillwave single-origin coffee Schlitz, butcher fanny pack scenester banh mi American" %}</td>
+            <td>{% include component/forms/fieldset-text.html class="quantity" name="quantity" type="textfield" value="1" %}</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      {% include component/typography/action-link.html body="Continue Shopping" class="prev" %}
+    </div><!--cart-->
+    <div class="shipping-review">
+      <div class="left half">
+        <h3 class="headline-tertiary">Shipping To:</h3>
+        <p>Fingerstache skateboard next level Portland 8-bit pop-up.</p>
+      </div>
+      <div class="half">
+        <h3 class="headline-tertiary">Billing To:</h3>
+        <p>Fingerstache skateboard next level Portland 8-bit pop-up.</p>
+      </div>
+    </div>
+    <div class="payment-review">
+      <div class="left half">
+        <h3 class="headline-tertiary">Paying With:</h3>
+        <p>Fingerstache skateboard next level Portland 8-bit pop-up.</p>
+      </div>
+      <div class="half">
+        <h3 class="headline-tertiary">Shipping Via:</h3>
+        <p>Fingerstache skateboard next level Portland 8-bit pop-up.</p>
+      </div>
+    </div>
+    <div class="order-info">
+      <p>Order and tracking information will be sent to <strong>you@blankwebsite.com</strong></p>
+    </div>
+    <div class="comment-confirm">
+      {% include component/forms/fieldset-textarea.html name="textarea" label="Additional Comments:" %}
+      {% include component/buttons/button.html value="Complete Purchase" %}
+    </div>
+  </section>
+  <aside class="review-confirm-aside">
+    {% include component/shopping-cart/summary.html title="Shopping Cart" %}
+    <div class="credit-cards">
+      <i class="fa fa-cc-visa"></i>
+      <i class="fa fa-cc-mastercard"></i>
+      <i class="fa fa-cc-discover"></i>
+      <i class="fa fa-cc-amex"></i>
+    </div>
+    <div class="faq">
+      <h3 class="headline-tertiary">FAQ</h3>
+      <p>Truffaut tattooed pop-up 3 wolf moon Shoreditch. Tattooed freegan jean shorts</p>
+      <p>Truffaut tattooed pop-up 3 wolf moon Shoreditch. Tattooed freegan jean shorts</p>
+      <p>Truffaut tattooed pop-up 3 wolf moon Shoreditch. Tattooed freegan jean shorts</p>
+      <p>Truffaut tattooed pop-up 3 wolf moon Shoreditch. Tattooed freegan jean shorts</p>
+    </div>
+  </aside>
+</div>

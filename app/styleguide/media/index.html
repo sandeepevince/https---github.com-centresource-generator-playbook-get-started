@@ -1,0 +1,394 @@
+---
+layout: styleguide
+title: Tony Robbins - Styleguide - Media
+chart:
+- label: Current Analysis
+  data: 65, 59, 90, 81, 56, 55, 40
+  color: 244, 232, 244, 0.7
+- label: Growth Goal
+  data: 28, 48, 40, 19, 96, 27, 100
+  color: 153, 205, 245, 0.7
+- label: Points of Potentional
+  data: 78, 100, 20, 50, 16, 47, 80
+  color: 121, 300, 155, 0.7
+---
+<h1>Media Elements</h1>
+{% include shared/nav-styleguide-secondary.html %}
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Hero">Hero</h4>
+  <p class="styleguide-notes">With/without image, primary, secondary or small sizing. Small can include icon.</p>
+  {% include component/media/hero.html class="small" primary="Quality of Life" secondary="This Headline is independent of product branding" src="/content/images/hero-sample.jpg" icon="fa-pie-chart" %}
+
+  {% highlight html %}
+  <div class="hero small with-image" style="background-image: url('/content/images/hero-sample.jpg')">
+    <div class="hero-headline">
+      <h1 class="headline-secondary"><i class="fa fa-pie-chart"></i>Quality of Life</h1>
+    </div>
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Media Object">Media Object</h4>
+  <p class="styleguide-notes">The media object block features a left-aligned image alongside textual content.</p>
+  {% include component/media/media-object.html src="http://placecorgi.com/64/64" body="<p>Echo Park cornhole small batch seitan brunch Tumblr. Next level church-key scenester locavore plaid. Try-hard fixie Helvetica selfies, Truffaut fap Blue Bottle skateboard squid ugh Banksy umami flannel slow-carb.</p> <p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid, Etsy hoodie before they sold out put a bird on it seitan Cosby sweater Pitchfork sustainable four loko VHS art party.</p>" %}
+
+  {% highlight html %}
+  <section class="media">
+    <img class="media-object" src="http://placecorgi.com/64/64">
+    <div class="media-body">
+      <p>Echo Park cornhole small batch seitan brunch Tumblr. Next level church-key scenester locavore plaid. Truffaut fap Blue Bottle skateboard squid ugh Banksy umami flannel slow-carb.</p> <p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid, Etsy hoodie before they sold out put a bird on it seitan Cosby sweater Pitchfork sustainable four loko VHS art party.</p>
+    </div>
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Media Block Small">Media Block - Small</h4>
+  <p class="styleguide-notes">The media block (small) is a grid object that features an image above textual content. Optional items include price and rating.<em>For best performance put all of your grid objects into their own container</em></p>
+  <div class="container">
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Hotel Name" price="129" rating="3" ratingsymbol="&#9734" description=".1 miles from conference" %}
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Hotel Name" price="149" rating="4" ratingsymbol="&#9734" description=".3 miles from conference" %}
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Hotel Name" price="135" rating="4" ratingsymbol="&#9734" description=".5 miles from conference" %}
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Hotel Name" price="99" rating="2" ratingsymbol="&#9734" description=".8 miles from conference" %}
+  </div>
+
+  {% highlight html %}
+  <div class="container">
+    <!-- MEDIA BLOCK (SMALL) -->
+    <div class="media-block-small">
+      <div class="media-image">
+        <img class="media" src="http://placecorgi.com/464/464">
+        <span class="price">$129</span>
+      </div>
+      <div class="media-info">
+        <h3 class="headline-paragraph media-name">Hotel Name</h3>
+          <ul class="rating rate-3">
+            <li class="rate1"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate2"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate3"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate4"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate5"><span>☆</span><span class="rate">☆</span></li>
+          </ul>
+          <p class="description">.1 miles from conference</p>
+      </div>
+    </div>
+    <!-- /MEDIA BLOCK (SMALL) -->
+    <!-- MEDIA BLOCK (SMALL) -->
+    <div class="media-block-small">
+      <div class="media-image">
+        <img class="media" src="http://placecorgi.com/464/464">
+        <span class="price">$149</span>
+      </div>
+      <div class="media-info">
+        <h3 class="headline-paragraph media-name">Hotel Name</h3>
+          <ul class="rating rate-4">
+            <li class="rate1"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate2"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate3"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate4"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate5"><span>☆</span><span class="rate">☆</span></li>
+          </ul>
+          <p class="description">.3 miles from conference</p>
+      </div>
+    </div>
+    <!-- /MEDIA BLOCK (SMALL) -->
+    <!-- MEDIA BLOCK (SMALL) -->
+    <div class="media-block-small">
+      <div class="media-image">
+        <img class="media" src="http://placecorgi.com/464/464">
+        <span class="price">$135</span>
+      </div>
+      <div class="media-info">
+        <h3 class="headline-paragraph media-name">Hotel Name</h3>
+          <ul class="rating rate-4">
+            <li class="rate1"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate2"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate3"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate4"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate5"><span>☆</span><span class="rate">☆</span></li>
+          </ul>
+          <p class="description">.5 miles from conference</p>
+      </div>
+    </div>
+    <!-- /MEDIA BLOCK (SMALL) -->
+    <!-- MEDIA BLOCK (SMALL) -->
+    <div class="media-block-small">
+      <div class="media-image">
+        <img class="media" src="http://placecorgi.com/464/464">
+        <span class="price">$99</span>
+      </div>
+      <div class="media-info">
+        <h3 class="headline-paragraph media-name">Hotel Name</h3>
+          <ul class="rating rate-2">
+            <li class="rate1"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate2"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate3"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate4"><span>☆</span><span class="rate">☆</span></li>
+            <li class="rate5"><span>☆</span><span class="rate">☆</span></li>
+          </ul>
+          <p class="description">.8 miles from conference</p>
+      </div>
+    </div>
+    <!-- /MEDIA BLOCK (SMALL) -->
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Product Block">Product Block</h4>
+  <p class="styleguide-notes">The product block is a grid object that features a product image above textual content. <em>For best performance put all of your grid objects into their own container</em></p>
+  <div class="container">
+    {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" price="$125" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+
+    {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" price="$125" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+
+    {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" price="$125" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+
+    {% include component/media/product-block.html src="http://placecorgi.com/390/390" name="Product Name" price="$125" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." %}
+  </div>
+
+  {% highlight html %}
+  <section class="media">
+    <div class="container">
+
+      <!-- PRODUCT BLOCK -->
+      <div class="product-block">
+        <a href="#" title="Product Name"><img class="product" src="http://placecorgi.com/390/390"></a>
+        <div class="media-body">
+          <h4 class="headline-paragraph product-name">Product Name</h4>
+          <p class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <footer class="footer-product">
+            <p class="price">$737</p>
+            <a class="action-link " href="" title="#">Add to Cart <i class="fa fa-chevron-right"></i></a>
+          </footer>
+        </div>
+      </div>
+      <!-- /PRODUCT BLOCK -->
+
+      <!-- PRODUCT BLOCK -->
+      <div class="product-block">
+        <a href="#" title="Product Name"><img class="product" src="http://placecorgi.com/390/390"></a>
+        <div class="media-body">
+          <h4 class="headline-paragraph product-name">Product Name</h4>
+          <p class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <footer class="footer-product">
+            <p class="price">$97</p>
+            <a class="action-link " href="" title="#">Add to Cart <i class="fa fa-chevron-right"></i></a>
+          </footer>
+        </div>
+      </div>
+      <!-- /PRODUCT BLOCK -->
+
+      <!-- PRODUCT BLOCK -->
+      <div class="product-block">
+        <a href="#" title="Product Name"><img class="product" src="http://placecorgi.com/390/390"></a>
+        <div class="media-body">
+          <h4 class="headline-paragraph product-name">Product Name</h4>
+          <p class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <footer class="footer-product">
+            <p class="price">$37</p>
+            <a class="action-link " href="" title="#">Add to Cart <i class="fa fa-chevron-right"></i></a>
+          </footer>
+        </div>
+      </div>
+      <!-- /PRODUCT BLOCK -->
+
+      <!-- PRODUCT BLOCK -->
+      <div class="product-block">
+        <a href="#" title="Product Name"><img class="product" src="http://placecorgi.com/390/390"></a>
+        <div class="media-body">
+          <h4 class="headline-paragraph product-name">Product Name</h4>
+          <p class="body-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <footer class="footer-product">
+            <p class="price">$137</p>
+            <a class="action-link " href="" title="#">Add to Cart <i class="fa fa-chevron-right"></i></a>
+          </footer>
+        </div>
+      </div>
+      <!-- /PRODUCT BLOCK -->
+    </div>
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Recommended">Recommended</h4>
+  <p class="styleguide-notes">The recommended block provides an image, header secondary text and a link</p>
+  <div class="container">
+    {% include component/media/recommended.html src="http://placecorgi.com/464/464" name="Recommended Product Goes Here" %}
+  </div>
+
+  {% highlight html %}
+  <section class="recommended">
+    <img class="product" src="http://placecorgi.com/464/464">
+    <h2 class="headline-secondary product-name">Recommended Product Goes Here</h2>
+    <input class="btn secondary" type="submit" value="Call Now">
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Full Width Ad">Full Width Ad</h4>
+  <p class="styleguide-notes">Full Width Ad with option for background image, icon. To add a single textfield form, enter form="[textfield placeholder]" as a variable. To use the audiobook version, just add class="audiobook".</p>
+  <div class="container">
+    {% include component/media/full-width-promo.html src="/content/images/audiobook.jpg" name="Get Your Free Audiobook" body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." icon="fa-tablet" class="audiobook" %}
+  </div>
+
+  {% highlight html %}
+  <section class="full-width-ad with-icon with-bg" style="background:url(/content/images/full-width-ad.jpg) no-repeat scroll 0 0;">
+    <i class="fa fa-database"></i>
+    <div class="ad-info">
+      <h2 class="headline-secondary product-name">Purchase an Event Bundle and Save</h2>
+      <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</em>
+    </div>
+    <input class="btn secondary" type="submit" value="Call Now">
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+<h4 class="styleguide-section-title" data-section-name="Responsive Video">Responsive Video</h4>
+  <p class="styleguide-notes">This is a responsive video object.</p>
+  {% include component/media/responsive-video.html source="/content/images/sample-video" %}
+
+  {% highlight html %}
+  <div class="video-block">
+    <video class="video-js vjs-sublime-skin" width="100%" height="100%" controls preload="auto" data-setup='{}'>
+      <source src="/content/images/sample-video.mp4" type='video/mp4'>
+      <source src="/content/images/sample-video.webm" type='video/webm'>
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser
+        that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
+  </div>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Image Content Left">Image with content on the left</h4>
+  <p class="styleguide-notes">An image with a headline and body copy to the left.</p>
+  {% include component/media/image-content.html class="copy-left" src="http://placecorgi.com/464/264" headline="This is my headline" body="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid" %}
+
+  {% highlight html %}
+  <section class="media">
+    <div class="image-content left">
+      <div class="copy">
+        <h3 class="headline">This is my headline</h3>
+        <p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid</p>
+      </div>
+      <img class="media-object" src="http://placecorgi.com/464/264">
+    </div>
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Image Content Right">Image with  content on the right</h4>
+  <p class="styleguide-notes">An image with a headline and body copy to the right.</p>
+  {% include component/media/image-content.html class="copy-right" src="http://placecorgi.com/464/264" headline="This is my headline" body="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid" %}
+
+  {% highlight html %}
+  <section class="media">
+    <div class="image-content right">
+      <img class="media-object" src="http://placecorgi.com/464/264">
+      <div class="copy">
+        <h3 class="headline">This is my headline</h3>
+        <p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid</p>
+      </div>
+    </div>
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Video Content Left">Video with content on the left</h4>
+  <p class="styleguide-notes">A responsive video with a headline and body copy to the left.</p>
+  {% include component/media/video-content-left.html iframe="<iframe src='//player.vimeo.com/video/104009964?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' width='500' height='281' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>" headline="This is my headline" body="<p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid</p>" %}
+
+  {% highlight html %}
+  <section class="media">
+    <div class="video-content">
+      <div class="copy">
+        <h3 class="headline">This is my headline</h3>
+        <p><p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid</p></p>
+      </div>
+
+      <div class="video-wrap">
+        <div class="video-block">
+          <video class="video-js vjs-sublime-skin" width="100%" height="100%" controls preload="auto" data-setup='{}'>
+            <source src="/content/images/sample-video.mp4" type='video/mp4'>
+            <source src="/content/images/sample-video.webm" type='video/webm'>
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a web browser
+              that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Video Content Right">Video with content on the right</h4>
+  <p class="styleguide-notes">A responsive video with a headline and body copy to the right.</p>
+  {% include component/media/video-content-right.html iframe="<iframe src='//player.vimeo.com/video/104009964?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' width='500' height='281' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>" headline="This is my headline" body="<p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid</p>" %}
+
+  {% highlight html %}
+  <section class="media">
+    <div class="video-content">
+      <div class="video-wrap">
+        <div class="video-block">
+          <video class="video-js vjs-sublime-skin" width="100%" height="100%" controls preload="auto" data-setup='{}'>
+            <source src="/content/images/sample-video.mp4" type='video/mp4'>
+            <source src="/content/images/sample-video.webm" type='video/webm'>
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a web browser
+              that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+          </video>
+        </div>
+      </div>
+
+      <div class="copy">
+        <h3 class="headline">This is my headline</h3>
+        <p>Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid</p>
+      </div>
+    </div>
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Accordion">Accordion</h4>
+  <p class="styleguide-notes">Collapsable element mainly used for FAQ's or related products</p>
+  {% include component/media/accordion.html panelOneId="panelOne" headlineOne="This is my first item" bodyOne="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid" panelTwoId="panelTwo" headlineTwo="This is my second item" bodyTwo="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid" panelThreeId="panelThree" headlineThree="This is my third item" bodyThree="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid"%}
+
+  {% highlight html %}
+  {% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Radar Chart">Radar Chart</h4>
+  <p class="styleguide-notes">Radar Chart with the ability to pass in the label, data and color for each set by data attributes.</p>
+  {% include component/media/radar-chart.html labels='"Physical Body", "Emotions &amp; Meaning", "Relationships", "Time", "Work/Career/Mission", "Finances", "Celebrate &amp; Continue"' %}
+
+  {% highlight html %}
+  <section class="graph" data-labels="['Physical Body', 'Emotions &amp; Meaning', 'Relationships', 'Time';, 'Work/Career/Mission', 'Finances', 'Celebrate &amp; Continue']">
+    <canvas id="result-chart" width="989" height="989" style="width: 989px; height: 989px;"></canvas>
+    <div class="graph-labels">
+        <h2 class="headline-secondary" data-graph="[65, 59, 90, 81, 56, 55, 40]" data-rgba="244, 232, 244, 0.7"><span style="background-color: rgba(244, 232, 244, 0.701961);"></span>Current Analysis</h2>
+        <h2 class="headline-secondary" data-graph="[28, 48, 40, 19, 96, 27, 100]" data-rgba="153, 205, 245, 0.7"><span style="background-color: rgba(153, 205, 245, 0.701961);"></span>Growth Goal</h2>
+        <h2 class="headline-secondary" data-graph="[78, 100, 20, 50, 16, 47, 80]" data-rgba="121, 300, 155, 0.7"><span style="background-color: rgba(121, 255, 155, 0.701961);"></span>Points of Potentional</h2>
+    </div>
+  </section>{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Media Grid Events">Media Grid Events</h4>
+  <p class="styleguide-notes">Media image grid, used for events sections</p>
+  {% include component/media/media-grid-events.html %}
+
+  {% highlight html %}{% endhighlight %}
+</section>
+
+<section class="styleguide-section">
+  <h4 class="styleguide-section-title" data-section-name="Media Grid Events - 4">Media Grid Events - 4</h4>
+  <p class="styleguide-notes">Media image grid variant with only 4 sections</p>
+  {% include component/media/media-grid-events-large.html %}
+
+  {% highlight html %}{% endhighlight %}
+</section>

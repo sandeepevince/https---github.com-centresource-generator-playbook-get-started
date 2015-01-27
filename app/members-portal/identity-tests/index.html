@@ -1,0 +1,22 @@
+---
+layout: default
+title: Identity Tests
+header_color: blue
+body_class: white-bg
+---
+<div class="login-forms">
+  <section class="login-container member-login">
+  <h1 class="title uppercase">I'm an H/E Member</h1>
+    {% include component/forms/fieldset-text.html name="username" type="text" placeholder="Username" help="<p class='help'>Please enter your username.</p>" %}
+
+    {% include component/forms/fieldset-text.html name="password" type="password" placeholder="Password" help="<p class='help'>Please enter your password.</p>" %}
+
+    {% include component/forms/fieldset-form-action.html class="secondary" value="Login" %}
+    <p class="non-member">Not a member? <a class="non-member-toggle" href="#">Enroll Now</a></p>
+  </section>
+
+  <section class="login-container guest-login">
+    <h1 class="title uppercase">I'm a Guest</h1>
+    {% include component/forms/guest-login-form.html %}
+  </section>
+</div>

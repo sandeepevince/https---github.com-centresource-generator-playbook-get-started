@@ -1,0 +1,40 @@
+.member-info {
+  background: $gray-light;
+  border-bottom: 5px solid shade($gray-light, 5%);
+  margin-bottom: 1em;
+
+  @include media($medium-below) {
+    max-width: 550px;
+    margin: 0 auto 1em;
+  }
+
+  img {
+    display: block;
+    min-width: 100%;
+  }
+
+}
+
+.member-details {
+  color: #82817F;
+  padding: 2% 5%;
+
+  .headline-tertiary {
+    color: $gray-dark;
+    line-height: 2em;
+  }
+
+  .headline-paragraph {
+    font: normal 1em $sans-serif;
+  }
+
+}
+
+.member-detail {
+  margin-bottom: 2em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}

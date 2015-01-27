@@ -1,0 +1,52 @@
+---
+layout: default
+title: Events
+body_class: events upw ticketing
+
+tabs:
+- url:
+  text: Overview
+- url: stories
+  text: Stories
+- url: steps
+  text: 4 Steps To Transformation
+- url: impact
+  text: Impact
+- url: accommodations
+  text: Accommodations
+- url: faq
+  text: FAQ
+- url: ticketing
+  text: Ticketing
+
+chart:
+- label: Current Analysis
+  data: 65, 59, 90, 81, 56, 55, 40
+  color: 244, 232, 244, 0.7
+- label: Growth Goal
+  data: 28, 48, 40, 19, 96, 27, 100
+  color: 153, 205, 245, 0.7
+- label: Points of Potentional
+  data: 78, 100, 20, 50, 16, 47, 80
+  color: 121, 300, 155, 0.7
+---
+
+{% include component/media/hero-event.html src="/content/images/hero-sample.jpg" primary="Get Ready" fullName="Unleash The Power Within" initials="UPW" location="Zanzibar" dateLocation="10/24 - 10/28 | Boca Raton Resort" countdownClass="countdown-upw" %}
+
+{% include component/layout/tabs.html class="uppercase scroll" takeActionURL="take-action" %}
+
+<section class="guarantee centered-content">
+  <h3 class="headline-secondary">Our Guarantee</h3>
+  <p class="body-copy">
+    Night came on; the train passed on at full speed, in the midst of the roaring of the tigers, bears, and wolves which fled before the locomotive; and the marvels of Bengal, Golconda ruined Gour, Murshedabad, the ancient capital, Burdwan, Hugly, and the French town of Chandernagor, where Passepartout would have been proud to see his country's flag flying, were hidden from their view in the darkness.
+  </p>
+</section>
+
+
+{% include component/carousels/commitment-level.html %}
+
+<section class="ticket-prices">
+  <div class="container">
+    {% include component/tables/ticket-comparisons.html %}
+  </div>
+</section>

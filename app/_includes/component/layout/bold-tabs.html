@@ -1,0 +1,11 @@
+<!-- TABULAR NAV -->
+<nav class="bold-tabs {{ include.class }}">
+  <ul>
+    {% for tab in page.tabs %}
+      <li class="bold-tab-item">
+        <a href="{{ tab.url }}">{{ tab.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+<!-- /TABULAR NAV -->

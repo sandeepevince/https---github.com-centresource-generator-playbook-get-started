@@ -1,0 +1,38 @@
+//MEDIA GRID BLOG
+.media-grid-large.events {
+  @include outer-container;
+
+  .media-block {
+    margin-bottom: 1em;
+  }
+
+  .column-small {
+    @include media($medium-alt) {
+      @include span-columns(4.5);
+    }
+  }
+
+  .three-across {
+    @include outer-container;
+
+    .media-block {
+      @include span-columns(3.8);
+      margin-right: 4.8%;
+    }
+  }
+
+  .two-across {
+    @include span-columns(7.9);
+    margin-right: 4.8%;
+  }
+
+  .one-across {
+    @include span-columns(3.8);
+  }
+
+  .column-large {
+    @include media($medium-alt) {
+      @include span-columns(7.5);
+    }
+  }
+}

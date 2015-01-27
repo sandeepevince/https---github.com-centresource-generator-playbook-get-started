@@ -1,0 +1,24 @@
+<!-- RECOMMENDED ARTICLE -->
+<div class="article">
+  <a class="related-resource" href="{{ include.destination }}">
+    <img class="media-object" src="{{ include.src }}">
+    {% if include.headline != null %}<figcaption class="media-body">
+      <div class="body">
+        {% if include.category != null %}
+        <div class="category">
+          {{ include.category }}
+          <div class="bar"></div>
+        </div>{% endif %}
+        <h4 class="headline-paragraph">{{ include.headline }}</h4>
+        <p class="body-copy">{{ include.body }}</p>
+      </div>
+      <footer class="footer-article">
+        <p>
+          <span class="price">FREE</span>
+          <span class="action-link uppercase" href="" title="Add To Cart">Add To Cart <i class="fa fa-chevron-right"></i></span>
+        </p>
+      </footer>
+    </figcaption>{% endif %}
+  </a>
+</div>
+<!-- /RECOMMENDED ARTICLE -->

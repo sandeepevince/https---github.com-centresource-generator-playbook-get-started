@@ -1,0 +1,22 @@
+<!-- GRID LIST ITEM - TESTIMONIAL -->
+{% if include.title != null %}
+<li class="item">
+  <div class="date-container">
+    <div class="date">
+      <span class="month">{{ include.month }}</span>
+      <span class="day">{{ include.day }}</span>
+    </div>
+  </div>
+
+  <div class="item-information event">
+    <h4 class="event-name">{{ include.title }}</h4>
+    <p class="body-copy">{{ include.commitment }}</p>
+  </div>
+
+  <div class="actionable-items">
+    {% include component/buttons/button.html value="View Recap" %}
+    {% include component/typography/action-link.html body="Submit Testimonial" %}
+  </div>
+</li>
+{% endif %}
+<!-- /GRID LIST ITEM - TESTIMONIAL -->

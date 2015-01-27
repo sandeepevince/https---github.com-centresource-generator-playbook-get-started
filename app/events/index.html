@@ -1,0 +1,35 @@
+---
+layout: default
+title: Events
+body_class: hero-image events
+---
+
+{% include component/media/hero.html class="medium" primary="Tony Robbins Live" secondary="Experience a Live Event" src="/content/images/events-landing.jpg" %}
+
+
+<section class="event-types">
+  <div class="container">
+    <h2 class="headline-secondary">Types of Events</h2>
+      <ul class="grid-list">
+      {% include component/layout/grid-list/grid-list-item.html group="upw" title="Unleash The Power Within" commitment="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."  buttonValue="Learn More" destination="upw" %}
+      {% include component/layout/grid-list/grid-list-item.html group="dwd" title="Date with Destiny" commitment="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."  buttonValue="Learn More" destination="dwd" %}
+      {% include component/layout/grid-list/grid-list-item.html group="lwm" title="Life &amp; Wealth Mystery" commitment="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."  buttonValue="Learn More" %}
+      {% include component/layout/grid-list/grid-list-item.html group="bm" title="Business Mastery" commitment="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."  buttonValue="Learn More" destination="bm" %}
+      {% include component/layout/grid-list/grid-list-item.html group="la" title="Leadership Academy" commitment="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."  buttonValue="Learn More" %}
+      {% include component/layout/grid-list/grid-list-item.html group="lm" title="Leadership Mastery" commitment="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."  buttonValue="Learn More" %}
+    </ul>
+  </div>
+</section>
+
+{% include component/media/full-width-promo.html src="/content/images/full-width-ad.jpg" name="Purchase an Event Bundle and Save" body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." icon="fa-database" %}
+
+<section class="upcoming-events">
+  <div class="container">
+    <h2 class="headline-secondary">Upcoming Events</h2>
+      <ul class="event-list">
+        {% include component/layout/event-list.html group="lm" title="Leadership Mastery" date="Sept. 26" location="Dallas, TX" body="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." buttonValue="Check In" %}
+        {% include component/layout/event-list.html group="la" title="Leadership Academy" date="Oct. 10" location="Nashville, TN" body="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." buttonValue="Check In" %}
+        {% include component/layout/event-list.html group="dwd" title="Date with Destiny" date="Nov. 11" location="Cincinatti, OH" body="Lorem ipsum dolor sit amet, consectetur adipisicing else. Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore." buttonValue="Check In" %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--TYPEKIT -->
+    <script src="//use.typekit.net/yeq7ion.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    {% include shared/styles.html %}
+    <!-- build:js({app,.tmp}) scripts/modernizr.js -->
+    <script src="/vendor/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+
+  <body class="styleguide">
+    {% include shared/nav-styleguide.html %}
+
+    <div class="styleguide-content">
+      {{ content }}
+    </div>
+
+    <!--[if lte IE 8]>
+      {% include shared/scripts-ie8.html %}
+    <![endif]-->
+
+    {% include shared/scripts.html %}
+
+  </body>
+</html>

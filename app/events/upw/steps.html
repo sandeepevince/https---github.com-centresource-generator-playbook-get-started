@@ -1,0 +1,33 @@
+---
+layout: default
+title: Steps
+body_class: events upw steps
+
+tabs:
+- url: ../
+  text: Overview
+- url: ../stories
+  text: Stories
+- url: ../steps
+  text: 4 Steps To Transformation
+- url: ../impact
+  text: Impact
+- url: ../accommodations
+  text: Accommodations
+- url: ../faq
+  text: FAQ
+---
+
+{% include component/media/hero-event.html src="/content/images/hero-sample.jpg" primary="Get Ready" fullName="Unleash The Power Within" initials="UPW" location="Zanzibar" destination="../ticketing" value="Buy Tickets" %}
+
+{% include component/layout/tabs.html class="uppercase scroll" takeActionURL="../take-action" %}
+
+<section class="intro">
+  {% include component/typography/centered-content.html headline="Turn Fear into Power" body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."%}
+</section>
+
+<section class="event-steps">
+  {% include component/carousels/bootstrap-tabs.html %}
+</section>
+
+{% include component/media/full-width-promo.html src="/content/images/audiobook.jpg" name="Get Your Free Audiobook" body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." icon="fa-tablet" class="audiobook" %}

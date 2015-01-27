@@ -1,0 +1,68 @@
+.step-tabs {
+  @include clearfix;
+
+  .step-tab-item {
+    display: block;
+    float: left;
+
+    a {
+      border:2px solid;
+      border-left:none;
+      border-right:none;
+      color: #3B3B3B;
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      padding:9px 25px 9px 34px;
+      position: relative;
+
+      &:before, &:after {
+        border:20px solid;
+        border-bottom-color:transparent;
+        border-top-color:transparent;
+        border-right-color:transparent;
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        right: -39px;
+        top:0;
+        z-index: 1;
+      }
+
+      &:after {
+        color: #fff;
+        right: -39px;
+      }
+    }
+
+    &:first-child a {
+      border-left:2px solid;
+      padding-left:1.5em;
+    }
+
+    &:last-child a {
+      border-right:2px solid;
+      &:before, &:after {
+        border:none;
+      }
+    }
+
+    &.active a, a:hover {
+      background-color:#666;
+      border-color:#666;
+      color: #fff;
+
+      &:before, &:after {
+        border-left-color:#666;
+      }
+    }
+
+    a:hover {
+      background-color:$gray;
+
+      &:before, &:after {
+        border-left-color:$gray;
+      }
+    }
+  }
+}

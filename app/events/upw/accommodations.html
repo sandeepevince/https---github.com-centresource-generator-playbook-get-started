@@ -1,0 +1,61 @@
+---
+layout: default
+title: Accommodations
+body_class: events upw accommodations
+
+tabs:
+- url: ../
+  text: Overview
+- url: ../stories
+  text: Stories
+- url: ../steps
+  text: 4 Steps To Transformation
+- url: ../impact
+  text: Impact
+- url: ../accommodations
+  text: Accommodations
+- url: ../faq
+  text: FAQ
+---
+
+{% include component/media/hero-event.html src="/content/images/hero-sample.jpg" primary="Get Ready" fullName="Unleash The Power Within" initials="UPW" location="Zanzibar" value="Buy Tickets" %}
+
+{% include component/layout/tabs.html class="uppercase scroll" takeActionURL="../take-action" %}
+
+<section class="about-the-city">
+  <div class="container">
+    {% include component/typography/centered-content.html headline="About the City" body="Night came on; the train passed on at full speed, in the midst of the roaring of the tigers, bears, and wolves which fled before the locomotive; and the marvels of Bengal, Golconda ruined Gour, Murshedabad, the ancient capital, Burdwan, Hugly, and the French town of Chandernagor, where Passepartout would have been proud to see his country's flag flying, were hidden from their view in the darkness." %}
+  </div>
+</section>
+
+<section class="hotels">
+  <div class="container">
+    <h2 class="headline-secondary">Hotels</h2>
+  </div>
+  <div class="container">
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Hotel Name" price="129" rating="3" ratingsymbol="&#9733;" description=".1 miles from conference" %}
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Hotel Name" price="149" rating="4" ratingsymbol="&#9733;" description=".3 miles from conference" %}
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Hotel Name" price="135" rating="4" ratingsymbol="&#9733;" description=".5 miles from conference" %}
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Hotel Name" price="99" rating="2" ratingsymbol="&#9733;" description=".8 miles from conference" %}
+  </div>
+</section>
+
+<section class="food-dining">
+  <div class="container">
+    <h2 class="headline-secondary">Food &amp; Dining</h2>
+  </div>
+  <div class="container">
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Restaurant Name" rating="1" ratingsymbol="$" description="Japanese Hibachi" %}
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Restaurant Name" rating="2" ratingsymbol="$" description="Prime Steakhouse and Lobster Bar" %}
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="Restaurant Name" rating="5" ratingsymbol="$" description="Italian Style Seafood" %}
+    {% include component/media/media-block-small.html src="http://placecorgi.com/464/464" name="American Diner" rating="3" ratingsymbol="$" description=".8 miles from conference" %}
+  </div>
+</section>
+
+<section class="video">
+  <div class="container">
+    {% include component/media/video-content-right.html iframe="<iframe src='//player.vimeo.com/video/104009964?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' width='500' height='281' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>" headline="The UPW Survival Kit" body="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid" %}
+  </div>
+</section>
+
+{% include component/media/full-width-promo.html src="/content/images/audiobook.jpg" name="Get Your Free Audiobook" body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." icon="fa-tablet" class="audiobook" %}

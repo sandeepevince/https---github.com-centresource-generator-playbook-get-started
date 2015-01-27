@@ -1,0 +1,37 @@
+---
+layout: default
+title: Member Portal
+header_color: blue
+body_class: white-bg no-hero
+---
+
+<section class="member-information">
+  <div class="container">
+    <aside class="content-aside">
+      {% include component/members-portal/member-info.html src="http://placecorgi.com/464/264" member-name="Member Name" member-email="email@emailaddress.com" %}
+    </aside>
+
+    <article class="content-main event-information">
+      <header class="header-article">
+        <h1 class="headline-tertiary"><span>You recently attended</span> Unleash The Power Within</h1>
+      </header>
+      <p class="body-copy">Down the hill I saw a bevy of hussars ride under the railway bridge; three galloped through the open gates of the Oriental College; two others dismounted, and began running from house to house.  The sun, shining through the smoke that drove up from the tops of the trees, seemed blood red, and threw an unfamiliar lurid light upon everything.</p>
+
+      {% include component/forms/testimonial-submission-form.html %}
+      <footer class="footer-article">
+        <p>Now what? Take Tony's advice and {% include component/typography/action-link.html body="Take action" %}</p>
+      </footer>
+    </article>
+  </div>
+</section>
+
+<section class="upcoming-events">
+  <div class="container">
+    <h3 class="headline-tertiary light">Events you've attended</h3>
+    <ul class="grid-list">
+      {% include component/layout/grid-list/grid-list-item-testimonial.html class="testimonial" month="Oct" day="24" title="Unleash The Power Within" commitment="Diamond Premier in Alagir, Republic of North Ossetia–Alania" %}
+      {% include component/layout/grid-list/grid-list-item-testimonial.html class="testimonial" month="May" day="19" title="Business Mastery Leadership" commitment="VIP in Agidel, Republic of Bashkortostan" %}
+      {% include component/layout/grid-list/grid-list-item-testimonial.html class="testimonial" month="Jan" day="12" title="Business Mastery" commitment="Diamond Premier in Alexandrovsk-Sakhalinsky, Sakhalin Oblast" %}
+    </ul>
+  </div>
+</section>

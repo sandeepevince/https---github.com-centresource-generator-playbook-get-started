@@ -1,0 +1,156 @@
+.account-settings {
+
+  .content-primary {
+    padding: 6.5em 0;
+  }
+
+  .your-details {
+    @include media($medium) {
+      @include span-columns(7);
+    }
+  }
+
+  .right-sidebar {
+    @include media($medium) {
+      @include span-columns(5);
+    }
+  }
+
+  .blurb-block {
+    padding: 1.5em;
+    border-bottom: 1px solid $gray-lighter;
+
+    &:not(with-bg):hover {
+      .edit-btn {
+        opacity: 1;
+      }
+    }
+
+    &:last-child,
+    &.with-bg {
+      border: none;
+    }
+
+    &.gender,
+    &.subscriptions {
+      &:last-child {
+        border-bottom: 1px solid $gray-lighter;
+      }
+    }
+
+    .form-label,
+    .headline-secondary {
+      font-family: $sans-serif;
+      font-weight: bold;
+    }
+
+    .headline-secondary {
+      border: none;
+      margin-bottom: 0;
+    }
+
+    .form-label {
+      @extend .headline-secondary;
+      color: $gray;
+      font-size: .75em;
+      margin-bottom: .5em;
+
+      &:after {
+        display: none;
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  .editable-content {
+    display: table;
+    width: 100%;
+  }
+
+  .edit-btn {
+    @include transition(opacity 100ms linear);
+    display: table-cell;
+    font-size: .75em;
+    font-weight: bold;
+    height: 100%;
+    opacity: 1;
+    text-align: right;
+    text-transform: uppercase;
+    vertical-align: middle;
+
+    @include media($medium) {
+      opacity: 0;
+    }
+  }
+
+  .name {
+    @extend .headline-paragraph;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .text {
+    font-size: 0.9em;
+    font-style: italic;
+    font-family: $serif;
+    margin-bottom: 0;
+  }
+
+  .expires {
+    color: $gray;
+    margin-left: 2em;
+    font-family: $sans-serif;
+    font-size: 0.75em;
+    font-style: normal;
+  }
+
+  .credit-card-number {
+    &:not(:last-child) {
+      margin-bottom: .5em;
+    }
+
+    &:first-child:not(.primary-card) {
+      margin-top: 1em;
+    }
+
+    &.primary-card {
+      margin-top: 1.25em;
+    }
+  }
+
+  .primary-card:before {
+    content: 'PRIMARY CARD';
+    color: $blue-light;
+    display: block;
+    font-family: $sans-serif;
+    font-size: 0.65em;
+    font-style: normal;
+    margin-top: -.5em;
+  }
+
+  .subscriptions .check {
+    margin-top: .5em;
+
+    label {
+      @extend .text;
+      font-weight: normal;
+      float: left;
+      margin-bottom: .75em;
+      width: 50%;
+
+      &.all-newsletters {
+        @extend .clearfix;
+        margin-top: 1em;
+      }
+    }
+
+  }
+}

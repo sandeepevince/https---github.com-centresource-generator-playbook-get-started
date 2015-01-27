@@ -1,0 +1,11 @@
+<!-- RADAR CHART -->
+<article class="graph" data-labels='[{{ include.labels }}]'>
+  <canvas id="result-chart" class="result-chart"></canvas>
+
+  <div class="graph-labels">
+    {% for item in page.chart %}
+      <h2 class="headline-secondary" data-graph="[{{ item.data }}]" data-rgba="{{ item.color }}"><span></span>{{ item.label }}</h2>
+    {% endfor %}
+  </div>
+</article>
+<!-- /RADAR CHART -->

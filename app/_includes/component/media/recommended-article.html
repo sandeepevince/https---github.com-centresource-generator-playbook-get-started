@@ -1,0 +1,41 @@
+<!-- RECOMMENDED ARTICLE -->
+<div class="article">
+  <a class="recommended-article" href="{{ include.destination }}">
+    <img class="media-object" src="{{ include.src }}">
+    {% if include.headline != null %}<figcaption class="media-body">
+
+      {% if include.classStatus != null %}
+      <header class="header-article {{ include.classStatus }}">
+        {% if include.classStatus == "viewed popular" %}
+          <div class="popular-icon">
+            <i class="fa fa-line-chart"></i> Popular
+          </div>
+
+          <i class="viewed-icon fa fa-eye"></i>
+
+        {% elsif include.classStatus == "popular" %}
+          <div class="popular-icon">
+            <i class="fa fa-line-chart"></i> Popular
+          </div>
+        {% elsif include.classStatus == "viewed" %}
+          <i class="viewed-icon fa fa-eye"></i>
+        {% endif %}
+      </header>
+      {% endif %}
+      <div class="body">
+        {% if include.category != null %}
+        <div class="category">
+          {{ include.category }}
+          <div class="bar"></div>
+        </div>{% endif %}
+        <h4 class="headline-paragraph">{{ include.headline }}</h4>
+        <p class="body-copy">{{ include.body }}</p>
+      </div>
+      <footer class="footer-article">
+        <img class="avatar" src="{{ include.src }}">
+        <p>Written by <span class="author">Tony Robbins</span></p>
+      </footer>
+    </figcaption>{% endif %}
+  </a>
+</div>
+<!-- /RECOMMENDED ARTICLE -->

@@ -1,0 +1,11 @@
+.action-link {
+  color: $gray;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  .fa {
+    color: $blue-light;
+    margin-left: .25em;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,49 @@
+.image-content {
+  @include row;
+  @include clearfix;
+
+  &.copy-right,
+  &.copy-left {
+    .copy {
+      @include media($medium) {
+        @include span-columns(6);
+      }
+
+      @include media($large) {
+        @include span-columns(7);
+      }
+    }
+
+    .media-object {
+      @include media($medium) {
+        @include span-columns(6);
+      }
+      @include media($large) {
+        @include span-columns(5);
+      }
+    }
+  }
+
+  .action-link {
+    margin-bottom: 2em;
+  }
+}
+
+.image-content.copy-left {
+  .copy,
+  .media-object {
+    @include media($medium) {
+      float: right;
+    }
+  }
+
+  .copy:last-child {
+    margin-right: 2.35765%;
+  }
+
+  .media-object {
+    @include media($medium) {
+      @include omega;
+    }
+  }
+}

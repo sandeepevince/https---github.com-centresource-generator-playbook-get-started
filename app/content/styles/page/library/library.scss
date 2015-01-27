@@ -1,0 +1,90 @@
+.library {
+  .content-aside {
+    display: none;
+
+    @include media($medium) {
+      @include span-columns(3);
+      display: block;
+    }
+
+    .sticky-scroll {
+      max-width: 228px;
+      margin-top: 3em;
+    }
+
+    .quote-container {
+      padding-bottom: 0;
+    }
+
+    .avatar-container {
+      margin-top: 1em;
+
+      &:after {
+        content: ' ';
+        display: block;
+        margin-top: -46px;
+        position: absolute;
+        height: 40px;
+        width: 100%;
+        @include linear-gradient(rgba($white, 0) 0, $white 90%, $fallback: transparent);
+      }
+
+      .avatar {
+        border-radius: 0;
+        max-height: 300px;
+        width: auto;
+        margin: auto;
+      }
+    }
+
+    .author {
+      color: $base-accent-color;
+      font: normal em(20) $header-font-family;
+      text-transform: uppercase;
+    }
+
+    .group {
+      color: tint($gray-dark, 30%);
+      font-style: italic;
+      font-family: Georgia;
+    }
+
+    .author {
+      padding-left: 1em;
+    }
+
+    .group {
+      padding-left: 1.1em;
+    }
+  }
+
+  .content-main {
+    @include media($medium) {
+      @include span-columns(9);
+    }
+  }
+
+  .product-type {
+    margin-bottom: 2em;
+
+    @include media($medium) {
+      margin-bottom: 3em;
+    }
+
+    .header-product {
+      @include outer-container;
+      @include clearfix;
+
+      .headline-tertiary {
+        @include small-border();
+        float: left;
+      }
+
+      .action-link {
+        margin-top: .5em;
+        float: right;
+      }
+    }
+  }
+
+}

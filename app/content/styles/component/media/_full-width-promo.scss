@@ -1,0 +1,192 @@
+.full-width-promo {
+  @include clearfix;
+  background-color: #F0EFEB;
+  width: 100%;
+  padding: 1em 0;
+
+  i {
+    @include media($small-only) {
+      display: none;
+    }
+  }
+
+  .container {
+    @include media($medium-below) {
+      max-width: 650px;
+    }
+  }
+
+  .ad-info {
+    margin-bottom: 1.5em;
+    vertical-align: middle;
+
+    @include media($medium) {
+      margin-bottom: 0;
+    }
+
+    @include media($large) {
+      @include span-columns(8);
+    }
+  }
+
+  .headline-secondary {
+    font-size: 1.5em;
+    margin-bottom: .25em;
+  }
+
+  em {
+    display: block;
+    font-family: $serif;
+    line-height: 1.2em;
+  }
+
+  .action-items {
+    @include clearfix;
+    font-size: 1.25em;
+
+    @include media($medium) {
+      padding: .4em 4% 1.2em;
+    }
+
+    @include media($large) {
+      float: right;
+      margin-top: 0;
+    }
+  }
+
+  input[type="submit"] {
+    font-size: .7em;
+    width: 100%;
+  }
+
+  // With Icon
+  &.with-icon {
+
+    i {
+      color: $blue;
+      font-size: em(30);
+
+      @include media($medium) {
+        @include span-columns(2);
+        font-size: em(68);
+      }
+
+      @include media($large) {
+        @include span-columns(1);
+      }
+    }
+
+    .ad-info {
+      @include media($large) {
+        @include span-columns(7);
+      }
+    }
+  }
+
+  // With Background Image
+  &.with-bg {
+    color: #fff;
+
+    i {
+      color: #fff;
+    }
+  }
+
+  // Contains Form Element
+  &.with-form {
+
+    i {
+      @include span-columns(2.2);
+      font-size: em(88);
+
+      @include media($large) {
+        @include span-columns(1.2);
+      }
+    }
+
+    .ad-info {
+      @include media($large) {
+        @include span-columns(6);
+      }
+    }
+
+    em {
+      color: $gray;
+    }
+
+    input[type="text"] {
+      border:none;
+      border-radius: 0;
+      box-shadow:none;
+      padding: 1em;
+      font-size:em(12);
+    }
+
+    input[type="submit"] {
+      font-size: .7em;
+    }
+  }
+
+  // AudioBook form specifically
+  &.audiobook {
+
+    i {
+      font-size: 5.25em;
+      text-align: center;
+    }
+
+    .ad-info {
+      @include media($large) {
+        @include span-columns(5);
+      }
+    }
+
+    .action-items {
+      padding: 0;
+
+      @include media($large) {
+        margin-top: 0;
+        width: 48%;
+      }
+    }
+
+    .textfields {
+      @include media($large) {
+        float: left;
+        margin-right: 3%;
+        width: 67%;
+      }
+    }
+
+    input[type="text"] {
+      border:none;
+      border-radius: 0;
+      box-shadow:none;
+      float: left;
+      font-size:em(12);
+      margin-right: 3%;
+      margin-bottom: 1em;
+      padding: .65em;
+      width: 48.5%;
+
+      &:first-child {
+        margin: 0 0 1em;
+        width: 100%;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    input[type="submit"] {
+      float: left;
+      font-size: 1em;
+      margin-bottom: 0;
+
+      @include media($large) {
+        padding: 6.75% 4%;
+        width: 30%;
+      }
+    }
+  }
+}

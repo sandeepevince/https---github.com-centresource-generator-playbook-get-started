@@ -1,0 +1,15 @@
+<!-- SHARE BLOCK-->
+<section class="share-block {{ include.class }}">
+  {% if include.headline-secondary != null %}
+    <h2 class="headline-secondary">{{ include.headline-secondary }}</h2>
+  {% endif %}
+  {% if include.description != null %}
+    <em class="description">{{ include.description }}</em>
+  {% endif %}
+  <div class="links">
+    {% for link in page.links %}
+      <a class="btn secondary" href="{{ link.url }}">{{ link.text }}</a>
+    {% endfor %}
+  </div>
+</section>
+<!-- /SHARE BLOCK -->

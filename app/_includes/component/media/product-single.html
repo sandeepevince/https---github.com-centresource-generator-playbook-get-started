@@ -1,0 +1,53 @@
+<!-- SINGLE PRODUCT BLOCK -->
+<div class="copy">
+  <h3 class="{{ include.headlineClass }}">{{ include.headline }}</h3>
+  {% if include.body != null %}
+    <p class="body-copy">{{ include.body }}</p>
+  {% endif %}
+
+  {% if include.headline2 != null %}
+    <h3>{{ include.headline2 }}</h3>
+  {% endif %}
+
+  {% if include.body2 != null %}
+    <p class="body-copy">{{ include.body2 }}</p>
+  {% endif %}
+
+  {% if include.headline3 != null %}
+    <h3>{{ include.headline3 }}</h3>
+  {% endif %}
+
+  {% if include.body3 != null %}
+    <p class="body-copy">{{ include.body3 }}</p>
+  {% endif %}
+
+  {% if include.headline4 != null %}
+    <h3>{{ include.headline4 }}</h3>
+  {% endif %}
+
+  {% if include.body4 != null %}
+    <p class="body-copy">{{ include.body4 }}</p>
+  {% endif %}
+
+  {% if include.link != null %}
+    {% include component/typography/action-link.html body=include.link class="uppercase" %}
+  {% endif %}
+
+  {% if include.price != null %}
+    <p class="price-copy">{{ include.price }}</p>
+  {% endif %}
+
+  <div class="product-actions">
+    {% if include.quantity != null %}
+      <div class="product-quantity">
+        <i class="fa fa-minus"></i> <span class="product-quantity-number">1</span> <i class="fa fa-plus"></i>
+      </div>
+    {% endif %}
+
+    {% if include.button != null %}
+      {% include component/buttons/button-icon.html destination=include.destination value=include.button class="secondary" %}
+    {% endif %}
+  </div>
+</div>
+<!-- /SINGLE PRODUCT BLOCK -->
+

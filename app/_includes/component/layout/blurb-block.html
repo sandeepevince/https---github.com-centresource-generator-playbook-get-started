@@ -1,0 +1,21 @@
+<!-- BLURB BLOCK -->
+{% if include.headline-secondary != null %}
+  <section class="blurb-block {{ include.class }}{% if include.src != null %} with-image{% endif %}">
+    <div class="blurb-info">
+      <h2 class="headline-secondary">{{ include.headline-secondary }}</h2>
+      {% if include.headline-tertiary != null %}
+        <h3 class="headline-tertiary">{{ include.headline-tertiary }}</h3>
+      {% endif %}
+      {% if include.body != null %}
+        <p class="blurb-body">{{ include.body }}</p>
+      {% endif %}
+      {% if include.link != null %}
+        {% include component/buttons/button.html class="btn secondary" value=include.link %}
+      {% endif %}
+      {% if include.src != null %}
+        <img class="blurb-img" src="{{ include.src }}" />
+      {% endif %}
+    </div><!--blurb-info-->
+  </section>
+{% endif %}
+<!-- /BLURB BLOCK -->

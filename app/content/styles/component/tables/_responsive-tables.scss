@@ -1,0 +1,75 @@
+//RESPONSIVE TABLES
+@include media($medium-below) {
+
+  table.responsive {
+    margin-bottom: 0;
+
+    td, th {
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+
+    th:first-child,
+    td:first-child,
+    td:first-child {
+      display: none;
+    }
+  }
+}
+
+
+.table-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  .pinned {
+    left: 0;
+    min-height: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+    position: absolute;
+    top: 0;
+
+    table {
+      border-right: none;
+      border-left: none;
+      width: 100%;
+
+      th, td {
+        white-space: nowrap;
+      }
+
+      td:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.table-wrapper {
+  .pinned {
+    width: 150px;
+
+    @include media($medium) {
+      width: 170px;
+    }
+  }
+
+  .scrollable {
+    margin-left: 150px;
+    overflow: scroll;
+    overflow-y: hidden;
+
+    @include media($medium) {
+      margin-left: 170px;
+    }
+
+    th, td {
+      padding: 1em;
+      width: 140px;
+    }
+  }
+}

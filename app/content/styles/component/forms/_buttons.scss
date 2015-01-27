@@ -1,0 +1,62 @@
+.btn {
+  @extend %button;
+  @include button-variant($white, $blue, darken($blue, 10));
+  border: none;
+  border-bottom: 3px solid darken($blue, 10);
+
+  @include media($small-only) {
+    padding: 1em 2em;
+    width: 100%;
+  }
+
+  &.small {
+    font-family: 'function_prodemi';
+    font-size: .75em;
+    padding: .5em 1.25em;
+  }
+
+  &.large {
+    border-bottom-width: 5px;
+    font-size: 1.25em;
+    padding: 1.25em 3em 1em;
+  }
+
+  &.secondary {
+    background: $blue-lighter;
+    border-bottom: 3px solid darken($blue-lighter, 10);
+    color: $white;
+
+    &.large {
+      border-bottom:5px solid darken($blue-lighter, 10);
+    }
+
+    &:hover {
+      background: darken($blue-lighter, 7);
+    }
+  }
+
+  &.icon {
+    padding: 0 1.5em 0 0;
+
+    .fa {
+      background: $blue-light;
+      padding: .75em 1em;
+      margin-right: .5em;
+      vertical-align: middle;
+    }
+
+    //HOVER STATE
+    &:hover {
+      .fa {
+        background: darken($blue-light, 10);
+      }
+    }
+  }
+
+  &.ghost {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}

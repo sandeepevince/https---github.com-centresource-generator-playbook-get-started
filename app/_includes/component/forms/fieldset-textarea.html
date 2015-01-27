@@ -1,0 +1,4 @@
+<fieldset>
+  {% if include.label != null %}<label for="{{ include.name }}">{{ include.label }}</label>{% endif %}
+  <textarea id="{{ include.name }}" placeholder="{{ include.placeholder }}"></textarea>
+</fieldset>

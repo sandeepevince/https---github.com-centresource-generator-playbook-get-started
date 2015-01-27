@@ -1,0 +1,33 @@
+---
+layout: default
+title: Identity Tests
+body_class: hero-image
+---
+
+<div id="identity-test-container" class="full-width-video video-active question-inactive">
+
+  {% include component/media/responsive-video.html source="/content/images/sample-video" player-id="identity-test-video" %}
+
+  <form id="identity-test-form" class="indentity-test-questions owl-carousel hero-carousel">
+    <div class="item">
+      {% include component/layout/identity-tests/question.html questionID="one" question="How happy are you with the overall state of your relationships?" %}
+    </div>
+    <div class="item">
+      {% include component/layout/identity-tests/question.html questionID="two" question="How sad are you with the overall state of your relationships?" %}
+    </div>
+    <div class="item">
+      {% include component/layout/identity-tests/question.html questionID="three" question="How excited are you with the overall state of your relationships?" %}
+    </div>
+    <div class="item">
+      {% include component/layout/identity-tests/question.html questionID="four" question-position="last" question="How discouraged are you with the overall state of your relationships?" %}
+    </div>
+  </form>
+
+  <div class="cover-blur"></div>
+</div>
+
+<div class="test-progress">
+  {% include component/forms/progress-bar.html class="id-test" progress="62" %}
+
+  {% include component/layout/identity-tests/nav-test.html categoryOneLink="body" categoryOne="Body" categoryTwoLink="emotions" categoryTwo="Emotions" categoryThreeLink="relationships" categoryThree="Relationships" categoryFourLink="time-management" categoryFour="Time Management" categoryFiveLink="work-career" categoryFive="Work/Career" categorysixLink="finances" categorySix="Finances" categorySevenLink="contributions" categorySeven="Contributions" %}
+</div >

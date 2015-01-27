@@ -1,0 +1,75 @@
+$arrow-icon-height: 42px;
+
+.hero-carousel {
+  .item {
+    position: relative;
+
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    .hero-copy {
+      @include position(absolute, 35% null null 0);
+      text-align: center;
+      width: 100%;
+
+      .headline-primary {
+        color: $white;
+        margin: 0 auto;
+        max-width: em(860);
+        text-align: center;
+        font-size: em(72);
+        line-height: 1;
+        margin-bottom: .15em;
+      }
+
+      .secondary-copy {
+        color: $white;
+        font-family: $serif;
+        margin: 0 auto 1.5em;
+        font-style: italic;
+      }
+    }
+  }
+
+  &.owl-theme .owl-controls .owl-buttons div {
+    background: none;
+    position: absolute;
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-prev {
+    left: 1em;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-next {
+    right: 1em;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+
+  &.owl-theme .owl-controls {
+    margin: 0;
+
+    .owl-pagination {
+      position: absolute;
+      bottom: 1em;
+      width: 100%;
+
+      .owl-page {
+        span {
+          background: none;
+          border: 2px solid $white;
+        }
+
+        &.active {
+          span {
+            background: $base-accent-color;
+            border-color: $base-accent-color;
+          }
+        }
+      }
+    }
+  }
+}

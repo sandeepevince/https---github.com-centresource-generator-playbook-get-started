@@ -1,0 +1,11 @@
+<!-- UPCOMING EVENT CHECKLIST ITEM -->
+<div class="checklist-item {{ include.completion }}">
+  <div class="blurb-block">
+    <div class="grunticon icon-{{ include.icon }}"></div>
+    <h2 class="headline-secondary">Step {{ include.stepNumber }}</h2>
+    <h3 class="headline-tertiary">{{ include.headline }}</h3>
+    <p class="blurb-body">{{ include.body }}</p>
+    {% include component/buttons/button.html class="secondary" value=include.value state=include.state %}
+  </div>
+</div>
+<!-- /UPCOMING EVENT CHECKLIST ITEM -->

@@ -1,0 +1,32 @@
+.login-forms {
+  @include clearfix();
+}
+
+.content-primary .login-container {
+  @include span-columns(12);
+  padding: 7.5em 2em 3em;
+
+  @include media($medium) {
+    @include span-columns(6);
+  }
+}
+
+.member-login,
+.guest-login {
+  background: $gray-lighter;
+  padding-bottom: 1em;
+  text-align: center;
+
+  .non-member {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.guest-login {
+  background-color: white;
+
+  label {
+    display: none;
+  }
+}

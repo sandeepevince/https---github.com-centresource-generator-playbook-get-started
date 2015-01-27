@@ -1,0 +1,23 @@
+<div class="media-block-small">
+  <div class="media-image">
+    <img class="media" src="{{ include.src }}" />
+    {% if include.price != null %}
+    <span class="price">${{ include.price }}</span>
+    {% endif %}
+  </div>
+  <div class="media-info">
+    <h3 class="headline-paragraph media-name">{{ include.name }}</h3>
+    {% if include.rating != null %}
+      <ul class="rating rate-{{ include.rating }}">
+        <li class="rate1"><span>{{ include.ratingsymbol }}</span><span class="rate">{{ include.ratingsymbol }}</span></li>
+        <li class="rate2"><span>{{ include.ratingsymbol }}</span><span class="rate">{{ include.ratingsymbol }}</span></li>
+        <li class="rate3"><span>{{ include.ratingsymbol }}</span><span class="rate">{{ include.ratingsymbol }}</span></li>
+        <li class="rate4"><span>{{ include.ratingsymbol }}</span><span class="rate">{{ include.ratingsymbol }}</span></li>
+        <li class="rate5"><span>{{ include.ratingsymbol }}</span><span class="rate">{{ include.ratingsymbol }}</span></li>
+      </ul>
+    {% endif %}
+    {% if include.description != null %}
+      <p class="description">{{ include.description }}</p>
+    {% endif %}
+  </div>
+</div>

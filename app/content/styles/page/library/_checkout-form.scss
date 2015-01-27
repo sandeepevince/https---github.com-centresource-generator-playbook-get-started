@@ -1,0 +1,43 @@
+.checkout-form-page {
+
+  h1 {
+
+    @include media($medium) {
+      float: left;
+      width: 50%;
+    }
+  }
+
+  .step-tabs {
+    @include clearfix;
+
+    margin-bottom: 4%;
+    @include media($medium) {
+      float: right;
+      margin-bottom: 0;
+      width:50%;
+    }
+
+    ul {
+
+      @include media($medium) {
+        float: right;      }
+    }
+  }
+}
+
+.checkout-form-container {
+  border:1px solid #ccc;
+  clear: left;
+  margin-bottom: 4%;
+  padding: 8% 2% 2%;
+  @include media($medium) {
+    padding:4% 4% 2%;
+  }
+}
+
+.payment-method {
+  border-bottom: 2px solid $gray;
+  margin-bottom: 4%;
+  padding-bottom: 1%;
+}

@@ -1,0 +1,18 @@
+<!-- GALLERY CAROUSEL -->
+<div class="gallery">
+  <div class="owl-carousel gallery-carousel sync-primary">
+    {% for image in page.images %}
+      <div class="item item-primary">
+        <img src="{{ image.url }}">
+      </div>
+    {% endfor %}
+  </div>
+  <div class="owl-carousel gallery-carousel sync-secondary">
+    {% for thumb in page.thumbs %}
+      <div class="item">
+        <img src="{{ thumb.url }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- /GALLERY CAROUSEL -->

@@ -1,0 +1,286 @@
+// Accept all color values for background opacity
+@mixin event($color, $bgUrl, $eventFontFamily) {
+
+  //APPLICABLE TO ALL PAGES
+  .headline-primary,
+  .headline-secondary,
+  .headline-tertiary,
+  .countdown {
+    font-family: $eventFontFamily;
+  }
+
+  .btn {
+    background: $color;
+    border-color: shade($color, 30%);
+
+    &:hover {
+      background-color: shade($color, 10%);
+      border-color: shade($color, 40%);
+    }
+  }
+
+  .action-link {
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color;
+    }
+
+    .fa {
+      color: $color;
+    }
+  }
+
+  .hero.event {
+    .bg-overlay {
+      background-color:shade($color, 80%);
+    }
+
+    .hero-container {
+      .headline-primary {
+        .location {
+          color: $color;
+        }
+      }
+    }
+  }
+
+  .author {
+    color: $color;
+  }
+
+  //COMMITMENT LEVEL - UPW ONLY
+  .nav-tabs {
+    background-color: $gray-lightest;
+
+    li {
+      &.active a {
+        border-color:$color;
+      }
+    }
+  }
+
+  .level-info {
+    .price {
+      color: $color;
+    }
+  }
+
+  //HOMEPAGE
+  .stories {
+    header {
+      @include outer-container;
+      padding: 0 1em;
+
+      @include media($large) {
+        padding: 0;
+      }
+
+      .headline-secondary {
+        @include small-border;
+        float: left;
+
+        &:after {
+          background-color: $color;
+        }
+      }
+
+      .action-link {
+        float: right;
+        padding: .25em 0 0;
+      }
+    }
+  }
+
+  .headline-secondary {
+    &:after {
+      background-color: $color;
+    }
+  }
+
+  .about-the-event {
+    background-image: $bgUrl;
+  }
+
+  .nav-tabs.back {
+    padding: 1em 0;
+  }
+
+
+  // TAKE ACTION PAGE
+  .take-action {
+
+    @include media($medium) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+
+    @include media($large) {
+      @include span-columns(6);
+      @include shift(3);
+    }
+
+    .headline-secondary {
+      @include small-border();
+      text-align: center;
+
+      &:after {
+        @include position(absolute, null null null 50%);
+        background-color: $color;
+        margin-left: -12px;
+      }
+    }
+
+    .video-block {
+      margin-bottom: 1em;
+    }
+
+    .body-copy {
+      font-family: $serif;
+      text-align: left;
+
+      .action-link {
+        font-family: $sans-serif;
+        padding: .5em 0 0;
+      }
+    }
+  }
+
+  .know-yourself {
+    .about {
+      @include media($medium-below) {
+        text-align: center;
+
+        .body-copy {
+          margin: 0 auto 1em;
+        }
+      }
+
+      @include media($large) {
+        @include span-columns(6);
+      }
+
+      .headline-secondary {
+        @include small-border($color);
+
+        &:after {
+          @include position(absolute, null null null 50%);
+          background-color: $color;
+          margin-left: -12px;
+
+          @include media($large) {
+            @include position(absolute, null null null 0);
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .graph {
+      text-align: center;
+
+      canvas {
+        border: 0;
+        @include media($medium-below) {
+          display: none;
+        }
+      }
+
+      .graph-labels {
+        display: none;
+      }
+
+      @include media($large) {
+        @include span-columns(6);
+      }
+    }
+  }
+
+  .recommended-articles {
+    background: $gray-light;
+
+    .headline-secondary {
+      @include small-border();
+      &:after {
+        background-color: $color;
+      }
+    }
+  }
+
+
+  //4 STEPS TO TRANSFORMATION
+  .event-steps {
+    .tabs-section {
+      margin-bottom: 2em;
+    }
+  }
+
+
+  //ACCOMMODATIONS PAGE
+  &.accommodations {
+    .hotels,
+    .food-dining {
+      .headline-secondary {
+        @include small-border();
+
+        &:after {
+          background-color: $color;
+        }
+      }
+    }
+  }
+
+
+  // TICKETING PAGE - UPW ONLY
+  &.ticketing {
+
+    .guarantee {
+      background-color: $gray-lightest;
+      padding: 5em 0;
+
+      .headline-secondary {
+        @include small-border($color);
+
+        &:after {
+          @include position(absolute, null null null 50%);
+          background-color: $color;
+          margin-left: -12px;
+        }
+      }
+
+      .body-copy {
+        margin-bottom: 0;
+      }
+    }
+
+    .level-group {
+      .headline-secondary {
+        @include small-border($color);
+
+        &:after {
+          @include position(absolute, null null null 50%);
+          background-color: $color;
+          margin-left: -12px;
+
+          @include media($large) {
+            @include position(absolute, null null null 0);
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .ticket-prices {
+      padding: 2em 0;
+
+      @include media($medium) {
+        padding: 3em 0;
+      }
+    }
+  }
+  .panel-group .panel {
+    .panel-heading {
+      background-color: $color
+    }
+  }
+}

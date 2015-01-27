@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tony Robbins{% if page.title != null %} | {{ page.title }}{% endif %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--TYPEKIT -->
+    <script src="//use.typekit.net/yeq7ion.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    {% include shared/styles.html %}
+
+    <!-- build:js({app,.tmp}) scripts/modernizr.js -->
+    <script src="/vendor/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    <div class="page-container">
+
+      <header id="header-primary" class="header-primary {% if page.header_color == "blue" %}blue-header{% endif %}">
+        {% include shared/header.html %}
+      </header>
+      {% include shared/nav.html %}
+      {% include shared/login.html %}
+      <main class="content-primary {% if page.body_class != null %}{{ page.body_class }}{% endif %}">
+        {{ content }}
+      </main>
+      {% include shared/footer.html %}
+
+      <!--[if lte IE 8]>
+        {% include shared/scripts-ie8.html %}
+      <![endif]-->
+
+      {% include shared/scripts.html %}
+    </div>
+    {% include component/layout/overlay.html %}
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.guest-login-form {
+  @include media($medium) {
+
+    .row {
+      @include clearfix;
+
+      .greeting {
+        @include span-columns(2);
+      }
+
+      .fieldset-wrap {
+        @include span-columns(10);
+      }
+    }
+
+
+    .form-actions {
+      text-align: center;
+    }
+  }
+}

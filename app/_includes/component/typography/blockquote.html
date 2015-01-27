@@ -1,0 +1,65 @@
+<!-- BLOCKQUOTE -->
+{% if include.class == "side" %}
+<blockquote{% if include.class != null %} class="{{ include.class }}"{% endif %}>
+  <div class="blockquote-wrap">
+    <div class="quote-container">
+      <span class="quotation-mark">“</span>
+      <p class="quote">{{ include.quote }}"</p>
+    </div>
+
+    <div class="avatar-container">
+      <hr>
+      <img class="avatar" src="{{ include.src }}">
+    </div>
+    <span class="author">{{ include.author }}</span>
+  </div>
+</blockquote>
+
+{% elsif include.class == "full-photo" or include.class == "full-photo sticky-scroll" %}
+<blockquote{% if include.class != null %} class="{{ include.class }}"{% endif %}>
+  <div class="blockquote-wrap">
+    <div class="quote-container">
+      <span class="quotation-mark">“</span>
+      <p class="quote">{{ include.quote }}"</p>
+    </div>
+
+    <span class="author">{{ include.author }}</span>
+    <div class="group">{{ include.group }}</div>
+    <div class="avatar-container">
+      <img class="avatar" src="{{ include.src }}">
+    </div>
+  </div>
+</blockquote>
+
+{% elsif include.class == "event" %}
+
+<blockquote{% if include.class != null %} class="{{ include.class }}"{% endif %}>
+  <div class="blockquote-wrap">
+    {% if include.src != null %}
+      <img class="author-photo" src="{{ include.src }}">
+    {% endif %}
+    <div class="quote-container">
+      <span class="quotation-mark">“</span>
+      <p class="quote">{{ include.quote }}"</p>
+      <p class="author">{{ include.author }}</p>
+      {% if include.src != null %}<p class="event">{{ include.event }}</p>{% endif %}
+    </div>
+  </div>
+</blockquote>
+{% else %}
+
+<blockquote{% if include.class != null %} class="{{ include.class }}"{% endif %}>
+  <div class="blockquote-wrap">
+    {% if include.src != null %}
+      <img class="author-photo" src="{{ include.src }}">
+    {% endif %}
+    <div class="quote-container">
+      <span class="quotation-mark">“</span>
+      <p class="quote">{{ include.quote }}"</p>
+      <p class="author"><span class="dash">- </span>{{ include.author }}</p>
+      {% if include.src != null %}<p class="event">{{ include.event }}</p>{% endif %}
+    </div>
+  </div>
+</blockquote>
+{% endif %}
+<!-- /BLOCKQUOTE -->

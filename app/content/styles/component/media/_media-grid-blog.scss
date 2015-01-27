@@ -1,0 +1,34 @@
+//MEDIA GRID BLOG
+.media-grid.blog {
+  .column-half {
+    @include media($medium-alt) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    .column-half {
+      @include media($medium) {
+        margin-right: 4.7153%;
+        width: 47.64235%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .media-block {
+      &.small {
+        @include span-columns(6);
+        @include omega(2n);
+        @include media($medium) {
+          @include square(100%)
+        }
+      }
+
+      &.large {
+        @include square(100%)
+      }
+    }
+  }
+}

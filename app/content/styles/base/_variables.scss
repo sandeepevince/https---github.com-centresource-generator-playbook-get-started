@@ -1,0 +1,98 @@
+// Typography
+$sans-serif: 'proxima_nova_rgregular';
+$serif: $georgia;
+$base-font-family: $sans-serif;
+$header-font-family: 'function_pro_bookbold';
+$header-font-family-light: 'function_prodemi';
+
+// Sizes
+$base-value: 16px;
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
+$header-line-height: $base-font-size * 1.25;
+$base-border-radius: em(3);
+
+// Grays
+$black: #111;
+$gray-dark: #343434;
+$gray: #999999;
+$gray-medium: #575757;
+$gray-light: #e7e5e1;
+$gray-lighter: #ededed;
+$gray-lightest: #f8f7f6;
+$white: #fff;
+
+// Colors
+$blue-dark: #00477d;
+$blue: #0b5e97;
+$blue-light: #0099d9;
+$blue-lighter: #3fb3f6;
+$pink: #da519f;
+
+$green: #2bb673;
+$green-light: #e6efc2;
+$red: #ff0000;
+$yellow: #fff6bf;
+$orange: #ffa633;
+$purple: #9f1962;
+
+// EVENT SPECIFIC ACTION COLORS
+$action-upw: #9e1961;
+$action-dwd: #f09c44;
+$action-lwm: #8dd0ce;
+$action-bm: #152c4e;
+$action-la: #008f91;
+$action-lm: #44c47a;
+
+//COLORS REUSED ACROSS MULTIPLE BRANDS//
+$color-passion: #e9292c;
+$color-gratitude: #ac0772;
+$color-transcendence: #781b66;
+$color-energy: #f58026;
+
+$color-positivity: #faa41a;
+$color-vitality: #ffe738;
+$color-wealth: #a2b526;
+$color-life: #93d6dc;
+
+$color-confidence: #471f6f;
+$color-leadership: #0098a1;
+$color-power: #0e3267;
+
+$color-success: #061d45;
+$color-humility: #caccc4;
+
+
+
+// Background Color
+$base-background-color: white;
+
+// Font Colors
+$base-font-color: $gray-dark;
+$base-accent-color: $blue-lighter;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+$base-button-color: $blue;
+$hover-button-color: darken($base-button-color, 15);
+
+// Border color
+$base-border-color: $gray-light;
+
+// Flash Colors
+$alert-color: $yellow;
+$error-color: $red;
+$notice-color: $yellow;
+$success-color: $green;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $sans-serif;

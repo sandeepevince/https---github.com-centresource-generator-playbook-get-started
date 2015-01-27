@@ -1,0 +1,100 @@
+.event-selector,
+.finalize {
+  .radio {
+    @include media($medium) {
+      margin: 0 auto 1em;
+      max-width: 80%;
+      text-align: center;
+    }
+
+    .option {
+      @include span-columns(4);
+      @include omega(3n);
+      margin-bottom: .75em;
+
+      @include media($large) {
+        @include omega-reset(3n);
+        @include span-columns(2);
+        @include omega(6n);
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+    }
+
+    .option {
+      input[type="radio"]+span {
+        background: $gray-light;
+        border-radius: .5em;
+        border-top: 2px solid darken($base-border-color, 10%);
+        color: $white;
+        display: block;
+        font-family: $sans-serif;
+        margin-bottom: .5em;
+        padding: 2em 0;
+
+        &:hover {
+          background: darken($gray-light, 7%);
+          cursor: pointer;
+        }
+      }
+
+      input[type="radio"]+span+span {
+        color: $gray;
+        display: block;
+        font-family: $sans-serif;
+        font-size: .75em;
+        font-weight: 300;
+        line-height: 1.25;
+        text-transform: uppercase;
+      }
+
+      input[type="radio"]:checked+span+span {
+        color: $gray-dark;
+      }
+
+      &.upw {
+        input[type="radio"]:checked+span {
+          background: $action-upw;
+          border-top: 2px solid $action-upw;
+        }
+      }
+
+      &.dwd {
+        input[type="radio"]:checked+span {
+          background: $action-dwd;
+          border-top: 2px solid $action-dwd;
+        }
+      }
+
+      &.lwm {
+        input[type="radio"]:checked+span {
+          background: $action-lwm;
+          border-top: 2px solid $action-lwm;
+        }
+      }
+
+      &.bm {
+        input[type="radio"]:checked+span {
+          background: $action-bm;
+          border-top: 2px solid $action-bm;
+        }
+      }
+
+      &.la {
+        input[type="radio"]:checked+span {
+          background: $action-la;
+          border-top: 2px solid $action-la;
+        }
+      }
+
+      &.lm {
+        input[type="radio"]:checked+span {
+          background: $action-lm;
+          border-top: 2px solid $action-lm;
+        }
+      }
+    }
+  }
+}

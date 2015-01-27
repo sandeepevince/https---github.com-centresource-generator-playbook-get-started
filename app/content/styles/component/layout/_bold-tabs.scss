@@ -1,0 +1,23 @@
+.bold-tabs {
+  background-color: #F8F7F5;
+  font-size: .8em;
+  padding: 3.5% 3% 2%;
+  margin-bottom: 1em;
+
+  @include small-border();
+
+  .bold-tab-item {
+    display: inline-block;
+    padding-right:3%;
+
+    a {
+      color: #3B3B3B;
+      font-weight: bold;
+      padding-bottom:.2em;
+    }
+
+    &.active a, a:hover {
+      color: #666;
+    }
+  }
+}

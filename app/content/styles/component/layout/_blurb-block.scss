@@ -1,0 +1,31 @@
+.blurb-block {
+  @include clearfix;
+
+  .blurb-info {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &.with-bg {
+    background-color:$gray-lightest;
+    border-bottom: 1px solid $gray-light;
+    padding: 1.5em;
+  }
+
+  .headline-secondary {
+    @include small-border($base-accent-color);
+  }
+
+  .blurb-body {
+    color: $gray;
+    font-family: $serif;
+  }
+
+  &.with-image {
+    .blurb-info {
+      padding-right: 5%;
+      width: 55%;
+    }
+  }
+}
+@include reset-display;

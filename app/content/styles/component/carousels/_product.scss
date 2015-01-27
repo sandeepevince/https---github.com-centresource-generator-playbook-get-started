@@ -1,0 +1,45 @@
+$arrow-icon-height: 34px;
+
+.product-carousel {
+
+  .item {
+    margin: 0 0.8em;
+  }
+
+  .product-block {
+    width: 100%;
+  }
+
+  .product-info {
+    padding-bottom: 1px; // without this, the bottom 1 pixel of the button gets cut off - find a better solution
+
+    h4 {
+      font-size: 1em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  &.owl-carousel {
+    padding: 0 calc(#{$arrow-icon-height} * 1.2);
+  }
+
+  &.owl-theme .owl-controls .owl-buttons div {
+    background: none;
+    color: $gray;
+    position: absolute;
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-prev {
+    left: -5px;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-next {
+    right: -5px;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+}

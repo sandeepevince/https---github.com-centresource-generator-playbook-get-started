@@ -1,0 +1,11 @@
+.learn-more-form {
+  @include clearfix;
+
+  fieldset {
+    @include span-columns(9);
+
+    &.form-actions {
+      @include span-columns(3);
+    }
+  }
+}

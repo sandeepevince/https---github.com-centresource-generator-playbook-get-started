@@ -1,0 +1,149 @@
+//BASIC STYLES
+.newsletter-options {
+  .options {
+    height: 100%;
+    overflow-y: auto;
+
+    .check.all {
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      input[type="checkbox"]+span {
+        border-radius: .5em;
+        border: 2px solid $base-border-color;
+        color: darken($base-border-color, 25%);
+        padding: .25em 0;
+
+        .fa {
+          font-size: 1.75em;
+          vertical-align: middle;
+        }
+      }
+
+      input[type="checkbox"]:checked+span {
+        color: $green;
+      }
+    }
+
+    .option {
+      color: $base-font-color;
+      margin-bottom: 1.5em;
+      padding: 1.5em 0;
+
+      label {
+        background: $white;
+        max-width: 205px;
+        margin: 0 auto;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+          display: none;
+        }
+
+        input[type="checkbox"]+span {
+          background: $base-border-color;
+          border-radius: .5em;
+          border: 2px solid $base-border-color;
+          color: darken($base-border-color, 25%);
+          position: absolute;
+          left: -8px;
+          top: -8px;
+
+          .fa {
+            font-size: 1.75em;
+          }
+        }
+
+        input[type="checkbox"]:checked+span {
+          background: $green;
+          border: 2px solid $green;
+          color: $white;
+        }
+
+        .option-body {
+          padding: 1em;
+
+          img {
+            display: block;
+            margin: 0 auto .5em;
+          }
+
+          p {
+            font-size: .8em;
+            line-height: 1;
+            margin-bottom: 0;
+          }
+        }
+
+        footer {
+          @include clearfix;
+          background: $base-accent-color;
+          padding: .75em 1em;
+
+          p {
+            color: $white;
+            font-size: .8em;
+            font-style: italic;
+            margin-bottom: 0;
+            text-align: left;
+
+            .subscribers {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//CAROUSEL STYLES
+
+.newsletter-options {
+  .options {
+    padding: 1em 1em 7em;
+
+    @include media($medium) {
+      padding: 2em 1em 7em;
+    }
+
+    .btn {
+      background: $green;
+      border-bottom: 3px solid darken($green, 15%);
+
+      &:hover {
+        background: darken($green, 15%);
+        border-bottom: 3px solid darken($green, 25%);
+      }
+    }
+  }
+
+  .options {
+    .newsletter-carousel {
+
+      .owl-buttons {
+        .owl-prev,
+        .owl-next {
+          @include position(absolute, 45% null null null);
+          background: none;
+          font-size: 1.5em;
+          margin: 0;
+          padding: 0;
+        }
+
+        .owl-prev {
+          left: 0;
+        }
+
+        .owl-next {
+          right: 0;
+        }
+      }
+    }
+  }
+}

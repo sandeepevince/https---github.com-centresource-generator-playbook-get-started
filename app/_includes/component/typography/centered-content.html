@@ -1,0 +1,21 @@
+<!-- CENTERED CONTENT -->
+{% if include.class == "event" %}
+<div class="centered-content event">
+  <h3 class="headline-secondary">About {{ include.eventName }}</h3>
+  {{ include.body }}
+  <h4 class="headline-tertiary">{{ include.headline }}</h4>
+  {% if include.button != null %}
+    {% include component/buttons/button-icon.html value=include.button class="large" destination=include.destination %}
+  {% endif %}
+</div>
+
+{% else %}
+<div class="centered-content">
+  <h4 class="headline-tertiary">{{ include.headline }}</h4>
+  <p{% if include.bodyClass != null %} class="{{ include.bodyClass }}"{% endif %}>{{ include.body }}</p>
+  {% if include.button != null %}
+    {% include component/buttons/button-icon.html value=include.button class="large" destination=include.destination %}
+  {% endif %}
+</div>
+{% endif %}
+<!-- /CENTERED CONTENT -->

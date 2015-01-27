@@ -1,0 +1,22 @@
+.event-information {
+  .footer-article {
+    padding: 1em;
+
+    p {
+      @include media($small-only) {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .action-link {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.upcoming-events {
+  .headline-tertiary {
+    @include small-border();
+  }
+}

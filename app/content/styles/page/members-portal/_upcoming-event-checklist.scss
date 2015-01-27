@@ -1,0 +1,77 @@
+.upcoming-event-checklist {
+
+  .action-link {
+    margin-left: 20px;
+  }
+
+  .blurb-block {
+    background: none;
+    border: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .blurb-body,
+  .headline-secondary:after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .full-width-promo {
+    background: $gray-lighter;
+    margin-bottom: 0;
+
+    i {
+      padding: 0.2em 0;
+      text-align: center;
+      width: 100%;
+
+      @include media($large) {
+        @include span-columns(1);
+        padding: 0;
+        text-align: left;
+      }
+
+    }
+
+    .ad-info {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 2em;
+
+      @include media($large) {
+        @include span-columns(7);
+        padding-top: 0.75em;
+        margin-bottom: 0;
+        text-align: left;
+      }
+    }
+
+    .app-form {
+      clear: both;
+
+      @include media($large) {
+        clear: none;
+      }
+    }
+
+    fieldset {
+      margin-bottom: 0;
+      min-width: 210px;
+
+      @include media($large) {
+        float: right;
+      }
+    }
+
+    .btn {
+      font-size: .9em;
+      padding: 1em 3em .8em;
+      width: 100%;
+
+      @include media($large) {
+        width: auto;
+      }
+    }
+  }
+}

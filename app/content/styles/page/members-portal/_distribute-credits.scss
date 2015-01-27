@@ -1,0 +1,246 @@
+.about-credit-distribution {
+  .headline-secondary {
+    @include small-border();
+    text-align: center;
+
+    &:after {
+      margin: 0 auto;
+    }
+  }
+}
+
+//BASIC STEP FORM STYLES
+.stepped-form {
+  .step {
+    background: $gray-lighter;
+    border-bottom: 3px solid $base-border-color;
+    text-align: center;
+    padding: 1em;
+
+    @include media($medium) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+
+    .stepped-form-number {
+      border: 2px solid $base-accent-color;
+      border-radius: 50%;
+      display: block;
+      font-weight: 700;
+      height: 44px;
+      margin: 0 auto 1em;
+      padding: .75em;
+      width: 44px;
+
+      @include media($medium) {
+        padding: .5em;
+      }
+
+      .fa {
+        color: $base-accent-color;
+      }
+    }
+
+    .headline-tertiary {
+      font-family: $serif;
+      font-style: italic;
+      font-weight: 100;
+      margin-bottom: 1em;
+      text-transform: inherit;
+    }
+
+    .secondary-controls {
+      .fa:before {
+        font-size: .8em;
+      }
+
+      .replay {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+//STEP ONE
+.stepped-form {
+  .step {
+    .invitation {
+      @include media($medium) {
+        @include span-columns(8);
+        @include shift(2);
+      }
+
+      .form-actions {
+        margin: 2em 0;
+      }
+    }
+  }
+}
+
+//STEP THREE
+.stepped-form {
+  .step {
+    .finalize {
+      margin: 0 auto;
+
+      @include media($medium) {
+        width: 60%;
+      }
+
+      .information {
+        @include clearfix;
+        margin-bottom: 1em;
+        text-align: left;
+
+        .selected-event {
+          float: left;
+          margin-right: 1em;
+        }
+
+        .selected-event {
+          .event-name {
+            @include square(65px);
+            border-radius: .5em;
+            color: $white;
+            display: block;
+            font-family: $sans-serif;
+            font-size: 1em;
+            padding: 1.25em 0;
+            text-align: center;
+
+            @include media($medium) {
+              @include square(85px);
+              padding: 1.5em 0;
+            }
+
+            .credit-number {
+              display: block;
+              font-size: .75em;
+            }
+
+            &.upw {
+              background: $action-upw;
+            }
+
+            &.dwd {
+              background: $action-dwd;
+            }
+
+            &.lwm {
+              background: $action-lwm;
+            }
+
+            &.bm {
+              background: $action-bm;
+            }
+
+            &.la {
+              background: $action-la;
+            }
+
+            &.lm {
+              background: $action-lm;
+            }
+          }
+        }
+
+        .headline-paragraph {
+          padding-top: .5em;
+          margin-bottom: 0;
+
+          @include media($medium) {
+            padding-top: .75em;
+          }
+
+          @include media($large) {
+            padding-top: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.event-invitations {
+  .blurb-block {
+    background: $gray-lighter;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    width: 100%;
+
+    .headline-secondary {
+      margin-bottom: 0;
+    }
+  }
+
+  .event {
+    .header-article {
+      @include clearfix;
+      border-bottom: 1px solid $base-border-color;
+      margin-bottom: 2em;
+      padding-bottom: 1em;
+
+      .headline-tertiary {
+        margin-right: .25em;
+
+        @include media($large) {
+          float: left;
+        }
+      }
+
+      .action-link {
+        color: $gray;
+        font-family: $sans-serif;
+        font-size: .5em;
+        font-weight: normal;
+        display: inline-block;
+        text-transform: uppercase;
+        vertical-align: baseline;
+
+        @include media($small-only) {
+          display: block;
+          padding-top: .5em;
+        }
+
+        .fa {
+          color: $base-accent-color;
+        }
+      }
+
+      .credit-information {
+        @include clearfix;
+        margin-bottom: 1em;
+
+        @include media($medium) {
+          margin-bottom: 0;
+          padding-top: .25em;
+        }
+
+        @include media($large) {
+          float: right;
+        }
+
+        .pending,
+        .remaining {
+          border-radius: 1em;
+          background: $base-accent-color;
+          color: $white;
+          float: left;
+          font-size: .75em;
+          font-weight: 700;
+          padding: 0 1em;
+          text-transform: uppercase;
+        }
+
+        .pending {
+          background: $gray-light;
+        }
+
+        .remaining {
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}

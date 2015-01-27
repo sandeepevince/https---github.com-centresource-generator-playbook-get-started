@@ -1,0 +1,59 @@
+.checkout-form {
+
+  .headline-secondary {
+    font-size: 1.75em;
+  }
+
+  .group {
+    @include clearfix;
+    background-color: #eee;
+    margin-bottom: 1.5em;
+    padding: 8% 2% 2%;
+    position: relative;
+
+    @include media($medium) {
+      margin-bottom: 2.5em;
+      padding: 5% 2% 2%;
+    }
+
+    .bg {
+      background: #fff;
+      height: 100%;
+      left: 0;
+      opacity: .5;
+      position: absolute;
+      top:0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    &.active {
+      .bg {
+        display: none;
+      }
+    }
+
+    .shipping-billing {
+      margin: 2% 1% 4% 0;
+      position: relative;
+      z-index: 11;
+      @include media($medium) {
+        margin: 2% 1% 2% 0;
+      }
+    }
+  }
+
+  .headline-tertiary {
+    background-color: #fff;
+    font-size: 1em;
+    font-weight: normal;
+    left: 0;
+    padding: 1%;
+    position: absolute;
+    top:0;
+  }
+
+  .form-actions .btn {
+    float: right;
+  }
+}

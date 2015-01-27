@@ -1,0 +1,34 @@
+.checklist-item {
+  position: relative;
+
+  @include media($medium) {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+
+  &.completed {
+    opacity: 0.5;
+  }
+
+  .grunticon {
+    background-size: cover;
+    height: 7em;
+    margin: auto auto 2em;
+    width: 7em;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .step-number {
+    background: $base-accent-color;
+    border-radius: 50%;
+    color: $white;
+    display: block;
+    font-size: 3.5em;
+    font-weight: 700;
+    padding: 0 .5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

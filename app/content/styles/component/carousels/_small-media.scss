@@ -1,0 +1,42 @@
+$arrow-icon-height: 34px;
+
+.small-media {
+  .owl-wrapper-outer {
+    border-left: solid 1px rgba($gray, 0.5);
+    border-right: solid 1px rgba($gray, 0.5);
+  }
+
+  .owl-wrapper {
+    margin-left: -2px; // to account for the 2px shift caused by the borders above
+  }
+
+  .item {
+    margin: 0 0.6em; // what's the best way to do this?
+
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.owl-carousel {
+    padding: 0 calc(#{$arrow-icon-height} * 1.2);
+  }
+
+  &.owl-theme .owl-controls .owl-buttons div {
+    background: none;
+    color: $gray;
+    position: absolute;
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-prev {
+    left: .5em;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-next {
+    right: .5em;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+}

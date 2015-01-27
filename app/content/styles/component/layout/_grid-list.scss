@@ -1,0 +1,321 @@
+//LAYOUT
+.grid-list {
+  .date-container {
+    @include clearfix;
+    @include span-columns(3);
+
+    @include media($medium) {
+      @include span-columns(2);
+    }
+  }
+
+  .item-information {
+    @include span-columns(9);
+    @include omega;
+
+    @include media($medium) {
+      @include span-columns(9);
+    }
+
+    &.event {
+      @include media($medium) {
+        @include span-columns(6);
+      }
+    }
+  }
+
+  .actionable-items {
+    @include media($medium) {
+      @include span-columns(4);
+    }
+
+    &.phone {
+      @include media($medium) {
+        @include span-columns(4);
+      }
+    }
+  }
+
+  .controls {
+    @include position(absolute, 0 0 null null);
+
+    @include media($medium) {
+      bottom: 0;
+    }
+  }
+}
+
+
+//EVENTS LANDING PAGE - SPECIFIC EVENTS
+.grid-list {
+  .group {
+    .cube {
+      @include square(85px);
+      color: $white;
+      display: block;
+      font-family: $header-font-family-light;
+      font-size: 2em;
+      margin: 0 auto .25em;
+      padding-top: 1em;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include media($medium) {
+        @include square(125px);
+        float: left;
+        font-size: 2em;
+        padding-top: 1.25em;
+        margin-right: .5em;
+      }
+
+      &.upw {
+        background: $action-upw;
+      }
+
+      &.dwd {
+        background: $action-dwd;
+      }
+
+      &.lwm {
+        background: $action-lwm;
+      }
+
+      &.bm {
+        background: $action-bm;
+      }
+
+      &.la {
+        background: $action-la;
+      }
+
+      &.lm {
+        background: $action-lm;
+      }
+    }
+  }
+}
+
+
+.grid-list {
+  .group {
+    .item-information {
+      @include media($small-only) {
+        text-align: center;
+        width: 100%;
+      }
+
+      @include media($medium) {
+        margin: 0 0 .5em;
+        width: 74%;
+      }
+
+      @include media($large) {
+        @include span-columns(7);
+      }
+    }
+
+    .actionable-items {
+      @include media($medium) {
+        float: right;
+        width: auto;
+      }
+
+      @include media($large) {
+        margin-top: 2em;
+      }
+    }
+  }
+}
+
+
+//U-TEST GRID ITEM LAYOUT
+
+.you-tests-description .blurb-body {
+  color: rgba($gray-dark, .7);
+  font-size: .9em;
+  font-style: italic;
+  margin: 1em 0 .5em;
+  max-width: 100%;
+}
+
+.grid-list {
+  .item.test {
+    .headline-paragraph {
+      font-size: 1.7em;
+      line-height: .9em;
+    }
+
+    .test-information {
+      margin-bottom: 1em;
+    }
+
+    @include media($medium) {
+      .test-information {
+        @include span-columns(7);
+
+        margin-bottom: 0;
+        .description {
+          color: $gray-dark;
+          font:.9em $serif;
+          font-style: italic;
+        }
+      }
+
+      .actionable-items {
+        @include span-columns(5);
+
+        > * {
+          float: right;
+        }
+
+        .btn {
+          padding:1em 2em .8em;
+        }
+
+      }
+
+      .completed {
+        color: $gray-light;
+        font: .8em $header-font-family;
+        margin-right: 1em;
+        padding-top: 1.25em;
+        text-transform: uppercase;
+
+        i {
+          background: $gray-light;
+          border-radius: 50%;
+          color: #fff;
+          font-size: .75em;
+          margin-right: .5em;
+          padding: 2px;
+          position: relative;
+          top: -1px;
+        }
+      }
+    }
+  }
+}
+
+
+// DESIGN
+.grid-list {
+  .item {
+    @include clearfix;
+    border-bottom: 1px solid $base-border-color;
+    padding: 1.5em 0;
+    position: relative;
+
+    @include media($medium) {
+      padding: 1.5em;
+    }
+
+    &.full-width {
+      padding:1.5em 0;
+
+      .event-information {
+        @include media($medium) {
+          @include span-columns(8);
+        }
+      }
+
+      .actionable-items {
+        text-align: right;
+        @include media($medium) {
+          @include span-columns(2);
+        }
+      }
+
+      .item-name {
+        font-weight: normal;
+      }
+    }
+
+    .date {
+      @include square(55px);
+      border: 2px solid $blue;
+      color: $blue;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0 auto;
+      padding: .5em;
+      text-align: center;
+
+      @include media($medium) {
+        padding: .35em;
+      }
+
+      .day {
+        font-size: 1.75em;
+      }
+
+      .month {
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+
+    .item-information {
+      @include media($small-only) {
+        margin: .5em 0 1.5em;
+      }
+
+      .item-name {
+        margin-bottom: 0;
+      }
+
+      .body-copy {
+        font-style: italic;
+        margin: 0;
+      }
+    }
+
+    .actionable-items {
+      text-align: center;
+
+      .action-link {
+        display: block;
+      }
+
+      &.phone {
+        color: $gray;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .controls {
+      background: shade($white, 5%);
+      text-align: center;
+
+      .control {
+        font-size: 1.25em;
+        padding: 0 .5em;
+
+        &:hover {
+          background: $base-border-color;
+        }
+
+        @include media($medium) {
+          border-bottom: 1px solid $base-border-color;
+          display: block;
+          margin: 0;
+          height: 50%;
+          padding: .25em .5em;
+        }
+      }
+
+      .control-label {
+        display: none;
+        text-indent: -9999px;
+      }
+    }
+  }
+}
+
+@include reset-display;

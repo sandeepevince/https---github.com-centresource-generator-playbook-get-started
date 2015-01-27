@@ -1,0 +1,9 @@
+<!-- MEDIA CAROUSEL -->
+<div class="owl-carousel media-pagination media-pagination-carousel{% if include.class != null %} {{ include.class }}{% endif %}">
+  {% for item in page.media-items %}
+  <div class="item">
+  {% include component/media/image-content.html class="copy-right" src=item.image-url headline=item.headline body=item.text button=item.button-text %}
+  </div>
+  {% endfor %}
+</div>
+<!-- /MEDIA CAROUSEL -->

@@ -1,0 +1,44 @@
+---
+layout: default
+title: Member Portal
+header_color: blue
+body_class: white-bg no-hero
+---
+
+<section class="member-event-information">
+  <div class="container">
+    <article class="your-cards">
+      <h3>Manage Cards</h3>
+      <ul class="grid-list">
+        {% include component/layout/grid-list/grid-list-item-credit-card.html cardID="8211" cardStatus="Primary Card" cardType="Visa" cardNumber="•••• •••• •••• 8211" cardExp="04/17" cardCCV="197" streetAddress="12 Fountain Square Blvd." suiteNumber="Apt 752" cityState="Beverly Hills, FL" %}
+
+        {% include component/layout/grid-list/grid-list-item-credit-card.html cardID="1432" cardType="Visa" cardNumber="•••• •••• •••• 1432" cardExp="04/17" cardCCV="197" streetAddress="12 Fountain Square Blvd." suiteNumber="Apt 752" cityState="Beverly Hills, FL" %}
+      </ul>
+
+      <footer class="cards-footer">
+        <a href="#" class="btn btn-default control" data-toggle="modal" data-target="#add-card">Add Card</a>
+
+        <!-- ADD CARD MODAL -->
+        <div class="modal fade" id="add-card" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn ghost close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="myModalLabel">Add Card</h4>
+              </div>
+              <div class="modal-body">
+                ( Add Card Fields )
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                <a href="#" class="btn btn-default">Add Card</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /ADD CARD MODAL -->
+      </footer>
+    </article>
+  </div>
+</section>
+

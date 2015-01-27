@@ -1,0 +1,37 @@
+---
+layout: default
+title: Thank You
+header_color: blue
+body_class: white-bg no-hero checkout-form-page thank-you
+step_tabs:
+- url: /library/checkout-form
+  text: Step 1
+- url: /library/review-confirm
+  text: Step 2
+- url: /library/thank-you
+  text: Step 3
+  class: active
+links:
+- url: http://facebook.com
+  text: Facebook
+- url: http://twitter.com
+  text: Twitter
+- url: http://linkedin.com
+  text: LinkedIn
+---
+
+<div class="container">
+  <h1>Confirmation</h1>
+  {% include component/layout/step-tabs.html %}
+
+  {% include component/typography/centered-content.html headline="Thank You for Your Purchase!" body="Brooklyn cardigan heirloom, 3 wolf moon twee cliche lomo you probably haven't heard of them DIY. Master cleanse Kickstarter artisan cardigan disrupt, Shoreditch meggings. +1 Pinterest ennui DIY sriracha actually. Wes Anderson artisan fixie Shoreditch hashtag. Locavore DIY trust fund, quinoa plaid jean shorts fashion axe polaroid. Odd Future slow-carb pork belly butcher flexitarian. Bushwick art party flexitarian lo-fi sriracha." %}
+
+  {% include component/layout/share-block.html headline-secondary="Share Your Progress" %}
+
+  <div class="track-order">
+    <h2 class="headline-secondary">Track Your order</h2>
+    <p>Master cleanse meh brunch yr flexitarian flannel. Hoodie Helvetica pork belly Odd Future Thundercats, tousled direct trade American Apparel kogi Banksy. </p>
+    {% include component/buttons/button.html class="secondary" value="Track Your Order" %}
+  </div>
+
+</div>

@@ -1,0 +1,11 @@
+{% if include.body != null %}
+  {% if include.class == "down" %}
+    <a class="action-link {{ include.class }}" href="{{ include.destination }}" title="#">{{ include.body }}<br><i class="fa fa-chevron-down"></i></a>
+
+  {% elsif include.class != "prev" %}
+    <a class="action-link {{ include.class }}" href="{{ include.destination }}" title="#">{{ include.body }} <i class="fa fa-chevron-right"></i></a>
+
+  {% else %}
+    <a class="action-link {{ include.class }}" href="{{ include.destination }}" title="#"><i class="fa fa-chevron-left"></i> {{ include.body }}</a>
+  {% endif %}
+{% endif %}

@@ -1,0 +1,129 @@
+//COLUMN LAYOUT PER SCREEN
+.media-grid {
+  @extend .container;
+  padding: 1em;
+
+  @include media($large) {
+    padding: 1em 0;
+  }
+
+  @include media($small-only) {
+    .row {
+      @include clearfix;
+    }
+
+    .media-block {
+      margin-bottom: 2.41458%;
+    }
+
+    .column-small {
+      @include clearfix;
+
+      .media-block {
+        @include span-columns(6 of 12);
+        @include omega(2n);
+      }
+    }
+
+    .column-med {
+      .row {
+        .media-block.small {
+          @include span-columns(4 of 12);
+          @include omega(3n);
+        }
+      }
+    }
+
+    .column-half {
+      .row {
+        .column-half {
+          @include span-columns(6 of 12);
+        }
+
+        .column-small {
+          @include span-columns(3 of 12);
+
+          .media-block.small {
+            @include span-columns(12 of 12);
+            @include omega(1n);
+            margin-bottom: 9.65832%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//MEDIUM
+.media-grid {
+  @extend .container;
+
+  @include media($medium) {
+    .row {
+      @include clearfix;
+      margin-bottom: 19.31664;
+    }
+
+    .column-small {
+      @include span-columns(1.5 of 6);
+    }
+
+    .column-med {
+      @include span-columns(4.5 of 6);
+    }
+
+    .column-half {
+      @include span-columns(12 of 12);
+      .column-half {
+        @include span-columns(3 of 6);
+      }
+    }
+  }
+}
+
+//ADJUSTING MARGINS TO KEEP CONSISTENT GUTTER
+.media-grid {
+  @include media($medium) {
+    .media-block {
+      margin-bottom: 4.82916%;
+    }
+
+    .column-small {
+      .media-block {
+        margin-bottom: 19.31664%;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .column-med {
+      .media-block.small {
+        @include span-columns(1.5 of 4.5);
+        @include omega(3n);
+      }
+    }
+
+    .column-half {
+      .column-half {
+        .media-block.medium {
+          margin-bottom: 9.65832%;
+        }
+      }
+    }
+  }
+}
+
+//LARGE
+.media-grid {
+  @include media($large) {
+    .column-half {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+      .column-half {
+        @include span-columns(3 of 6);
+      }
+    }
+  }
+}

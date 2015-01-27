@@ -1,0 +1,14 @@
+<!-- HERO -->
+<div class="hero event{% if include.class != null %} {{ include.class }}{% endif %} {% if include.src != null %}with-image{% endif %}"{% if include.src != null %} style="background-image: url('{{ include.src }}')"{% endif %}>
+  <span class="bg-overlay"></span>
+  <div class="hero-container">
+    {% if include.fullName != null %}<h2 class="headline-tertiary">{{ include.fullName }}</h2>{% endif %}
+    <h1 class="headline-primary">{{ include.initials }}<span class="location">{{ include.location }}</span></h1>
+    {% if include.dateLocation != null %}<h2 class="headline-tertiary">{{ include.dateLocation }}</h2>{% endif %}
+    {% if include.countdownClass != null %}
+      <div id="countdown" class="countdown {{ include.countdownClass }}"></div>
+    {% endif %}
+    {% include component/buttons/button-icon.html class="large" destination=include.destination value=include.value %}
+  </div>
+</div>
+<!-- /HERO -->

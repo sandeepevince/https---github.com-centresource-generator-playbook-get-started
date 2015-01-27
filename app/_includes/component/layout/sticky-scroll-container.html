@@ -1,0 +1,10 @@
+<!-- STICKY SCROLL CONTAINER -->
+<div class="sticky-scroll-container {{ include.class }}">
+  <div class="sticky-scroll-content">
+    {% include {{ include.content }} %}
+  </div>
+  <div class="sticky-scroller-container">
+    {% include component/layout/sticky-scroll.html class="styleguide-sticky-scroll-example" content=include.sticky-scroll-content %}
+  </div>
+</div>
+<!-- /STICKY SCROLL CONTAINER -->

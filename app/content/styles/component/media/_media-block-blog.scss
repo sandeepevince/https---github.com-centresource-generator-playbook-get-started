@@ -1,0 +1,134 @@
+
+//BLOG MEDIA BLOCK ITEMS
+.media-grid.blog {
+  .media-block {
+    .media-body {
+      line-height: 1.25;
+      padding: .5em;
+      text-align: left;
+
+      .header-media-block {
+        @include clearfix;
+        color: $gray-light;
+        font-size: .75em;
+
+        @include media($medium) {
+          margin-bottom: .5em;
+        }
+
+        .popular-icon {
+          float: left;
+        }
+
+        .viewed-icon {
+          float: right;
+        }
+      }
+
+      .body {
+        padding: .5em;
+
+        .category {
+          color: $base-accent-color;
+          font-size: .65em;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          @include media($medium) {
+            font-size: .55em;
+          }
+
+          .bar {
+            border-bottom: 2px solid $white;
+            margin: .35em 0 1em;
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.media-grid.blog {
+  .media-block {
+    &.small {
+      position: relative;
+
+      @include media($medium) {
+        margin-bottom: 9.65832%;
+      }
+
+      &:after {
+        @include radial-gradient(transparent, $black);
+        bottom: 0;
+        content: '';
+        left: 0;
+        opacity: .65;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+
+      .media-body {
+        @include position(absolute, 0 0 0 0);
+        @include background-opacity($black, .8);
+        color: $white;
+        padding: .5em;
+        text-align: left;
+        z-index: 2;
+
+        .body-copy {
+          font-style: italic;
+
+          @include media($x-small-only) {
+            display: none;
+          }
+        }
+
+        &.text-only {
+          &:after {
+            opacity: .5;
+          }
+
+          .media-body {
+            @include background-opacity($blue-dark, .95);
+            position: relative;
+            z-index: 2;
+          }
+        }
+      }
+    }
+
+    &.medium {
+      @include media($small-only) {
+        max-height: 300px;
+      }
+
+      .media-body {
+        @include position(absolute, 70% 0 0 0);
+
+        @include media($medium) {
+          @include position(absolute, 55% 0 0 0);
+        }
+      }
+    }
+
+    &.large {
+      .media-body {
+        @include position(absolute, 70% 0 0 0);
+
+        @include media($large) {
+          @include position(absolute, 50% 0 0 0);
+        }
+      }
+
+      &.video {
+        .media-body {
+          @include position(absolute, 70% 0 0 0);
+        }
+      }
+    }
+  }
+}

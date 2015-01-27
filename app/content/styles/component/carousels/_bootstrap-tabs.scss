@@ -1,0 +1,165 @@
+//BOOSTRAP STYLES
+.tab-content > .tab-pane {
+  display: none;
+  visibility: hidden;
+}
+
+.tab-content > .active {
+  display: block;
+  visibility: visible;
+}
+
+.fade {
+  @include transition(opacity 0.15s linear);
+  opacity: 0;
+
+  &.in {
+    opacity: 1;
+  }
+}
+
+
+.tabs-section {
+  background-color: $gray-lightest;
+  color: $gray;
+  text-align: center;
+
+  .nav-tabs {
+    @include clearfix;
+    border-bottom: 0;
+    color: $gray-light;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    li {
+      display: inline-block;
+
+      a, a:hover {
+        display: block;
+        border-bottom:4px solid;
+        border-color:transparent;
+        color: tint($gray, 35%);
+        font-size: .8em;
+        font-weight: 700;
+        padding:1em;
+        text-transform: uppercase;
+      }
+
+      &.active a {
+        color: $gray;
+      }
+
+      a:hover {
+        color: $gray;
+      }
+    }
+  }
+}
+
+.tab-content {
+  .text-content {
+    margin: 5em 0;
+  }
+
+  .btn {
+    display: block;
+    margin: 2em auto 0;
+  }
+
+  .text-left {
+    @include span-columns(8);
+    margin-top: 4em;
+  }
+
+  blockquote.side {
+    @include span-columns(4);
+    margin-top: 0;
+  }
+}
+
+
+.level-info-wrap {
+  @include clearfix;
+  position: relative;
+  padding: 1em;
+}
+
+.level-info {
+
+  @include media($large) {
+    @include span-columns(7);
+    @include omega;
+  }
+
+  .headline-tertiary {
+    display: inline-block;
+  }
+
+  .price {
+    font:em(26) $header-font-family;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  p {
+    color: tint($gray-dark, 30%);
+  }
+}
+
+
+.level-testimony {
+  @include media($large) {
+    @include span-columns(4);
+    @include shift(1);
+    @include omega;
+  }
+
+  .quote-container {
+
+    .quotation-mark {
+      font-size: 19em;
+    }
+
+    .quote {
+      font-size: 1.4em;
+      line-height: 1.4em;
+    }
+  }
+
+  .author {
+    font: normal em(26) $header-font-family;
+    text-transform: uppercase;
+  }
+
+  .group {
+    color: tint($gray-dark, 30%);
+    font-style: italic;
+    font-family: Georgia;
+  }
+
+  .avatar-container {
+    bottom:0;
+    opacity: .3;
+    right: 0;
+    position: absolute;
+    @include media($large) {
+      opacity: 1;
+    }
+  }
+
+  .avatar {
+    border-radius:0;
+  }
+}
+
+.level-group {
+  @include clearfix;
+  background-color: $gray-lightest;
+  border-top:1px solid $gray-light;
+  clear: left;
+  color: tint($gray-dark, 30%);
+}
+

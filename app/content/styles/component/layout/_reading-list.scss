@@ -1,0 +1,69 @@
+.reading-list {
+  background: $gray-lightest;
+
+  .container {
+    padding: 0;
+  }
+
+  &.sticking {
+    width: inherit;
+    z-index: 1000;
+  }
+
+  li:first-child {
+    padding: 1.5em 1em;
+    width: 100%;
+
+    &:before {
+      margin-right: 0.4em;
+      font-size: 0.9em;
+    }
+  }
+
+  li {
+    border-bottom: 1px solid $gray-light;
+    width: 100%;
+
+    a {
+      color: $gray-dark;
+      display: block;
+      margin: auto;
+      padding: 1em;
+    }
+
+    a:before {
+      color: $gray;
+      content: counter(li);
+      counter-increment: li;
+      font-weight: 800;
+      position: absolute;
+    }
+
+    .article-author,
+    .article-title {
+      margin-left: 1em;
+    }
+
+    .article-author {
+      font-size: 0.9em;
+      font-style: italic;
+    }
+
+    .article-title {
+      font-weight: 800;
+    }
+  }
+
+  li:nth-child(2) {
+    border-left: 3px solid $blue-lighter;
+  }
+
+  .list-title {
+    text-transform: uppercase;
+  }
+
+  ul {
+    counter-reset: li;
+    padding: 0;
+  }
+}

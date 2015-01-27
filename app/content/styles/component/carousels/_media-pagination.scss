@@ -1,0 +1,104 @@
+$arrow-icon-height: 42px;
+
+.media-pagination {
+  .item {
+    padding: 0 calc(#{$arrow-icon-height} * 1.6);
+  }
+
+  &.owl-theme .owl-controls .owl-buttons div {
+    background: none;
+    color: $gray-dark;
+    position: absolute;
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-prev {
+    left: 1em;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-next {
+    right: 1em;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+}
+
+
+//HOMEPAGE SPECIFIC
+.media-pagination.homepage {
+  .item {
+    padding: 3.5em 1em 0;
+
+    @include media($medium) {
+      font-size: .9em;
+    }
+
+    .image-content {
+      border-bottom: 1px solid $base-border-color;
+
+      @include media($small-only) {
+        padding-bottom: 3em;
+      }
+
+      .media-object {
+        @include media($small-only) {
+          max-width: 225px;
+          margin: 0 auto;
+          display: block;
+        }
+
+        @include media($medium) {
+          bottom: 0;
+          display: block;
+          left: 9%;
+          position: relative;
+          width: 53%;
+        }
+      }
+
+      .copy {
+        margin: 0 auto;
+        width: 75%;
+
+        @include media($medium) {
+          @include span-columns(5);
+          left: 51%;
+          position: absolute;
+          top: 20%;
+        }
+
+        @include media($large) {
+          @include span-columns(5);
+          top: 22%;
+        }
+
+        @include media($x-large) {
+          @include span-columns(4);
+        }
+      }
+    }
+  }
+
+  .owl-pagination {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+
+    @include media($medium) {
+      bottom: 10px;
+    }
+
+    .owl-page {
+      span {
+        background: none;
+        border: 1px solid $gray-lighter;
+      }
+
+      &.active {
+        span {
+          background: $base-accent-color;
+          border: 1px solid $base-accent-color;
+        }
+      }
+    }
+  }
+}

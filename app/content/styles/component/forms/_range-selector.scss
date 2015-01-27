@@ -1,0 +1,130 @@
+%handle-pseudo {
+  background: white;
+  display: block;
+  height: 14px;
+  left: 14px;
+  position: absolute;
+  top: 6px;
+  width: 1px;
+}
+
+.no-ui-slider {
+  width: 100%;
+
+  .slider-labels {
+    font-size: 13px;
+    list-style: none;
+    margin-left: -3px;
+    margin-top: 15px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+
+    li {
+      color: #d3d3d3;
+      cursor: pointer;
+      display: inline;
+      float: left;
+      width: calc(100% / 9);
+
+      &:nth-last-child(1) {
+        margin-left: -3px;
+        position: absolute;
+        width: 25px;
+      }
+
+      &.active,
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.noUi-target {
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.noUi-base {
+  @include linear-gradient(left, $base-accent-color, $color-leadership 50%, $fallback: $base-accent-color);
+  border-radius: .5em;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.noUi-origin {
+  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.noUi-handle {
+  background: white;
+  border-radius: 100%;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    @extend %handle-pseudo;
+  }
+
+  &:after {
+    @extend %handle-pseudo;
+    left: 17px;
+  }
+}
+
+.noUi-stacking {
+  .noUi-handle {
+    z-index: 10;
+  }
+
+  + .noUi-origin {
+    *z-index: -1;
+  }
+}
+
+.noUi-horizontal {
+  height: 8px;
+
+  .noUi-handle {
+    border-radius: 100%;
+    height: 26px;
+    left: -13px;
+    top: -9px;
+    width: 26px;
+  }
+
+  &.noUi-extended {
+    padding: 0 15px;
+
+    .noUi-origin {
+      right: -15px;
+    }
+  }
+}
+
+.noUi-background {
+  background-color: $gray-medium;
+  box-shadow: none;
+}
+
+.noUi-state-tap .noUi-origin {
+  transition: left 0.3s, top 0.3s;
+}
+
+.noUi-state-drag * {
+  cursor: inherit !important;
+}

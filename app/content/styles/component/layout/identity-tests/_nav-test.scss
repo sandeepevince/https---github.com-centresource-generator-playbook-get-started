@@ -1,0 +1,29 @@
+.nav-test {
+  background: $gray-dark;
+  font-size: .75em;
+  text-align: center;
+
+  .nav-tab-item {
+    display: block;
+    padding: 0;
+
+    @include media($large) {
+      display: inline-block;
+      padding: 1em;
+    }
+
+    &.active {
+      border-bottom: 3px solid $base-accent-color;
+    }
+
+    a {
+      color: $gray;
+      display: block;
+      padding: 1em;
+
+      &:hover {
+        background: darken($gray-dark, 7%);
+      }
+    }
+  }
+}

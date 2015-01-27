@@ -1,0 +1,134 @@
+.action-link {
+  display: block;
+}
+
+.profile-information {
+  .content-aside {
+    @include media($medium) {
+      @include span-columns(12);
+    }
+    @include media($medium-alt) {
+      @include span-columns(3.5);
+    }
+  }
+
+  .content-main {
+    @include media($medium) {
+      @include span-columns(12);
+    }
+    @include media($medium-alt) {
+      @include span-columns(8.5);
+    }
+
+    &.attendance-information {
+      .blurb-block {
+        background: $gray-lighter;
+        padding: 1em;
+        width: 100%;
+
+        .headline-secondary {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Help Overlay
+.help {
+  border: 2px solid $gray-light;
+  border-radius: 13px;
+  background-color: transparent;
+  color: $gray-light;
+  font-size: 12px;
+  padding: 1px 3px 1px 5px;
+  text-align: center;
+
+  &:hover {
+    background-color:transparent;
+    border-color:$gray;
+    color: $gray;
+  }
+}
+
+#helpText {
+  background: url(/content/images/trans-white.png);
+  display: table;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  @include transition(opacity .5s);
+
+  &.show {
+    opacity: 1;
+    z-index: 200;
+  }
+
+  .testimonial {
+    display: table-cell;
+    margin: 0 auto;
+    padding: 8%;
+    vertical-align: middle;
+  }
+
+  .blockquote-wrap {
+    @include clearfix;
+    border-bottom: 1px solid $gray-lighter;
+    position: relative;
+  }
+
+  .author-photo {
+    @include media($medium) {
+      @include span-columns(5);
+    }
+  }
+
+  .quote-container {
+    font-size: 1.3em;
+    padding:6% 3% 0;
+
+    @include media($medium) {
+      @include span-columns(7);
+      @include omega;
+    }
+
+    .quotation-mark {
+      font-size: 20em;
+      top: 6%;
+    }
+
+    .author {
+      color: $blue;
+      font: 1.3em $header-font-family;
+      text-transform: uppercase;
+    }
+
+    .dash {
+      display: none;
+    }
+  }
+
+  .close {
+    background-color:transparent;
+    border:none;
+    color: $gray-dark;
+    font-size: 1.5em;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: -11%;
+    @include transition(all .3s);
+
+    @include media($medium) {
+      top:0;
+    }
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}

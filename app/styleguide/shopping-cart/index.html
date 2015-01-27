@@ -1,0 +1,27 @@
+---
+layout: styleguide
+title: Tony Robbins - Styleguide - Shopping Cart
+items:
+- label: Product or Bundle Title
+  price: 298
+cart:
+- name: Product Name
+  price: 34.50
+- name: Product Name
+  price: 109.50
+- name: Product Name
+  price: Free
+---
+<h1>Cart</h1>
+{% include shared/nav-styleguide-secondary.html %}
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Cart Block">Cart Summary</h3>
+  <p class="styleguide-notes">Summary section, typically used in an aside section.</p>
+
+  {% include component/shopping-cart/summary.html title="Shopping Cart Summary" %}
+
+  {% highlight html %}{% endhighlight %}
+
+</section>
+

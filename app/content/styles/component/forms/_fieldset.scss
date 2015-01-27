@@ -1,0 +1,53 @@
+fieldset {
+  .sr-only {
+    display: none;
+  }
+
+  p.help {
+    color: $red;
+    display: none;
+    font-size: .75em;
+    font-style: italic;
+    margin-bottom: 0;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.fieldset-wrap {
+  @include clearfix;
+}
+
+.half {
+  @include media($medium) {
+    @include span-columns(6);
+  }
+  @include media($small-only) {
+    &.expiration {
+      @include span-columns(6);
+
+      .half {
+        @include span-columns(6);
+      }
+    }
+  }
+}
+
+//SEARCH FIELDS
+fieldset.search {
+  position: relative;
+
+  &:after {
+    content: "\f002";
+    color: $gray;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-size: 1.5em;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

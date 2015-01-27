@@ -1,0 +1,57 @@
+.dark-product {
+  background-color: #242424;
+  color:#fff;
+  @include span-columns(6);
+  @include omega(2n);
+  margin-bottom: 1em;
+
+  @include media($large) {
+    @include omega-reset(2n);
+    @include span-columns(4);
+    @include omega(3n);
+    margin-bottom: 1.5em;
+  }
+
+  .product-name {
+    font-size: 1.6em;
+    line-height: 1.3em;
+    margin-bottom: .6em;
+  }
+
+  .product-description {
+    @include small-border(#fff);
+    font-style: italic;
+
+    &:after {
+      margin: 2em 0 1em;
+    }
+  }
+
+  .product-info {
+    padding: 6%;
+  }
+
+  .price {
+    color: $blue-lighter;
+    float: left;
+    font-weight: bold;
+    width: 40%;
+  }
+
+  .action-link {
+    color: #fff;
+    float: right;
+    font-size:.9em;
+    font-weight: normal;
+    text-align: right;
+    width: 60%;
+
+    .fa {
+      font-size: .9em;
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+

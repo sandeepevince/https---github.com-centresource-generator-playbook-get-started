@@ -1,0 +1,95 @@
+---
+layout: default
+title: Thank You
+header_color: blue
+body_class: white-bg no-hero upsell
+cart:
+- name: Product Name
+  price: 34.50
+- name: Product Name
+  price: 109.50
+- name: Product Name
+  price: Free
+---
+
+<div class="checkout-header">
+  <h2>Library</h2>
+  <h1>Checkout</h1>
+</div>
+
+<div class="container sticky-scroll-container">
+
+  <div class="content-main sticky-scroll-content">
+    {% include component/typography/action-link.html body="Continue Shopping" class="prev" %}
+
+    <div class="owl-carousel upsell-carousel">
+      <div class="item product-summary">
+        {% include component/media/image-content.html class="copy-right" src="http://placecorgi.com/246/246" headline="Product or Bundle Title" body="Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid <span class='price'>$34.50</span>" %}
+        <div class="survey">
+          {% include component/typography/centered-content.html headline="Take this Survery for a 10% Discount" body="Night came on; the train passed on at full speed, in the midst of the roaring of the tigers, bears, and wolves which fled before the locomotive; and the marvels of Bengal, Golconda ruined Gour, Murshedabad, the ancient capital, Burdwan, Hugly, and the French town of Chandernagor, where Passepartout would have been proud to see his country's flag flying, were hidden from their view in the darkness." %}
+          {% include component/buttons/button.html class="secondary" value="Begin Survey" %}
+          {% include component/typography/action-link.html body="No Thanks" %}
+        </div>
+      </div>
+      <div class="item attend-summary">
+        <div class="video-blurb">
+          <h4 class="headline-paragraph">Attend UPW Dallas</h4>
+          {% include component/media/responsive-video.html source="/content/images/sample-video" %}
+          <p>Shoreditch bicycle rights gentrify, distillery lo-fi cliche PBR Portland four loko Wes Anderson pork belly cardigan. Gluten-free sartorial chambray banh mi crucifix semiotics, wolf Intelligentsia</p>
+        </div>
+        <div class="event-levels">
+          <h2 class="headline-secondary">Event Levels</h2>
+          <ul class="levels">
+            <li>Diamond Premier</li>
+            <li>Diamond</li>
+            <li>VIP</li>
+            <li>Executive</li>
+            <li>General Admission</li>
+          </ul>
+          <ul class="products">
+            <li>
+              <span>$2695</span>
+              {% include component/buttons/button.html class="small secondary" value="Add to Cart" %}
+            </li>
+            <li>
+            <span>$2195</span>
+              {% include component/buttons/button.html class="small secondary" value="Add to Cart" %}
+            </li>
+            <li>
+              <span>$1000</span>
+              {% include component/buttons/button.html class="small secondary" value="Add to Cart" %}
+            </li>
+            <li>
+              <span>$795</span>
+              {% include component/buttons/button.html class="small secondary" value="Add to Cart" %}
+            </li>
+            <li>
+              <span>$595</span>
+              {% include component/buttons/button.html class="small secondary" value="Add to Cart" %}
+            </li>
+          </ul>
+        </div><!--event-levels-->
+        <div class="action-set">
+          {% include component/typography/action-link.html body="No Thanks" %}
+        </div>
+      </div><!--attend-summary-->
+      <div class="item fifty-percent-off">
+        {% include component/typography/centered-content.html headline="Get an Additional 50% Off Select Products!" body="Night came on; the train passed on at full speed, in the midst of the roaring of the tigers, bears, and wolves which fled before the locomotive; and the marvels of Bengal, Golconda ruined Gour, Murshedabad, the ancient capital, Burdwan, Hugly, and the French town of Chandernagor, where Passepartout would have been proud to see his country's flag flying, were hidden from their view in the darkness." %}
+        <div class="sale-products container">
+          {% include component/media/dark-product.html src="http://placecorgi.com/350/350" name="Product or Bundle Title" price="79.50" description="Swag PBR blog, single-origin coffee wayfarers taxidermy ethical whatever slow-carb cold-pressed" %}
+          {% include component/media/dark-product.html src="http://placecorgi.com/350/350" name="Product or Bundle Title" price="79.50" description="Swag PBR blog, single-origin coffee wayfarers taxidermy ethical whatever slow-carb cold-pressed" %}
+          {% include component/media/dark-product.html src="http://placecorgi.com/350/350" name="Product or Bundle Title" price="79.50" description="Swag PBR blog, single-origin coffee wayfarers taxidermy ethical whatever slow-carb cold-pressed" %}
+        </div><!--sale-products-->
+        <div class="action-set">
+          {% include component/typography/action-link.html body="No Thanks" class="no-js" destination="/library/checkout-form" %}
+        </div>
+      </div>
+    </div><!--carousel-->
+  </div><!--content-main-->
+  <aside class="sticky-scroller-container">
+    <div class="cart sticky-scroll">
+      {% include component/shopping-cart/summary.html title="Shopping Cart Summary" %}
+    </div>
+  </aside>
+
+</div>

@@ -1,0 +1,31 @@
+<!-- INVITEE LIST ITEM -->
+<li class="invitee" data-invitee-email="{{ include.email }}">
+  <div class="information">
+    <img class="media-object" src="{{ include.src }}">
+    <h4 class="headline-paragraph">{{ include.name }}</h4>
+    <p class="body-copy email">{{ include.email }}</p>
+    <a class="remove-invitee fa fa-times" href="#"></a>
+  </div>
+  <footer class="credit-detail">
+    <p class="details"><span class="number">{{ include.creditAmount }}</span> Credits <span class="status">{{ include.status }}</span></p>
+    <a class="edit fa fa-pencil" href="#" data-toggle="modal" data-target="#change-credits-{{ include.name }}"></a>
+  </footer>
+  <div class="modal fade" id="change-credits-{{ include.name }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn ghost close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+          <h4 class="modal-title" id="myModalLabel">Change Credits for {{ include.name }}</h4>
+        </div>
+        <div class="modal-body">
+          <p>Current Credits: <span class="number">{{ include.creditAmount }}</span> Credits <span class="status">{{ include.status }}</span></p>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+          <a href="#" class="btn btn-default">Save changes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+<!-- /INVITEE LIST ITEM -->

@@ -1,0 +1,22 @@
+.group-rate-form {
+  @include clearfix;
+
+  @include media($medium) {
+    .label-left {
+      margin-right: 1em;
+      label {
+        float: left;
+        margin-right: .5em;
+      }
+    }
+
+    .ticket-submit {
+      float: right;
+
+      fieldset {
+        display: inline-block;
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+//MEDIA GRID HOMEPAGE
+.media-grid.homepage,
+.media-grid.events {
+  padding-bottom: 0;
+
+  .media-block {
+    &.small {
+      @include background-opacity($black, .8);
+
+      &:hover {
+        @include transition (all .15s ease-in-out);
+        opacity: .9;
+      }
+    }
+
+    &.medium,
+    &.large {
+      .media-body {
+        &:hover {
+          background: $base-accent-color;
+          border: 8px solid lighten($base-accent-color, 7%);
+        }
+      }
+    }
+  }
+}

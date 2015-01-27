@@ -1,0 +1,66 @@
+.past-event {
+
+  .past-event-gallery {
+    @include media($medium) {
+      @include span-columns(6);
+    }
+
+    @include media($large) {
+      @include span-columns(7);
+    }
+  }
+
+  .event-info {
+    @include media($medium) {
+      @include span-columns(6);
+    }
+
+    @include media($large) {
+      @include span-columns(5);
+    }
+
+    .headline-secondary {
+      font-size: 2.5em;
+    }
+
+    .date {
+      font-size: 1.3em;
+    }
+
+    .action-link {
+      display: inline-block;
+      float: right;
+      margin: 1%;
+    }
+
+    p {
+      margin-top: 1em;
+    }
+  }
+
+  .owl-buttons {
+    border:none;
+    float: left;
+    font-size: .8em;
+    padding: 1.2em 2em 1em;
+  }
+
+  .gallery-next {
+    float: right;
+  }
+
+  .sync-secondary {
+    .owl-wrapper-outer {
+      overflow: visible;
+    }
+
+    .owl-wrapper {
+      position: static;
+      width: auto !important;
+    }
+
+    .owl-item {
+      margin-right: 1%;
+    }
+  }
+}

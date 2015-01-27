@@ -1,0 +1,10 @@
+<!-- SMALL MEDIA CAROUSEL -->
+<div class="owl-carousel small-media news-media-carousel">
+  {% for item in page.small-media-items %}
+  <div class="item">
+    <img class="source-logo" src="{{ item.url }}" alt="{{ item.text }}">
+    {% if item.news != null %}<p class="update"><strong>Latest:</strong> {{ item.news }}</p>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+<!-- /SMALL MEDIA CAROUSEL -->

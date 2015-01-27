@@ -1,0 +1,11 @@
+<!-- STEP TABS -->
+<nav class="step-tabs {{ include.class }}">
+  <ul>
+    {% for tab in page.step_tabs %}
+      <li class="step-tab-item {{ tab.class }}">
+        <a href="{{ tab.url }}">{{ tab.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+<!-- /STEP TABS -->

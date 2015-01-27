@@ -1,0 +1,28 @@
+---
+layout: default
+title: Checkout Form
+header_color: blue
+body_class: white-bg no-hero checkout-form-page
+step_tabs:
+- url: /library/checkout-form
+  text: Step 1
+  class: active
+- url: /library/review-confirm
+  text: Step 2
+- url: /library/thank-you
+  text: Step 3
+---
+
+<div class="container">
+  <h1>Checkout</h1>
+  {% include component/layout/step-tabs.html %}
+
+  <div class="checkout-form-container">
+    <div class="payment-method info">
+      <h3 class="headline-tertiary">Payment Method</h3>
+      {% include component/buttons/button.html value="Paypal" %}
+      {% include component/buttons/button.html class="secondary" value="Credit/Debit" %}
+    </div>
+    {% include component/forms/cc-form.html %}
+  </div>
+</div>

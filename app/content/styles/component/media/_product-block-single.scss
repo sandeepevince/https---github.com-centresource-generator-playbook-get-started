@@ -1,0 +1,99 @@
+.product {
+  .container {
+    @include row;
+    @include clearfix;
+
+    .product-information-main {
+      @include media($medium) {
+        @include span-columns(6);
+      }
+      @include media($large) {
+        @include span-columns(5);
+      }
+    }
+
+    .product-information-secondary {
+      @include media($medium) {
+        @include span-columns(6);
+      }
+
+      @include media($large) {
+        @include span-columns(7);
+      }
+
+      .action-link {
+        color: $base-accent-color;
+      }
+    }
+
+    .product-highlights {
+      background-color: $gray-lightest;
+      padding: em(16);
+
+      .title-highlights {
+        @include small-border();
+      }
+    }
+
+    .copy {
+      padding-top: 1.7em;
+    }
+
+    .price-copy {
+      border-bottom: 1px solid $gray-light;
+      color: $blue-lighter;
+      font-size: 1.1em;
+      font-weight: 500;
+      margin-top: em(32);
+      padding: em(8) 0 em(32);
+    }
+
+    .product-actions {
+      @include row();
+      @include clearfix;
+
+      .btn {
+        @include span-columns(8);
+
+        @include media($medium) {
+          @include span-columns(12);
+        }
+
+        @include media($large) {
+          @include span-columns(6);
+        }
+      }
+    }
+
+    .product-quantity {
+      @include span-columns(4);
+
+      @include media($medium) {
+        @include span-columns(12);
+        margin-bottom: 1.5em;
+      }
+
+      @include media($large) {
+        @include span-columns(4);
+      }
+
+      .product-quantity-number {
+        background: $gray-lighter;
+        border-top: 2px solid $gray-light;
+        font-weight: 500;
+        display: inline-block;
+        height: 43px;
+        margin: 0 em(16);
+        padding: 0.8em 1.5em;
+
+        @include media($medium) {
+          padding: 0.5em 1.5em;
+        }
+      }
+    }
+  }
+}
+
+.related-resources {
+  background-color: $gray-lightest;
+}

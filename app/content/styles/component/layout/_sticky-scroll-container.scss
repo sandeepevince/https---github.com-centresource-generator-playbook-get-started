@@ -1,0 +1,15 @@
+.sticky-scroll-container {
+  @include outer-container;
+
+  .sticky-scroll-content {
+    @include media($medium) {
+      @include span-columns(9);
+    }
+  }
+
+  .sticky-scroller-container {
+    @include media($medium) {
+      @include span-columns(3);
+    }
+  }
+}

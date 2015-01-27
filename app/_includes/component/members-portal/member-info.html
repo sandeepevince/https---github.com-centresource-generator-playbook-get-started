@@ -1,0 +1,18 @@
+<!-- MEMBER INFO -->
+<article class="member-info">
+  <img class="media-object" src="{{ include.src }}">
+  <div class="member-details">
+    <h3 class="headline-tertiary">{{ include.member-name }}</h3>
+    <div class="member-detail">
+      <h4 class="headline-paragraph">Email:</h4>
+      <em>{{ include.member-email }}</em>
+    </div>
+    <div class="member-detail">
+      <h4 class="headline-paragraph">Password:</h4>
+      <em>**********</em>
+    </div>
+
+    {% include component/typography/action-link.html body="Edit Account Settings" class="uppercase" %}
+  </div>
+</article>
+<!-- /MEMBER INFO -->

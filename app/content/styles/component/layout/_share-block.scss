@@ -1,0 +1,41 @@
+.content-primary {
+  section.share-block {
+    padding: 4em 0;
+
+    @include media($medium) {
+      padding: 5em 0;
+    }
+  }
+}
+
+.share-block {
+  background-color: $gray-lighter;
+  text-align: center;
+
+  .headline-secondary {
+    font-size: 1.6em;
+    font-weight: normal;
+    margin-bottom: .4em;
+  }
+
+  .description {
+    color: $gray;
+    display: block;
+    font: 1.1em $serif;
+    font-style: italic;
+    max-width: none;
+  }
+
+  .links {
+    margin-top: 1.5em;
+
+    .btn {
+      font-weight: bold;
+      margin: 1% .5%;
+
+      @include media($medium) {
+        margin: 0 .5%;
+      }
+    }
+  }
+}

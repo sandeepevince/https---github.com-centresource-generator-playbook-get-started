@@ -1,0 +1,110 @@
+.media-block {
+  display: block;
+  overflow: hidden;
+
+  .media-object {
+    display: block;
+    min-width: 100%;
+  }
+
+  .media-body {
+    .body-copy {
+      color: $white;
+      font-style: italic;
+
+      @include media($medium) {
+        font-size: .9em;
+      }
+    }
+  }
+}
+
+
+//BASIC SIZE VARIANTS
+.media-block {
+  margin: 0;
+
+  &.small {
+    @include square(25%);
+  }
+
+  &.large {
+    @include square(75%);
+  }
+}
+
+
+//VARIANTS BASED ON CONTAINER
+.column-small {
+  .media-block {
+    @include square(100%)
+  }
+}
+
+.column-med {
+  .media-block.large {
+    @include square(100%)
+  }
+}
+
+.column-half {
+  .media-block.medium {
+    @include square(100%)
+  }
+}
+
+
+//MEDIUM & LARGE OVERLAY STYLES
+.media-block {
+  &.medium,
+  &.large {
+    position: relative;
+
+    &:after {
+      @include radial-gradient(transparent, $black);
+      bottom: 0;
+      content: '';
+      left: 0;
+      opacity: .65;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    .media-body {
+      @include background-opacity($black, .8);
+      @include position(absolute, 0 0 0 0);
+      @include transition (all .15s ease-in-out);
+      border: 1px solid lighten($black, 7%);
+      color: $white;
+      text-align: center;
+      z-index: 2;
+    }
+  }
+
+
+  &.medium {
+    .media-body {
+      padding-top: 15%;
+
+      @include media($medium) {
+        padding-top: 18%;
+      }
+
+      @include media($large) {
+        padding-top: 27.5%;
+      }
+    }
+  }
+
+  &.large {
+    .media-body {
+      padding-top: 40%;
+
+      @include media($large) {
+        padding-top: 35%;
+      }
+    }
+  }
+}

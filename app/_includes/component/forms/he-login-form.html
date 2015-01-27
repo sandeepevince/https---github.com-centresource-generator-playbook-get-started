@@ -1,0 +1,11 @@
+<!-- MEMBER LOGIN FORM -->
+<div class="he-login-form">
+  {% include component/forms/fieldset-text.html name="username" type="text" placeholder="Username" help="<p class='help'>Please enter your username.</p>" %}
+
+  {% include component/forms/fieldset-text.html name="password" type="password" placeholder="Password" help="<p class='help'>Please enter your password.</p>" %}
+
+  {% include component/forms/fieldset-form-action.html class="secondary" value="Login" %}
+  <p class="non-member">Not a member? <a class="non-member-toggle" href="#">Enroll Now</a></p>
+  <button type="button" class="btn ghost close-login member-toggle"><i class="fa fa-times"></i></button>
+</div>
+<!-- /MEMBER LOGIN FORM -->

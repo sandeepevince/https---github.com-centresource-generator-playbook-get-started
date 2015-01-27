@@ -1,0 +1,31 @@
+---
+layout: default
+title: Stories
+body_class: events dwd events-stories
+
+tabs:
+- url: ../
+  text: Overview
+- url: ../stories
+  text: Stories
+- url: ../steps
+  text: 4 Steps To Transformation
+- url: ../impact
+  text: Impact
+- url: ../accommodations
+  text: Accommodations
+- url: ../faq
+  text: FAQ
+
+quotes:
+- text: And those who were seen dancing were thought to be insane by those who could not hear the music.
+  attribution: Friedrich Nietzsche
+- text: If you can't do great things, do small things in a great way.
+  attribution: Napoleon Hill
+---
+
+{% include component/media/hero-event.html src="/content/images/hero-sample.jpg" primary="Get Ready" fullName="Date With Destiny" initials="DWD" location="Laos" dateLocation="10/24 - 10/28 | Laotian Resort" countdownClass="countdown-dwd" value="Call Now" %}
+
+{% include component/layout/tabs.html class="uppercase scroll" takeActionURL="../take-action" %}
+
+{% include component/media/media-grid-events.html %}

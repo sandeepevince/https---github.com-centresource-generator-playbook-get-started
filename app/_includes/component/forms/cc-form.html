@@ -1,0 +1,89 @@
+<!-- CHECKOUT FORM -->
+<div class="checkout-form">
+
+  <div class="shipping">
+    <h2 class="headline-secondary">Shipping &amp; Payment</h2>
+
+    <div class="shipping-address group">
+      <h3 class="headline-tertiary">Shipping Address</h3>
+      <div class="fieldset-wrap">
+        {% include component/forms/fieldset-country-select.html %}
+
+        {% include component/forms/fieldset-text.html class="half" name="first-name" label="First Name" type="text" help="<p class='help'>Please enter your first name.</p>" %}
+
+        {% include component/forms/fieldset-text.html class="half" name="last-name" label="Last Name" type="text" help="<p class='help'>Please enter your last name.</p>" %}
+      </div>
+
+      {% include component/forms/fieldset-text.html class="half" name="company" label="Company" type="text" placeholder="Optional" %}
+
+      <div class="fieldset-wrap">
+        {% include component/forms/fieldset-text.html class="half" name="address" label="Address" type="text" help="<p class='help'>Please enter your street address.</p>" %}
+
+        {% include component/forms/fieldset-text.html class="half" name="address_2" label="Address 2" type="text" %}
+      </div>
+
+      <div class="fieldset-wrap">
+        {% include component/forms/fieldset-text.html class="half" name="city" label="City" type="text" help="<p class='help'>Please enter your city.</p>" %}
+
+        <div class="half">
+          {% include component/forms/fieldset-state-select.html class="half" %}
+
+          {% include component/forms/fieldset-text.html class="half" name="zip" label="Zip" type="text" help="<p class='help'>Please enter your zip code.</p>" %}
+        </div>
+      </div><!--fieldset-wrap-->
+    </div><!--shipping-address-->
+
+    <div class="payment group">
+      <h3 class="headline-tertiary">Payment</h3>
+      <div class="fieldset-wrap">
+        {% include component/forms/fieldset-text.html class="half" name="card-number" label="Card Number" type="password" help="<p class='help'>Please enter your card number.</p>" %}
+
+        <div class="half">
+          {% include component/forms/cc-expiration-select.html class="half" name="exp-date" help="<p class='help'>Please enter your expiration date.</p>" %}
+
+          {% include component/forms/fieldset-text.html name="security-code" label="Security Code" type="text" help="<p class='help'>Please enter your security code.</p>" %}
+        </div>
+      </div>
+    </div><!--payment-->
+
+    <div class="billing group">
+      <h3 class="headline-tertiary">Billing Address</h3>
+
+      {% include component/forms/fieldset-country-select.html %}
+
+      <div class="fieldset-wrap">
+        {% include component/forms/fieldset-text.html class="half" name="first-name" label="First Name" type="text" help="<p class='help'>Please enter your first name.</p>" %}
+
+        {% include component/forms/fieldset-text.html class="half" name="last-name" label="Last Name" type="text" help="<p class='help'>Please enter your last name.</p>" %}
+      </div>
+
+      {% include component/forms/fieldset-text.html class="half" name="company" label="Company" type="text" placeholder="Optional" %}
+
+      <div class="fieldset-wrap">
+        {% include component/forms/fieldset-text.html class="half" name="address" label="Address" type="text" help="<p class='help'>Please enter your street address.</p>" %}
+
+        {% include component/forms/fieldset-text.html class="half" name="address_2" label="Address 2" type="text" %}
+      </div>
+
+      <div class="fieldset-wrap">
+        {% include component/forms/fieldset-text.html class="half" name="city" label="City" type="text" help="<p class='help'>Please enter your city.</p>" %}
+
+        <div class="half">
+          {% include component/forms/fieldset-state-select.html class="half" %}
+
+          {% include component/forms/fieldset-text.html class="half" name="zip" label="Zip" type="text" help="<p class='help'>Please enter your zip code.</p>" %}
+        </div>
+      </div>
+
+      <div class="fieldset-wrap">
+        {% include component/forms/fieldset-text.html class="half" name="email" label="Email" type="email" placeholder="email@address.com" help="<p class='help'>Please enter your email address.</p>" %}
+
+        {% include component/forms/fieldset-text.html class="half" name="phone-number" label="Phone Number" type="text" placeholder="(XXX) XXX-XXXX" help="<p class='help'>Please enter your phone number.</p>" %}
+      </div>
+    </div><!--billing-->
+
+    {% include component/forms/fieldset-form-action.html value="Continue" %}
+
+  </div><!--shipping-->
+</div><!--checkout-form-->
+<!-- /CHECKOUT FORM -->

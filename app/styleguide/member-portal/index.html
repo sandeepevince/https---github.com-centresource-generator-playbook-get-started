@@ -1,0 +1,31 @@
+---
+layout: styleguide
+title: Tony Robbins - Styleguide - Member Portal
+---
+<h1>Member Portal</h1>
+{% include shared/nav-styleguide-secondary.html %}
+
+<section class="styleguide-section">
+  <h3 class="styleguide-section-title" data-section-name="Member Info">Member Info</h3>
+  <p class="styleguide-notes">The member info block features a member image and affiliated information.</p>
+
+  {% include component/members-portal/member-info.html src="http://placecorgi.com/464/264" member-name="Member Name" member-email="email@emailaddress.com" %}
+
+  {% highlight html %}
+  <section class="member-info">
+    <img class="media-object" src="http://placecorgi.com/464/264">
+    <div class="member-details">
+      <h3 class="headline-tertiary">Member Name</h3>
+      <section class="member-detail">
+        <h4 class="headline-paragraph">Email:</h4>
+        <em>email@emailaddress.com</em>
+      </section>
+      <section class="member-detail">
+        <h4 class="headline-paragraph">Password:</h4>
+        <em>**********</em>
+      </section>
+    </div>
+  </section>{% endhighlight %}
+
+</section>
+

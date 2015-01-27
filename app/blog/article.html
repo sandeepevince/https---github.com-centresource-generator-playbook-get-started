@@ -1,0 +1,89 @@
+---
+layout: default
+title: Tony Robbins | Blog
+body_class: blog blog-article
+articles:
+- url:
+  title: CURRENT ARTICLE TITLE
+  author: Tony Robbins
+- url:
+  title: NEXT ARTICLE TITLE
+  author: Tony Robbins
+- url:
+  title: THIRD ARTICLE TITLE HERE
+  author: Tony Robbins
+- url:
+  title: FINAL ARTICLE TITLE HERE
+  author: Tonya Robbins
+---
+
+{% include component/media/hero.html src="/content/images/events-landing.jpg" class="blog-article"%}
+<article class="article-content">
+
+  <h1 class="headline-primary centered-content">ARTICLE TITLE FADE BG</h1>
+  <section class="byline">
+    {% include component/media/avatar.html src="/content/images/grimace.jpg"%}
+    posted by <a class="author">John Hughes</a> on <date>November 3, 2014</date>
+  </section>
+
+  <section class="quarter-page">
+    {% include component/typography/action-link.html body="All Articles" destination="/blog" class="prev" %}
+    {% include component/typography/blockquote.html class="side" src="http://placecorgi.com/94/94"  quote="Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be" author="Oprah Winfrey" %}
+  </section>
+
+  <section class="blog-copy half-page sticky-scroll-content">
+    <p>
+      Fusce neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Etiam sit amet orci eget eros faucibus tincidunt.
+    </p>
+    <p>
+      Maecenas malesuada. Etiam rhoncus. Fusce convallis metus id felis luctus adipiscing.
+    </p>
+    <p>
+      In turpis. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. In auctor lobortis lacus.
+    </p>
+    <p>
+      Sed aliquam ultrices mauris. Curabitur a felis in nunc fringilla tristique. Praesent ut ligula non mi varius sagittis.
+    </p>
+    <p>
+      Fusce neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Etiam sit amet orci eget eros faucibus tincidunt.
+    </p>
+    <p>
+      Maecenas malesuada. Etiam rhoncus. Fusce convallis metus id felis luctus adipiscing.
+    </p>
+    <p>
+      In turpis. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. In auctor lobortis lacus.
+    </p>
+    <p>
+      Sed aliquam ultrices mauris. Curabitur a felis in nunc fringilla tristique. Praesent ut ligula non mi varius sagittis.
+    </p>
+    <p>
+      Fusce neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Etiam sit amet orci eget eros faucibus tincidunt.
+    </p>
+    <p>
+      Maecenas malesuada. Etiam rhoncus. Fusce convallis metus id felis luctus adipiscing.
+    </p>
+    <p>
+      In turpis. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. In auctor lobortis lacus.
+    </p>
+    <p>
+      Sed aliquam ultrices mauris. Curabitur a felis in nunc fringilla tristique. Praesent ut ligula non mi varius sagittis.
+    </p>
+
+    {% include component/typography/action-link.html body="Next Article" link="#"%}
+  </section>
+
+  <section class="quarter-page sticky-scroll-container">
+    {% include component/layout/reading-list.html title="Reading List" class="sticky-scroll reading-list" %}
+
+    {% include component/typography/blockquote.html class="side" src="http://placecorgi.com/94/94"  quote="Men may seem detestable as joint stock-companies and nations; knaves, fools, and murderers there may be" author="Oprah Winfrey" %}
+  </section>
+</article>
+
+<section class="recommended-articles">
+  <div class="container">
+    <h2 class="headline-secondary">You Might Like...</h2>
+    {% include component/media/recommended-article.html classStatus="popular" src="http://placecorgi.com/250/250" headline="This is a sample headline and such" body="Some details about this headline. Lorem ipsum dollar dollar bills yall." %}
+
+    {% include component/media/recommended-article.html classStatus="popular" src="http://placecorgi.com/250/250" headline="This is a sample headline and such" body="Some details about this headline. Lorem ipsum dollar dollar bills yall." %}
+  </div>
+</section>

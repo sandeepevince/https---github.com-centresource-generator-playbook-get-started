@@ -1,0 +1,24 @@
+<!-- TABULAR NAV -->
+<nav class="nav-tabs {{ include.class }}">
+  <div class="container">
+    <ul>
+      {% for tab in page.tabs %}
+        <li class="nav-tab-item {{ tab.class }}">
+          <a href="{{ tab.url }}">{{ tab.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if include.takeActionURL == 'take-action' %}
+    <a class="btn primary" href="{{ include.takeActionURL }}">Take Action</a>
+    {% endif %}
+
+    {% if include.takeActionURL == '../audiobook' %}
+    <a class="btn btn-icon {{ include.class }}" href="{{include.takeActionURL}}">
+      <div class="grunticon icon-audiobook"></div>
+      <span>Free audiobook</span>
+    </a>
+    {% endif %}
+  </div>
+</nav>
+<!-- /TABULAR NAV -->

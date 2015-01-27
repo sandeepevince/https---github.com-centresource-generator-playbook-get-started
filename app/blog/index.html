@@ -1,0 +1,30 @@
+---
+layout: default
+title: Blog
+body_class: hero-image blog
+
+tabs:
+- url:
+  text: All
+  class: active
+- url: ../human
+  text: Human
+- url: ../business
+  text: Business
+- url: ../finance
+  text: Finance
+- url: ../previously-viewed
+  text: Previously Viewed
+
+links:
+- url: #
+  text: Sign Up Today
+---
+
+{% include component/media/hero.html class="medium" primary="Your key to growth" secondary="the human elevation community" src="/content/images/blog-landing.jpg" %}
+
+{% include component/layout/tabs.html class="uppercase scroll" takeActionURL="../audiobook" %}
+
+{% include component/layout/blog/media-grid-blog.html %}
+
+{% include component/layout/share-block.html headline-secondary="Unlock Your Full Potential" description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr." %}

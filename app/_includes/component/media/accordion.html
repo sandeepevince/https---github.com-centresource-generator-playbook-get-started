@@ -1,0 +1,54 @@
+<!-- ACCORDION -->
+<div class="panel-group" id="accordion">
+  {% if include.headlineOne != null %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#{{ include.panelOneId }}">
+          {{ include.headlineOne }}
+        </a>
+      </h4>
+    </div>
+    <div id="{{ include.panelOneId}}" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <p>{{ include.bodyOne }}</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if include.headlineTwo != null %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#{{ include.panelTwoId }}">
+          {{ include.headlineTwo }}
+        </a>
+      </h4>
+    </div>
+    <div id="{{ include.panelTwoId }}" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>{{ include.bodyTwo }}</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if include.headlineThree != null %}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#{{ include.panelThreeId }}">
+          {{ include.headlineThree }}
+        </a>
+      </h4>
+    </div>
+    <div id="{{ include.panelThreeId }}" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>{{ include.bodyThree }}</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+<!-- /ACCORDION -->

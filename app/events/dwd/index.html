@@ -1,0 +1,46 @@
+---
+layout: default
+title: Events
+body_class: events dwd
+
+tabs:
+- url:
+  text: Overview
+- url: stories
+  text: Stories
+- url: steps
+  text: 4 Steps To Transformation
+- url: impact
+  text: Impact
+- url: accommodations
+  text: Accommodations
+- url: faq
+  text: FAQ
+
+quotes:
+- image: /content/images/carousel-quote-eva.png
+  text: And those who were seen dancing were thought to be insane by those who could not hear the music.
+  attribution: Friedrich Nietzsche
+  event: UPW 2011
+- image: /content/images/carousel-quote-eva.png
+  text: If you can't do great things, do small things in a great way. Srsly Guise.
+  attribution: Napoleon Hill
+  event: UPW 2013
+---
+
+{% include component/media/hero-event.html src="/content/images/hero-sample.jpg" primary="Get Ready" fullName="Date With Destiny" initials="DWD" location="Laos" dateLocation="10/24 - 10/28 | Laotian Resort" countdownClass="countdown-dwd" value="Call Now" %}
+
+{% include component/layout/tabs.html class="uppercase scroll" takeActionURL="take-action" %}
+
+
+{% include component/media/media-grid-events.html %}
+
+{% include component/media/full-width-promo.html src="/content/images/audiobook.jpg" name="Get Your Free Audiobook" body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." icon="fa-tablet" class="audiobook" %}
+
+<section class="endorsements">
+  {% include component/carousels/endorsements.html class="event" %}
+</section>
+
+<section class="about-the-event">
+  {% include component/typography/centered-content.html class="event" eventName="UPW" body="<p>Night came on; the train passed on at full speed, in the midst of the roaring of the tigers, bears, and wolves which fled before the locomotive; and the marvels of Bengal, Golconda ruined Gour, Murshedabad, the ancient capital, Burdwan, Hugly, and the French town of Chandernagor, where Passepartout would have been proud to see his country's flag flying, were hidden from their view in the darkness.</p> <p>Night came on; the train passed on at full speed, in the midst of the roaring of the tigers, bears, and wolves which fled before the locomotive; and the marvels of Bengal, Golconda ruined Gour, Murshedabad, the ancient capital, Burdwan, Hugly, and the French town of Chandernagor, where Passepartout would have been proud to see his country's flag flying, were hidden from their view in the darkness.</p> <p>Night came on; the train passed on at full speed, in the midst of the roaring of the tigers, bears, and wolves which fled before the locomotive; and the marvels of Bengal, Golconda ruined Gour, Murshedabad, the ancient capital, Burdwan, Hugly, and the French town of Chandernagor, where Passepartout would have been proud to see his country's flag flying, were hidden from their view in the darkness.</p>" headline="That day the scattered multitudes began" button="Call Now" %}
+</section>

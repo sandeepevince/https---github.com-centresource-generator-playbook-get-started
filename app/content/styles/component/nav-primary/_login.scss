@@ -1,0 +1,72 @@
+.login {
+  @include clearfix;
+  @include position(fixed, 0 0 0 0);
+  @include transition (opacity .35s ease-in-out);
+  opacity: 0;
+  padding-top: 6em;
+  z-index: 1;
+
+  &.active {
+    @include transition (opacity .35s ease-in-out);
+    @include position(fixed, 0 0 0 0);
+    opacity: 1;
+    z-index: 100;
+  }
+}
+
+
+.he-login-form {
+  padding-top: 3em;
+  position: relative;
+
+  @include media($medium) {
+    @include span-columns(8);
+    @include shift(2);
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    background: none;
+    border: 0;
+    border-bottom: 1px solid $white;
+    border-radius: 0;
+    color: $white;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+
+    &:active,
+    &:focus {
+      @include background-opacity($gray-dark, .5);
+      outline: none;
+      box-shadow: none;
+    }
+
+    @include placeholder {
+      color: shade($gray, 50%);
+    }
+  }
+
+  .non-member {
+    color: $white;
+    max-width: none;
+    text-align: center;
+    width: 100%;
+
+    .non-member-toggle {
+      color: $base-accent-color;
+    }
+  }
+
+  .close-login {
+    color: $gray-lightest;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+
+    .fa {
+      font-size: 1.5em;
+    }
+  }
+}

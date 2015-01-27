@@ -1,0 +1,90 @@
+.media-block-small {
+  @include span-columns(6);
+  @include omega(2n);
+
+  @include media($medium) {
+    @include omega-reset(2n);
+    @include span-columns(4);
+    @include omega(3n);
+  }
+
+  @include media($large) {
+    @include omega-reset(3n);
+    @include span-columns(3);
+    @include omega(4n);
+  }
+
+  .media-image {
+    position: relative;
+
+    .price {
+      background-color: #fff;
+      bottom:0;
+      font: 1.2em $header-font-family;
+      opacity: .8;
+      padding: 3% 4%;
+      position: absolute;
+      right:0;
+      z-index: 1;
+    }
+  }
+
+  .media-name {
+    margin: .25em 0;
+  }
+
+  .rating {
+    li {
+      display: inline-block;
+      position: relative;
+
+      span:first-child {
+        opacity: .5;
+      }
+
+      .rate {
+        display: none;
+        left: 0;
+        position: absolute;
+        top:0;
+      }
+    }
+
+    &.rate-1 {
+      .rate1 .rate {
+        display: block;
+      }
+    }
+
+    &.rate-2 {
+      .rate1 .rate, .rate2 .rate {
+        display: block;
+      }
+    }
+
+    &.rate-3 {
+      .rate1 .rate, .rate2 .rate, .rate3 .rate {
+        display: block;
+      }
+    }
+
+    &.rate-4 {
+      .rate1 .rate, .rate2 .rate, .rate3 .rate, .rate4 .rate {
+        display: block;
+      }
+    }
+
+    &.rate-5 {
+      .rate {
+        display: block;
+      }
+    }
+  }
+
+  .description {
+    font-size: .9em;
+    margin-bottom: 0;
+  }
+}
+
+

@@ -1,0 +1,9 @@
+<!-- MEDIA BLOCK -->
+<a {% if include.id != null %}id="{{ include.id }}"{% endif %} class="media-block{% if include.class != null %} {{ include.class }}{% endif %}" href="{{ include.destination }}">
+  <img class="media-object" src="{{ include.src }}">
+  {% if include.headline != null %}<figcaption class="media-body">
+  <h4 class="headline-paragraph">{{ include.headline }}</h4>
+  <p class="body-copy">{{ include.body }}</p>{% endif %}
+  </figcaption>
+</a>
+<!-- /MEDIA BLOCK -->

@@ -1,0 +1,19 @@
+<!-- READING LIST -->
+<nav class="reading-list {{ include.class }}">
+  <div class="container">
+    <ul>
+      {% if include.title != null %}
+        <li class="list-title fa fa-list">{{ include.title }}</li>
+      {% endif %}
+      {% for article in page.articles %}
+        <li class="reading-list-item">
+          <a href="{{ article.url }}">
+            <div class="article-title">{{ article.title }}</div>
+            <div class="article-author">posted by {{ article.author }}</div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+<!-- /READING LIST -->

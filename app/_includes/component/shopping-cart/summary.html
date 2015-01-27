@@ -1,0 +1,50 @@
+<!-- SHOPPING CART SUMMARY -->
+<div class="cart-summary {% if include.class == "sticky-scroll" %}{{ include.class }}{% endif %}">
+  <div class="cart-summary-header">
+    <i class="fa fa-shopping-cart"></i>
+    <span class="item-count">3</span>
+    <span class="cart-summary-title">{{ include.title }}</span>
+  </div>
+
+  {% for item in page.cart %}
+  <div class="cart-summary-item">
+    <div class="item-info">
+      <div class="item-info-row">
+        <span class="item-product-name">{{ item.name }}</span>
+        <span class="item-remove"><i class="fa fa-times-circle-o"></i></span>
+      </div>
+      <div class="item-info-row">
+        <span class="item-quantity">
+          <i class="fa fa-minus"></i> <span class="item-quantity-number">1</span> <i class="fa fa-plus"></i>
+        </span>
+        <span class="item-price">${{ item.price }}</span>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="cart-summary-subtotal">
+    <div class="subtotal-details">
+      <span>Subtotal</span>
+      <span>$144.00</span>
+    </div>
+    <div class="subtotal-details">
+      <span>Tax</span>
+      <span>$15.50</span>
+    </div>
+    <div class="subtotal-details">
+      <span>Shipping</span>
+      <span>TBD</span>
+    </div>
+  </div>
+
+  <div class="cart-summary-total zigzag-border">
+    <div class="total-details">
+      <span>Total</span>
+      <span>$159.50</span>
+    </div>
+  </div>
+
+  <input class="btn secondary btn-block" type="submit" value="Checkout">
+</div>
+<!-- /SHOPPING CART SUMMARY -->

@@ -1,0 +1,30 @@
+$arrow-icon-height: 42px;
+
+.quote {
+  .item {
+    padding: 0 2.5em;
+    text-align: center;
+
+    @include media($medium-alt) {
+      text-align: left;
+    }
+  }
+
+  &.owl-theme .owl-controls .owl-buttons div {
+    background: none;
+    color: $gray-dark;
+    font-size: em(16);
+    font-weight: 700;
+    position: absolute;
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-prev {
+    left: -5px;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+
+  &.owl-theme .owl-controls .owl-buttons .owl-next {
+    right: -5px;
+    top: calc(50% - (#{$arrow-icon-height} / 2));
+  }
+}

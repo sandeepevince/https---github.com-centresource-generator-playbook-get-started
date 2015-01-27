@@ -1,0 +1,27 @@
+.video-content {
+  @include clearfix;
+
+  .copy {
+    @include media($medium) {
+      @include span-columns(6);
+    }
+
+    @include media($large) {
+      @include span-columns(5);
+    }
+  }
+
+  .video-wrap {
+    @include media($small-only) {
+      margin-bottom: 1em;
+    }
+
+    @include media($medium) {
+      @include span-columns(6);
+    }
+
+    @include media($large) {
+      @include span-columns(7);
+    }
+  }
+}

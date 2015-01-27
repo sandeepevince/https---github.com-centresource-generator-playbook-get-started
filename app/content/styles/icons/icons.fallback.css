@@ -1,0 +1,23 @@
+
+.icon-check-circle {
+	background-image: url('../../images/icons/check-circle.png');
+	background-repeat: no-repeat;
+}
+
+
+.icon-printer {
+	background-image: url('../../images/icons/printer.png');
+	background-repeat: no-repeat;
+}
+
+
+.icon-qol-graph {
+	background-image: url('../../images/icons/qol-graph.png');
+	background-repeat: no-repeat;
+}
+
+
+.icon-audiobook {
+  background-image: url('../../images/icons/audiobook.png');
+  background-repeat: no-repeat;
+}

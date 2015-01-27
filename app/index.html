@@ -1,0 +1,59 @@
+---
+layout: default
+title: Home
+body_class: hero-image hero-home-container
+
+small-media-items:
+- url: http://placecorgi.com/100/100
+  text: Foo
+  news: A ticker reporting the latest news or updates for Tony Robbins paired with a recognizable moosehead logo
+- url: http://placecorgi.com/100/100
+  text: Bar
+  news: A ticker reporting the latest news or updates for Tony Robbins paired with a recognizable moosehead logo
+- url: http://placecorgi.com/100/100
+  text: Foo
+  news: A ticker reporting the latest news or updates for Tony Robbins paired with a recognizable moosehead logo
+
+media-items:
+- headline: Get Some
+  text: Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid
+  button-text: CTA Button
+  image-url: /content/images/carousel-media-iphone.png
+- headline: Get Some MOAR
+  text: Carles fashion axe leggings, dreamcatcher Intelligentsia synth banjo readymade. Gluten-free McSweeney's letterpress Tumblr, photo booth umami single-origin coffee locavore. Jean shorts hashtag ethical cornhole dreamcatcher VHS, Tumblr lomo. Quinoa retro squid
+  button-text: CTA Button
+  image-url: /content/images/carousel-media-iphone.png
+
+quotes:
+  - image: /content/images/carousel-quote-eva.png
+    text: And those who were seen dancing were thought to be insane by those who could not hear the music.
+    attribution: Friedrich Nietzsche
+  - image: /content/images/carousel-quote-eva.png
+    text: If you can't do great things, do small things in a great way. Srsly Guise.
+    attribution: Napoleon Hill
+---
+
+<!-- HERO -->
+<div id="hero-home" class="hero hero-home with-image">
+  <div class="hero-headline">
+    <h1 class="headline-primary">Get Ready</h1>
+    <h2 class="headline-tertiary">The New TonyRobbins.com</h2>
+    <a href="#" class="play-link"><i class="fa fa-play-circle-o"></i></a>
+    <a class="action-link smooth-scroll" href="#homepage-content">Discover More<br><i class="fa fa-chevron-down"></i></a>
+  </div>
+</div>
+<!-- /HERO -->
+
+{% include component/carousels/news-media.html %}
+
+<a name="homepage-content"></a>
+{% include component/carousels/media-pagination.html class="homepage" %}
+
+{% include component/layout/media-grid-homepage.html %}
+
+<section class="endorsements homepage">
+  <div class="container">
+    <h3 class="headline-secondary">What People Are Saying</h3>
+    {% include component/carousels/endorsements.html %}
+  </div>
+</section>

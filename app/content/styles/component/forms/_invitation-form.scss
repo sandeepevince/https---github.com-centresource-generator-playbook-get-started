@@ -1,0 +1,8 @@
+.invitation {
+  @include clearfix;
+
+  input[type="text"],
+  input[type="email"] {
+    padding: 1em 1.5em;
+  }
+}

@@ -1,0 +1,123 @@
+.styleguide {
+  @include clearfix;
+  background: $white;
+  text-align: left;
+
+	a {
+		font-weight: 300;
+	}
+
+  p {
+    span {
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+  }
+
+  .styleguide-sidebar {
+    @include span-columns(12 of 12);
+    background-color: $gray-light;
+
+    @include media($medium) {
+      @include span-columns(2 of 12);
+      height: 100%;
+      position: fixed;
+    }
+  }
+
+  .styleguide-logo {
+    background: darken($gray-light, 50%) url('/content/images/logo.svg') no-repeat center;
+    background-size: 80%;
+    display: block;
+    height: 160px;
+    text-indent: -9999px;
+    width: 100%;
+  }
+
+  .nav-styleguide {
+    a {
+      @include link-variant($gray-dark);
+      display: block;
+      padding: 1em;
+
+      &:hover {
+        background-color: darken($gray-light, 3%);
+      }
+
+      &.current {
+        background-color: white ;
+      }
+    }
+  }
+
+  .nav-styleguide-secondary {
+    border-top: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-light;
+    margin: 0 0 3em;
+    padding: 1em 0;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      padding: .5em;
+      display: block;
+    }
+  }
+
+  .styleguide-content {
+    @include span-columns(12 of 12);
+    padding: 1em;
+
+    @include media($medium) {
+      @include span-columns(10 of 12);
+      @include shift(2);
+      @include omega;
+      padding: 2em 2em 2em 0;
+    }
+  }
+
+  .styleguide-section {
+    margin: 0 0 5em;
+  }
+
+	.styleguide-section-title {
+		border-bottom: 1px solid $gray-light;
+	}
+
+  .highlight {
+    @include clearfix;
+    margin: 1.5em 0;
+  }
+
+  .styleguide-progress-bar-example {
+    &.progress-bar {
+      height: 30px;
+      background: #f96b07;
+
+      .progress-indicator {
+        background: #ddd;
+      }
+
+      .progress-label {
+        color: white;
+        font-weight: bold;
+        padding-left:10px;
+      }
+    }
+  }
+
+  .question-container {
+    background: $black;
+  }
+
+  .styleguide-sticky-scroll-example {
+    &.sticky-scroll {
+      border: 1px solid gray;
+      margin: 2px;
+      padding: 4px;
+      width: 100px;
+    }
+  }
+}

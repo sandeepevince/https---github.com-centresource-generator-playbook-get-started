@@ -1,0 +1,88 @@
+.hero.event {
+  padding: 6em 1em 2em;
+  position: relative;
+
+  @include media($medium) {
+    padding: 7em 0 2em;
+  }
+
+  @include media($large) {
+    padding: 8em 0 2em;
+  }
+
+  .bg-overlay {
+    height: 100%;
+    left: 0;
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .hero-container {
+    @include outer-container;
+    position: relative;
+    text-align: center;
+
+    .headline-primary {
+      line-height: .85;
+      margin: .05em 0;
+
+      .location {
+        display: block;
+        font-size: .5em;
+
+        @include media($medium) {
+          font-size: .75em;
+        }
+
+        @include media($large) {
+          display: inline-block;
+          font-size: 1em;
+        }
+      }
+    }
+
+    .countdown {
+      @include clearfix;
+      border-bottom: 1px dotted $base-border-color;
+      border-top: 1px dotted $base-border-color;
+      opacity: .5;
+      margin: 0 auto;
+      max-width: 420px;
+      padding: .5em;
+      text-align: center;
+
+      @include media($medium) {
+        padding: .5em 1.5em;
+        width: 85%;
+      }
+
+      .increment {
+          @include clearfix;
+          float: left;
+          text-align: center;
+          width: 25%;
+
+        .digit {
+          font-size: 3em;
+          line-height: 1;
+
+          @include media($medium) {
+            font-size: 3.5em;
+          }
+        }
+
+        .units {
+          display: block;
+          font-size: .75em;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 1em;
+    }
+  }
+}
